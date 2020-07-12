@@ -1,0 +1,24 @@
+// :root {
+//   @include defineColorHSL(--color-primary, 0, 89%, 56%);
+// }
+// [data-theme="dark"] {
+//   @include defineColorHSL(--color-primary, 0, 100%, 56%);
+// }
+
+$primary-color: #22486B;
+
+$link-color: blue;
+
+$color-white: #ffffff;
+$color-gray: #cccccc;
+$color-black: #000000;
+$color-red: red;
+$color-pink: pink;
+
+$add-color-pink: #AD009F;
+$add-color-blue: #9FCFED;
+$add-color-brown: #A4947E;
+
+$primary-font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+$font-source: 'Source Sans Pro',$primary-font;

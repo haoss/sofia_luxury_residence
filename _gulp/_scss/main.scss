@@ -6,17 +6,19 @@ $grid-gutter-width: 30px;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
+  sm: 480px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1600px
 );
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
+  sm: 480px,
+  md: 750px,
+  lg: 970px,
+  xl: 1170px,
+  xxl: 1560px
 );
 
 @import "node_modules/bootstrap/scss/functions";
@@ -39,7 +41,7 @@ $container-max-widths: (
 // @import "node_modules/bootstrap/scss/nav";
 // @import "node_modules/bootstrap/scss/navbar";
 // @import "node_modules/bootstrap/scss/card";
-@import "node_modules/bootstrap/scss/breadcrumb";
+// @import "node_modules/bootstrap/scss/breadcrumb";
 // @import "node_modules/bootstrap/scss/pagination";
 // @import "node_modules/bootstrap/scss/badge";
 // @import "node_modules/bootstrap/scss/jumbotron";

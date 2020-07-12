@@ -14,24 +14,18 @@ html(lang="ru")
 
     include ./_include/_header
 
+    // Top row
+    .top-row
+      .top-row__wrapper
+        img(src="./tmp/img-apartments.png", alt="")
+      .top-row__title Апартаменты 
+
+    // Content
     .content
       .container
-
-        h1 Главная 22
-
-        .row
-          .col-md-4 4 collumns
-          .col-md-8 8 collumns
-          .col-md-12 12 collumns
-          .col-md-12 12 collumns
-
-        .row
-          .col-md-12
-
-            button.btn.btn-primary(type="button") Button
-            button.btn.btn-danger(type="button") Button
-            button.btn.btn-custom-color(type="button") Button
-            button.btn.btn-custom-color2(type="button") Button
+        .content__inside 
+          p Построены и оборудованы по самым современным техническим и дизайнерским решениям.
+          p Инвестиции в размере от €2 млн. нужно сохранять всего 5 лет. После 5 лет вы можете продать часть недвижимости, оставив себе жилье на сумму €500 тысяч. Инвесторы должны будут сохранять свои инвестиции в течение 5 лет после натурализации. Необходимо внести пожертвования (невозвратные взносы): €75 тысяч в Фонд содействия исследованиям и €75 тысяч в Кипрскую землеустроительную корпорацию.
 
 
     include ./_include/_footer

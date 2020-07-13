@@ -1,1 +1,115 @@
 /* modules */
+.content {
+  padding-top: 54px;
+  padding-bottom: 50px;
+  &__head {
+    .h1, h1, .h2, h2 {
+      position: relative;
+      padding-left: 47px;
+      &::before {
+        content: '';
+        height: 2px;
+        width: 30px;
+        position: absolute;
+        left: 0;
+        top: 17px;
+        background: $primary-color;
+      }
+    }
+    .h2, h2 {
+      &::before {
+        top: 16px;
+      }
+    }
+  }
+  &__inside {
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+      height: auto;
+    }
+  }
+  &__thumb {
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  @include media-breakpoint-up(sm) {
+    &__inside {
+      padding-left: 45px;
+    }
+    &__head {
+      margin-left: -45px;
+    }
+    &__container {
+      margin-left: -45px;
+    }
+  }
+}
+
+.top-row {
+  overflow: hidden;
+  position: relative;
+  &__wrapper {
+    img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    right: 0;
+    z-index: 10;
+    display: none;
+    .h1, h1 {
+      color: $color-white;
+      line-height: 1;
+      white-space: nowrap;
+      font-size: rem(60px);
+      line-height: 1.05;
+      letter-spacing: 0;
+      margin-bottom: 0;
+      font-weight: 900;
+      @include media-breakpoint-up(md) {
+        font-size: rem(100px);
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: rem(130px);
+      }
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &__title {
+      display: block;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__title {
+      bottom: -16px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__title {
+      bottom: -19px;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &__wrapper {
+      img {
+        height: 300px;
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &__wrapper {
+      img {
+        height: 400px;
+      }
+    }
+  }
+}

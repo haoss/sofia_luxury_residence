@@ -26,22 +26,33 @@ html(lang="ru")
       // Content
       .content
         .container
-          .content__inside 
 
-            .row
-              .col-12.col-md-6
+          .row
+            .col-12.col-md-6
+              .content__inside 
                 .content__head
                   .h1 19 Премиум апартаментов
                 p Построены и оборудованы по самым современным техническим и дизайнерским решениям.
                 p Инвестиции в размере от €2 млн. нужно сохранять всего 5 лет. После 5 лет вы можете продать часть недвижимости, оставив себе жилье на сумму €500 тысяч. Инвесторы должны будут сохранять свои инвестиции в течение 5 лет после натурализации. Необходимо внести пожертвования (невозвратные взносы): €75 тысяч в Фонд содействия исследованиям и €75 тысяч в Кипрскую землеустроительную корпорацию.
-              .col-12.col-md-6
-                .content__thumb
+            .col-12.col-md-6
+              .content__thumb.--video
+                a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8").popup-youtube
                   img(src="./tmp/apartments-thumb-1.png", alt="")
-                .content__thumb
+              .content__thumb.--threed.--last
+                a(href="#!")
                   img(src="./tmp/apartments-thumb-2.png", alt="")
 
-            .row
-              .col-12
+          .row
+            .col-12
+              .content__inside 
+                .apartments__info.--inside
+                  div.first.nowrap Стоимость за 
+                    br
+                    | квадратный метр 
+                  div.last.nowrap от 
+                    b.b 4 500
+                      small €
+
                 .content__head
                   h2 Собственная управляющая компания
                 p Мы предлагаем удобный формат по коммерческому управлению Вашей недвижимостью, а именно: Обслуживаемые Апартаменты. Это прекрасная возможность для тех, кто любит несколько раз в год летать на море на отдых, каждый раз останавливаться в собственной квартире и получать полный спектр услуг, не уступающий гостиничному.
@@ -59,8 +70,8 @@ html(lang="ru")
                   li Подготовка и личное администрирование соглашений аренды
                   li Инспекции домовладения примерно с еженедельной периодичностью
 
-            .content__container
-              img(src="./tmp/apartments-scheme.png", alt="")
+          .apartments__bottom
+            img(src="./tmp/apartments-scheme.png", alt="").img-fluid
 
       include ./_include/_footer
       div(style="height: 1000px; background-color: #000")

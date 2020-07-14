@@ -1,7 +1,46 @@
 // Header
 header.header
   .container
-    
-    p header
+
+    .header__wrapper
+      .logo
+        img(src="./images/log_alt.png", alt="")
+      .header__phones
+        a(href="tel:") +357 
+          b 99 855 277
+
+      nav.header__nav
+        ul
+          li: a(href="#!") НОМЕРА
+          li: a(href="#!") УСЛУГИ
+          li: a(href="#!") ОТЗЫВЫ
+          li: a(href="#!") КОНТАКТЫ
+
+      nav.nav(role="navigation")
+        button(type="button").nav__btn
+          span Меню
+        .nav__dropdown
+          ul
+            li.active: span Главная
+            li: a(href="#!") Номера
+            li: a(href="#!") Услуги
+            li: a(href="#!") Отзывы
+            li: a(href="#!") Контакты
+          .nav__dropdown-foot
+            div
+              .div Москва
+              a(href="tel:") +7 (495) 
+                b 142 25 70
+            div
+              .div Кипр, Пафос:
+              a(href="tel:") +357 
+                b 99 855 277
+      
+      .lang
+        .lang__head RU
+        ul.lang__ul
+          li: a(href="#!") En
+          li: a(href="#!") fr
+          li: a(href="#!") RU
 
 .header-holder

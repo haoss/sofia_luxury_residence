@@ -10,4 +10,10 @@
     }
   }
 }
-  
+
+.nav {
+  &__dropdown {
+    position: absolute;
+    display: none;
+  }
+}

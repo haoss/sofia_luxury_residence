@@ -14,31 +14,46 @@
     align-items: center;
     height: 100px;
   }
-  &__nav {
+  &__menu {
     display: none;
   }
   &__phones {
     display: none;
   }
+  &__logo {
+    flex-grow: 1;
+  }
+  &__lang {
+    margin-left: 22px;
+  }
+  &__nav {
+    margin-left: 22px;
+  }
 }
 
 .lang {
+  $this: &;
   position: relative;
-  // box-shadow: 0 0 0 1px red;
+  box-shadow: 0 0 0 1px rgba($primary-color,.3);
+  filter: drop-shadow(0px 0 0 rgba($primary-color,.05));
   padding: 2px;
   border-radius: 25px;
+  transition: all 0.35s;
   &__head {
     width: 40px;
     height: 40px;
     text-align: center;
-    line-height: 40px;
+    line-height: 39px;
     border-radius: 50%;
     background-color: $color-white;
+    border: 1px solid $color-white;
     font-weight: 900;
     font-size: rem(14px);
     text-transform: uppercase;
     position: relative;
     z-index: 5;
+    cursor: pointer;
+    transition: all 0.35s;
   }
   &__ul {
     position: absolute;
@@ -49,8 +64,10 @@
     left: 0;
     background-color: $color-white;
     border-radius: 25px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.05);
     padding-top: 44px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s;
     li {
       list-style: none;
       margin: 0;
@@ -66,6 +83,7 @@
         text-transform: uppercase;
         background: $color-white;
         border: 1px solid $color-white;
+        transition: all 0.35s;
         &:hover {
           background: $add-color-pink;
           color: $color-white;
@@ -74,4 +92,29 @@
       }
     }
   }
+  &:hover {
+    #{$this} {
+      &__head {
+        background: $add-color-blue;
+      }
+    }
+  }
+  &.is-active {
+    box-shadow: 0 0 0 0px rgba($primary-color,.3);
+    filter: drop-shadow(0px 8px 15px rgba($primary-color,.05));
+    #{$this} {
+      &__ul {
+        visibility: visible;
+        opacity: 1;
+      }
+      &__head {
+        background: $add-color-blue;
+      }
+    }
+    
+  }
+}
+
+.logo {
+  flex-shrink: 0;
 }

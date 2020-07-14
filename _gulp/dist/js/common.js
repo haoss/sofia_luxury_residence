@@ -39,6 +39,53 @@ $(document).on('ready', function(){
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
 
+  // Language block enabled
+  $('.lang').on('click', function(e) {
+    e.stopPropagation();
+  });
+  $('.lang__head').on('click', function() {
+    var block = $(this).parent();
+    if (block.hasClass('is-active')) {
+      block.removeClass('is-active')
+    } else {
+      block.addClass('is-active')
+    }
+    $('.nav').removeClass('is-active');
+  });
+
+  // Mobile menu enabled
+  $('.nav').on('click', function(e) {
+    e.stopPropagation();
+  });
+  $('#menu-btn').on('click', function(e) {
+    e.stopPropagation();
+
+    var block = $(this).parent();
+    if (block.hasClass('is-active')) {
+      block.removeClass('is-active');
+    } else {
+      block.addClass('is-active');
+    }
+    $('.lang').removeClass('is-active');
+  });
+
+  $(document).on('click', function(){
+
+    // Language disabled
+    var lang = $('.lang');
+    if (lang.hasClass('is-active')) {
+      lang.removeClass('is-active')
+    }
+
+    // Mobile menu disabled
+    var nav = $('.nav');
+    if (nav.hasClass('is-active')) {
+      nav.removeClass('is-active')
+    }
+
+
+  });
+
   // Footer menu mobile animation
   footerNav();
 

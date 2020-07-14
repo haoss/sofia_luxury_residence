@@ -5,6 +5,8 @@
   &__top {
     padding-top: 37px;
     padding-bottom: 40px;
+    max-width: 346px;
+    margin: 0 auto;
   }
   &__bottom {
     border-top: 1px solid rgba($add-color-blue,.3);
@@ -118,9 +120,81 @@
       }
     }
   }
+  &__social {
+    padding-left: 90px;
+    margin-bottom: 30px;
+    margin-top: -10px;
+  }
+  @include media-breakpoint-up(md) {
+    &__top {
+      max-width: inherit;
+      display: flex;
+      margin: 0 -15px;
+      &-row {
+        padding: 0 15px;
+        width: 50%;
+      }
+    }
+  }
   @include media-breakpoint-up(lg) {
     &__nav {
       display: block !important;
+    }
+    &__top {
+      &-row {
+        width: auto;
+        display: flex;
+      }
+    }
+    &__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      &>div {
+        &+div {
+          margin: 0;
+        }
+      }
+    }
+    &__bonus {
+      width: 216px;
+      height: 256px;
+      border: 0;
+      border-radius: 0;
+      background: url('../images/footer-bonus.png') 0 0 no-repeat;
+      font-size: rem(12px);
+      &-title {
+        .b {
+          font-size: rem(18px);
+        }
+      }
+      &-app {
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 73px;
+        }
+        &>div {
+          &+div {
+            margin: 10px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.social {
+  font-size: 0;
+  a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: rem(35px);
+    text-align: center;
+    color: $add-color-blue;
+    &+a {
+      margin-left: 10px;
     }
   }
 }

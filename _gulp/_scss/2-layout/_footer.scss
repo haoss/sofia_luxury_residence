@@ -139,11 +139,51 @@
   @include media-breakpoint-up(lg) {
     &__nav {
       display: block !important;
+      ul {
+        padding-left: 0;
+        margin-bottom: 35px;
+      }
+    }
+    &__title {
+      font-size: rem(14px);
+      padding-left: 42px;
+      line-height: 1.7;
+      &::before {
+        width: 30px;
+        left: 0;
+        top: 10px;
+      }
     }
     &__top {
+      padding-bottom: 0;
+      padding-top: 45px;
+      margin: 0;
       &-row {
         width: auto;
         display: flex;
+        padding: 0;
+        .div1, .div2, .div3, .div4 {
+          padding-right: 15px;
+          min-width: 160px;
+        }
+        .div3 {
+          flex-shrink: 0;
+        }
+        .div4 {
+          width: 205px;
+          margin-right: -40px;
+        }
+        .div5 {
+          width: 206px;
+          position: relative;
+          min-height: 245px;
+        }
+        &.--first {
+          flex-grow: 1;
+          &>div {
+            flex-grow: 1;
+          }
+        }
       }
     }
     &__bottom {
@@ -164,7 +204,18 @@
       border-radius: 0;
       background: url('../images/footer-bonus.png') 0 0 no-repeat;
       font-size: rem(12px);
+      padding-left: 39px;
+      margin-top: -8px;
+      padding-top: 56px;
+      margin-right: -10px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
       &-title {
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
         .b {
           font-size: rem(18px);
         }
@@ -182,6 +233,12 @@
         }
       }
     }
+    &__social {
+      padding-left: 42px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    
   }
 }
 

@@ -44,12 +44,18 @@ body {
   font-weight: 600;
   margin-bottom: 20px;
   line-height: 1.15;
+  @include media-breakpoint-up(xxl) {
+    font-size: rem(40px);
+  }
 }
 .h2, h2 {
   font-size: rem(28px);
   font-weight: 600;
   line-height: 1.15;
   margin-bottom: 20px;
+  @include media-breakpoint-up(xxl) {
+    font-size: rem(35px);
+  }
 }
 .h3, h3 {
   font-size: rem(16px);

@@ -163,6 +163,17 @@
         }
       }
     }
+    &__inside {
+      padding-left: 52px;
+    }
+    &__head {
+      margin-left: -52px;
+      h1, .h1, .h2, h2 {
+        &::before {
+          left: 7px;
+        }
+      }
+    }
   }
   @include media-breakpoint-up(xxl) {
     padding-top: 85px;
@@ -188,6 +199,25 @@
           background-size: 90px 65px;
           height: 65px;
           
+        }
+      }
+    }
+    &__inside {
+      padding-left: 90px;
+    }
+    &__head {
+      margin-left: -90px;
+      h1, .h1, .h2, h2 {
+        padding-left: 90px;
+        &::before {
+          left: 0px;
+          width: 60px;
+          top: 22px;
+        }
+      }
+      .h2, h2 {
+        &::before {
+          top: 20px;
         }
       }
     }
@@ -317,6 +347,18 @@
         margin-right: -15px;
         margin-left: 0;
         margin-bottom: 35px;
+        justify-content: flex-start;
+        padding-left: 30px;
+      }
+    }
+    @include media-breakpoint-up(xxl) {
+      .first {
+        padding-top: 0;
+      }
+      &.--inside {
+        margin-right: -30px;
+        margin-left: -32px;
+        padding-left: 30px;
       }
     }
   }

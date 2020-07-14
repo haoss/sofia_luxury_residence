@@ -94,12 +94,12 @@ hr {
 
 // Links
 a, .link {
-  color: $link-color;
+  color: $primary-color;
   text-decoration: underline;
   outline: none;
   transition: color 0.35s, background 0.35s, border 0.35s;
   &:hover, &:focus, &:active {
-    color: $link-color;
+    color: $add-color-pink;
     text-decoration: none;
     outline: none;
   }

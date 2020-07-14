@@ -2,4 +2,125 @@
 .footer {
   background-color: $color-white;
   border-top: 1px solid rgba($add-color-blue,.3);
+  &__top {
+    padding-top: 37px;
+    padding-bottom: 40px;
+  }
+  &__bottom {
+    border-top: 1px solid rgba($add-color-blue,.3);
+    padding: 15px 0;
+    font-size: rem(14px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    a {
+      text-decoration: none;
+    }
+    &>div {
+      &+div {
+        margin-top: 5px;
+      }
+    }
+  }
+  &__bonus {
+    border: 5px solid #A0CFED;
+    border-radius: 6px;
+    text-align: center;
+    font-size: rem(13px);
+    padding: 15px 10px 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    &-title {
+      line-height: 1.3;
+      margin-bottom: 10px;
+      .b {
+        display: block;
+        font-size: rem(20px);
+      }
+    }
+    &-app {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &>div {
+        &+div {
+          margin-left: 15px;
+        }
+      }
+      img {
+        display: block;
+      }
+    }
+  }
+  &__title {
+    position: relative;
+    padding-left: 90px;
+    font-weight: bold;
+    font-size: rem(20px);
+    line-height: 1.4;
+    margin-bottom: 20px;
+    &::before, &::after {
+      content: '';
+      top: 14px;
+      width: 60px;
+      height: 2px;
+      position: absolute;
+      left: 18px;
+      background: $primary-color;
+      transition: all 0.35s;
+    }
+    &::after {
+      opacity: 0;
+      width: 2px;
+      height: 20px;
+      left: 69px;
+      top: 5px;
+    }
+    &.is-active {
+      color: $add-color-blue;
+      &::before {
+        width: 20px;
+        left: 60px;
+        background: $add-color-blue;
+      }
+      &::after {
+        opacity: 1;
+        background: $add-color-blue;
+      }
+    }
+  }
+  &__nav {
+    font-size: rem(14px);
+    display: none;
+    ul {
+      margin: 0 0 15px 0;
+      padding-left: 18px;
+      li {
+        list-style: none;
+        margin: 0 0 10px 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &>a, &>span {
+          text-decoration: none;
+        }
+        &.active {
+          &>a, &>span {
+            text-decoration: underline;
+          }
+        }
+        &>a {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__nav {
+      display: block !important;
+    }
+  }
 }

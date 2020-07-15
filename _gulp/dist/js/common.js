@@ -39,17 +39,6 @@ $(document).on('ready', function(){
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
 
-  // Stop propagation
-  $('.lang').on('click', function(e) {
-    e.stopPropagation();
-  });
-  $('.m-search').on('click', function(e) {
-    e.stopPropagation();
-  });
-  $('.nav').on('click', function(e) {
-    e.stopPropagation();
-  });
-
   $('.j-modal-btn').on('click', function(e) {
     var block = $(this).parent();
     
@@ -65,10 +54,16 @@ $(document).on('ready', function(){
     $('.j-modal-btn').parent().removeClass('is-active');
   });
 
+  $(document).on('click', '.lang, .m-search, .nav, .d-search, .d-search .datepicker-here', function(e){
+    e.stopPropagation();
+  });
+
   // Footer menu mobile animation
   footerNav();
   inputFocus();
+
   countTest();
+  dateTest();
 
   // Chrome Smooth Scroll
   try {
@@ -149,7 +144,7 @@ function inputFocus(){
 }
 
 function countTest () {
-  var block = $('.j-cart-count');
+  var block = $('.j-people-count');
 
   block.each(function(){
     var _this = $(this);
@@ -168,5 +163,19 @@ function countTest () {
       value = parseFloat(value) - 1;
       input.val(value + ' чел');
     });
-  })
+  });
+}
+
+function dateTest() {
+  var btnDateTest = $('.j-m-date-test');
+  var btnCountTest = $('.j-m-count-test');
+  
+  btnDateTest.on('click', function() {
+    $('[data-date="from"]').addClass('is-fill').text('10.07');
+    $('[data-date="to"]').addClass('is-fill').text('19.07');
+  });
+
+  btnCountTest.on('click', function() {
+    btnCountTest.addClass('is-fill').text('4 чел');
+  });
 }

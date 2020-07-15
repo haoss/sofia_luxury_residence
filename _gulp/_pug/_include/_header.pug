@@ -11,7 +11,37 @@ header.header
 
       .header__search
         .d-search
-          p 
+          .d-search__date
+            .d-search__date-btn.j-modal-btn.j-m-date-test
+              div(data-date="from") Заезд
+              div(data-date="to") Выезд
+            .d-search__dropdown.--calendar
+              .d-search__dropdown-wrapper
+                .datepicker-here(data-range="true")
+                
+          .d-search__input
+            .d-search__input-btn.j-modal-btn.j-m-count-test Сколько гостей?
+            .d-search__dropdown
+              .d-search__dropdown-wrapper
+                .d-search__input-row.mb15
+                  div
+                    label.d-search__input-label Взрослых
+                    p.d-search__input-p Возраст: от 18 лет
+                  div
+                    .form-count.j-people-count
+                      button(type="button").btn-minus
+                      button(type="button").btn-plus
+                      input(type='text' value='2 чел')
+                .d-search__input-row
+                  div
+                    label.d-search__input-label Детей
+                    p.d-search__input-p Возраст: от 6  до 18 лет
+                  div
+                    .form-count.j-people-count
+                      button(type="button").btn-minus
+                      button(type="button").btn-plus
+                      input(type='text' value='2 чел')
+          button(type="button").d-search__btn
         .m-search
           button(type="button").m-search-btn.j-modal-btn
             span Начать поиск
@@ -20,16 +50,17 @@ header.header
             .m-search__dropdown-wrapper
               form(action="#!")
                 .m-search__group
-                  .m-search__date
-                    div Заезд
-                    div Выезд
+                  .m-search__date.j-m-date-test
+                    div(data-date="from") Заезд
+                    div(data-date="to") Выезд
                 .m-search__group
-                  .m-search__input Сколько гостей?
-
+                  .datepicker-here.m-search__datepicker(data-range="true")
+                .m-search__group
+                  .m-search__input.j-people-value.j-m-count-test Сколько гостей?
                 .m-search__group.mb20
                   label.m-search__group-label Взрослых
                   p.m-search__group-p Возраст: от 18 лет
-                  .form-count.j-cart-count
+                  .form-count.j-people-count
                     button(type="button").btn-minus
                     button(type="button").btn-plus
                     input(type='text' value='2 чел')
@@ -37,7 +68,7 @@ header.header
                 .m-search__group
                   label.m-search__group-label Детей
                   p.m-search__group-p Возраст: от 6  до 18 лет
-                  .form-count.j-cart-count
+                  .form-count.j-people-count
                     button(type="button").btn-minus
                     button(type="button").btn-plus
                     input(type='text' value='2 чел')

@@ -216,6 +216,9 @@
     &:focus {
       box-shadow: 0px 4px 15px rgba($color-black,.15);
     }
+    &.is-fill {
+      color: $primary-color;
+    }
   }
   &__date {
     display: flex;
@@ -243,6 +246,36 @@
         border-radius: 0 35px 35px 0;
         border-left: 1px solid rgba(#CCCCCC,.3);
       }
+      &.is-fill {
+        color: $primary-color;
+      }
+    }
+  }
+  &__datepicker {
+    .datepicker {
+      border: 0;
+      font-weight: 600;
+      color: #22486B;
+      font-size: rem(14px);
+    }
+    .datepicker--nav {
+      border-bottom: 0;
+    }
+    .datepicker--cell {
+      &.-range-to-, &.-range-from- {
+        // border-radius: 50%;
+      }
+      &.-selected- {
+        background: #6B92A8;
+        // box-shadow: 0 0 0 7px #6b92a8;
+        z-index: 5;
+        &.-focus- {
+          background: #6B92A8;
+        }
+      }
+      &.-in-range- {
+        background: #9FCFED;
+      }
     }
   }
   &.is-active {
@@ -264,6 +297,9 @@
         transform: translateX(-50%);
       }
     }
+  }
+  @include media-breakpoint-up(lg) {
+    display: none;
   }
 }
 
@@ -299,3 +335,4 @@
     }
   }
 }
+

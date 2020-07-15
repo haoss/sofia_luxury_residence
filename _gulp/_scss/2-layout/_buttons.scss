@@ -6,3 +6,29 @@ button {
     outline: none;
   }
 }
+
+.btn {
+  text-decoration: none;
+  color: $color-white;
+  background: #AD009F linear-gradient(270deg, #AD009F 0%, #EA1FD9 100%);
+  box-shadow: 0px 6px 15px rgba(233, 31, 216, 0.7);
+  border-radius: 100px;
+  text-align: center;
+  display: inline-block;
+  height: 50px;
+  font-weight: 900;
+  font-size: rem(16px);
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  min-width: 150px;
+  padding: 0 20px;
+  transition: all 0.35s;
+  &:hover {
+    background: #EA1FD9;
+    box-shadow: 0px 0 0 rgba(233, 31, 216, 0.7);
+  }
+  &--block {
+    width: 100%;
+  }
+}

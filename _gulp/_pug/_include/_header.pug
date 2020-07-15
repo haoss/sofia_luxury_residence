@@ -9,6 +9,39 @@ header.header
         a(href="tel:") +357 
           b 99 855 277
 
+      .header__search
+        .m-search
+          button(type="button").m-search-btn.j-modal-btn
+            span Начать поиск
+          .m-search__dropdown
+            .m-search__dropdown-head
+            .m-search__dropdown-wrapper
+              form(action="#!")
+                .m-search__group
+                  .m-search__date
+                    button(type="button") Заезд
+                    button(type="button") Выезд
+                .m-search__group
+                  input(type="m-search-input" placeholder="Сколько гостей?").m-search__input
+
+                .m-search__group.mb20
+                  label.m-search__group-label Взрослых
+                  p.m-search__group-p Возраст: от 18 лет
+                  .form-count.j-cart-count
+                    button(type="button").--minus
+                    button(type="button").--plus
+                    input(type='text' value='2 чел')
+
+                .m-search__group
+                  label.m-search__group-label Детей
+                  p.m-search__group-p Возраст: от 6  до 18 лет
+                  .form-count.j-cart-count
+                    button(type="button").--minus
+                    button(type="button").--plus
+                    input(type='text' value='2 чел')
+
+                button(type="button").btn.btn--block Проверить цены
+
       nav.header__menu
         ul
           li: a(href="#!") НОМЕРА
@@ -17,7 +50,7 @@ header.header
           li: a(href="#!") КОНТАКТЫ
 
       nav.nav.header__nav(role="navigation")
-        button(type="button")#menu-btn.menu-btn
+        button(type="button").menu-btn.j-modal-btn
           span Меню
         .nav__dropdown
           .nav__dropdown-head
@@ -39,10 +72,10 @@ header.header
                   b 99 855 277
       
       .lang.header__lang
-        .lang__head RU
+        .lang__head.j-modal-btn RU
         ul.lang__ul
           li: a(href="#!") En
-          li: a(href="#!") fr
-          li: a(href="#!") RU
+          li: a(href="#!") Fr
+          li: a(href="#!") Ru
 
 .header-holder

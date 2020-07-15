@@ -23,6 +23,46 @@
                     <div class="header__wrapper">
                         <div class="logo header__logo"><img src="./images/log_alt.png" alt=""></div>
                         <div class="header__phones"><a href="tel:">+357 <b>99 855 277</b></a></div>
+                        <div class="header__search">
+                            <div class="m-search">
+                                <button class="m-search-btn j-modal-btn" type="button"><span>Начать поиск</span></button>
+                                <div class="m-search__dropdown">
+                                    <div class="m-search__dropdown-head"></div>
+                                    <div class="m-search__dropdown-wrapper">
+                                        <form action="#!">
+                                            <div class="m-search__group">
+                                                <div class="m-search__date">
+                                                    <button type="button">Заезд</button>
+                                                    <button type="button">Выезд</button>
+                                                </div>
+                                            </div>
+                                            <div class="m-search__group">
+                                                <input class="m-search__input" type="m-search-input" placeholder="Сколько гостей?">
+                                            </div>
+                                            <div class="m-search__group mb20">
+                                                <label class="m-search__group-label">Взрослых</label>
+                                                <p class="m-search__group-p">Возраст: от 18 лет</p>
+                                                <div class="form-count j-cart-count">
+                                                    <button class="--minus" type="button"></button>
+                                                    <button class="--plus" type="button"></button>
+                                                    <input type="text" value="2 чел">
+                                                </div>
+                                            </div>
+                                            <div class="m-search__group">
+                                                <label class="m-search__group-label">Детей</label>
+                                                <p class="m-search__group-p">Возраст: от 6  до 18 лет</p>
+                                                <div class="form-count j-cart-count">
+                                                    <button class="--minus" type="button"></button>
+                                                    <button class="--plus" type="button"></button>
+                                                    <input type="text" value="2 чел">
+                                                </div>
+                                            </div>
+                                            <button class="btn btn--block" type="button">Проверить цены</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <nav class="header__menu">
                             <ul>
                                 <li><a href="#!">НОМЕРА</a></li>
@@ -32,7 +72,7 @@
                             </ul>
                         </nav>
                         <nav class="nav header__nav" role="navigation">
-                            <button class="menu-btn" type="button" id="menu-btn"><span>Меню</span></button>
+                            <button class="menu-btn j-modal-btn" type="button"><span>Меню</span></button>
                             <div class="nav__dropdown">
                                 <div class="nav__dropdown-head"></div>
                                 <div class="nav__dropdown-wrapper">
@@ -55,11 +95,11 @@
                             </div>
                         </nav>
                         <div class="lang header__lang">
-                            <div class="lang__head">RU</div>
+                            <div class="lang__head j-modal-btn">RU</div>
                             <ul class="lang__ul">
                                 <li><a href="#!">En</a></li>
-                                <li><a href="#!">fr</a></li>
-                                <li><a href="#!">RU</a></li>
+                                <li><a href="#!">Fr</a></li>
+                                <li><a href="#!">Ru</a></li>
                             </ul>
                         </div>
                     </div>

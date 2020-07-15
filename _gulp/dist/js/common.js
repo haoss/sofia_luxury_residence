@@ -39,55 +39,36 @@ $(document).on('ready', function(){
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
 
-  // Language block enabled
+  // Stop propagation
   $('.lang').on('click', function(e) {
     e.stopPropagation();
   });
-  $('.lang__head').on('click', function() {
-    var block = $(this).parent();
-    if (block.hasClass('is-active')) {
-      block.removeClass('is-active')
-    } else {
-      block.addClass('is-active')
-    }
-    $('.nav').removeClass('is-active');
+  $('.m-search').on('click', function(e) {
+    e.stopPropagation();
   });
-
-  // Mobile menu enabled
   $('.nav').on('click', function(e) {
     e.stopPropagation();
   });
-  $('#menu-btn').on('click', function(e) {
-    e.stopPropagation();
 
+  $('.j-modal-btn').on('click', function(e) {
     var block = $(this).parent();
+    
     if (block.hasClass('is-active')) {
       block.removeClass('is-active');
     } else {
+      $('.j-modal-btn').parent().removeClass('is-active');
       block.addClass('is-active');
     }
-    $('.lang').removeClass('is-active');
   });
 
-  $(document).on('click', function(){
-
-    // Language disabled
-    var lang = $('.lang');
-    if (lang.hasClass('is-active')) {
-      lang.removeClass('is-active')
-    }
-
-    // Mobile menu disabled
-    var nav = $('.nav');
-    if (nav.hasClass('is-active')) {
-      nav.removeClass('is-active')
-    }
-
-
+  $(document).on('click', function(e){
+    $('.j-modal-btn').parent().removeClass('is-active');
   });
 
   // Footer menu mobile animation
   footerNav();
+  inputFocus();
+  countTest();
 
   // Chrome Smooth Scroll
   try {
@@ -129,6 +110,62 @@ function footerNav() {
       } else if (width >= 992) {
         return false
       }
+    });
+  })
+}
+
+function inputFocus(){
+  var jinput = $(".css-input");
+
+  jinput.each(function(){
+    var _this = $(this);
+    var val = _this.val();
+    var field = _this.parents('.j-field-text');
+
+    if (val.length > 0 && _this.is('input') || val.length > 0 && _this.is('textarea')) {
+      field.addClass("active-full");
+    } else {
+      field.removeClass("active-full");
+    }
+
+    // input on focus
+    _this.focus(function () {
+      field.addClass("active");
+    }).blur(function () {
+      field.removeClass("active");
+    })
+
+    _this.on('change', function () {
+      var val = _this.val();
+
+      if (val == '') {
+        field.removeClass("active-full");
+      } else {
+        field.addClass("active-full");
+      }
+    });
+  })
+}
+
+function countTest () {
+  var block = $('.j-cart-count');
+
+  block.each(function(){
+    var _this = $(this);
+    var plus = _this.find('.--plus');
+    var minus = _this.find('.--minus');
+    var input = _this.find('input');
+    var value = input.val();
+
+    plus.on('click', function(){
+      value = parseFloat(value) + 1;
+      input.val(value + ' чел');
+    });
+  
+    minus.on('click', function(){
+      if (value <= 1) return;
+      value = parseFloat(value) - 1;
+      input.val(value + ' чел');
     });
   })
 }

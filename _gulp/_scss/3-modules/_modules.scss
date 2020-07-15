@@ -378,3 +378,56 @@
     }
   }
 }
+
+.form-count {
+  width: 174px;
+  overflow: hidden;
+  position: relative;
+  input {
+    height: 40px;
+    width: 100%;
+    padding: 0 40px;
+    text-align: center;
+    color: $primary-color;
+    background: $color-white;
+    border: 0;
+    border-radius: 35px;
+    font-weight: bold;
+    font-size: rem(16px);
+    font-family: $font-source;
+  }
+  button {
+    display: block;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    z-index: 5;
+    background: $color-white;
+    text-decoration: none;
+    color: $primary-color;
+    text-align: center;
+    font-size: rem(9px);
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.35s;
+    border-radius: 35px;
+    &::before {
+      font-family: $font-icomoon;
+    }
+    &:hover {
+      background: #ccc;
+    }
+  }
+  .--minus {
+    &::before {
+      content: '\e920';
+    }
+  }
+  .--plus {
+    right: 0;
+    &::before {
+      content: '\e91f';
+    }
+  }
+}

@@ -89,6 +89,7 @@ $(window).on('resize', function() {
   
   if (width >= 992) {
     $('.j-footer-nav').removeClass('is-active');
+    $('.m-search').removeClass('is-active');
     $('.footer__nav').attr('style','');
   }
 });
@@ -152,8 +153,8 @@ function countTest () {
 
   block.each(function(){
     var _this = $(this);
-    var plus = _this.find('.--plus');
-    var minus = _this.find('.--minus');
+    var plus = _this.find('.btn-plus');
+    var minus = _this.find('.btn-minus');
     var input = _this.find('input');
     var value = input.val();
 

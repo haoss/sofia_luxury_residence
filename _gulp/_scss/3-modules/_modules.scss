@@ -419,12 +419,12 @@
       background: #ccc;
     }
   }
-  .--minus {
+  .btn-minus {
     &::before {
       content: '\e920';
     }
   }
-  .--plus {
+  .btn-plus {
     right: 0;
     &::before {
       content: '\e91f';

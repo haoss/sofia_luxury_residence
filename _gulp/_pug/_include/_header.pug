@@ -10,6 +10,8 @@ header.header
           b 99 855 277
 
       .header__search
+        .d-search
+          p 
         .m-search
           button(type="button").m-search-btn.j-modal-btn
             span Начать поиск
@@ -19,25 +21,25 @@ header.header
               form(action="#!")
                 .m-search__group
                   .m-search__date
-                    button(type="button") Заезд
-                    button(type="button") Выезд
+                    div Заезд
+                    div Выезд
                 .m-search__group
-                  input(type="m-search-input" placeholder="Сколько гостей?").m-search__input
+                  .m-search__input Сколько гостей?
 
                 .m-search__group.mb20
                   label.m-search__group-label Взрослых
                   p.m-search__group-p Возраст: от 18 лет
                   .form-count.j-cart-count
-                    button(type="button").--minus
-                    button(type="button").--plus
+                    button(type="button").btn-minus
+                    button(type="button").btn-plus
                     input(type='text' value='2 чел')
 
                 .m-search__group
                   label.m-search__group-label Детей
                   p.m-search__group-p Возраст: от 6  до 18 лет
                   .form-count.j-cart-count
-                    button(type="button").--minus
-                    button(type="button").--plus
+                    button(type="button").btn-minus
+                    button(type="button").btn-plus
                     input(type='text' value='2 чел')
 
                 button(type="button").btn.btn--block Проверить цены

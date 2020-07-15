@@ -16,6 +16,31 @@
   }
   &__menu {
     display: none;
+    font-size: 0;
+    font-weight: 900;
+    ul {
+      white-space: nowrap;
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        display: inline-block;
+        vertical-align: middle;
+        &>a, &>span {
+          font-size: rem(16px);
+          text-decoration: none;
+          display: block;
+          height: 40px;
+          line-height: 40px;
+          padding: 0 8px;
+        }
+        &.active {
+          &>a, &>span {
+            color: $add-color-pink;
+          }
+        }
+      }
+    }
   }
   &__phones {
     display: none;
@@ -48,6 +73,12 @@
     }
   }
   @include media-breakpoint-up(md) {
+    &__logo {
+      margin-right: 15px;
+    }
+    &__lang {
+      margin-left: 32px;
+    }
     &__phones {
       flex-grow: 0;
       a {
@@ -63,6 +94,43 @@
     }
     &__nav {
       margin-left: 0;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &__search {
+      flex-grow: 0;
+    }
+    &__phones {
+      margin-right: 48px;
+    }
+    &__menu {
+      display: block;
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &__logo {
+      margin-right: 30px;
+    }
+    &__phones {
+      margin-right: 43px;
+    }
+    &__lang {
+      margin-left: 70px;
+    }
+    &__nav {
+      margin-left: 70px;
+    }
+    &__menu {
+      text-align: right;
+      ul {
+        li {
+          &>a, &>span {
+            padding: 0 15px;
+          }
+        }
+      }
     }
   }
 }
@@ -325,4 +393,31 @@
   @include media-breakpoint-up(lg) {
     display: flex;
   }
+  @include media-breakpoint-up(xl) {
+    &__dropdown, &__dropdown.--calendar {
+      left: 0;
+      margin-left: 0;
+    }
+  }
+  @media (min-width: 1200px) and (max-width: 1559px) {
+    &__date {
+      font-size: rem(12px);
+      &-btn {
+        &>div {
+          width: 69px;
+        }
+      }
+    }
+    &__input {
+      &-btn {
+        font-size: rem(12px);
+        width: 120px;
+      }
+    }
+    &__btn {
+      width: 44px;
+      padding-left: 14px;
+    }
+  }
+  
 }

@@ -334,5 +334,10 @@
       content: '\e925';
     }
   }
+  @include media-breakpoint-up(lg) {
+    &::after {
+      margin-left: 16px;
+    }
+  }
 }
 

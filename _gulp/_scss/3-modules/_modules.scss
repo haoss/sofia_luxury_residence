@@ -104,7 +104,9 @@
       padding-left: 45px;
     }
     &__head {
-      margin-left: -45px;
+      &.--outside {
+        margin-left: -45px;
+      }
     }
     &__thumb {
       margin-bottom: 30px;
@@ -167,11 +169,13 @@
       padding-left: 52px;
     }
     &__head {
-      margin-left: -52px;
       h1, .h1, .h2, h2 {
         &::before {
           left: 7px;
         }
+      }
+      &.--outside {
+        margin-left: -52px;
       }
     }
   }
@@ -206,7 +210,6 @@
       padding-left: 90px;
     }
     &__head {
-      margin-left: -90px;
       h1, .h1, .h2, h2 {
         padding-left: 90px;
         &::before {
@@ -219,6 +222,9 @@
         &::before {
           top: 20px;
         }
+      }
+      &.--outside {
+        margin-left: -90px;
       }
     }
   }
@@ -416,7 +422,8 @@
       font-family: $font-icomoon;
     }
     &:hover {
-      background: #ccc;
+      color: $add-color-blue;
+      border-color: $add-color-blue;
     }
   }
   .btn-minus {
@@ -428,6 +435,124 @@
     right: 0;
     &::before {
       content: '\e91f';
+    }
+  }
+}
+
+.gallery-row {
+  &__block {
+    margin-right: 30px;
+  }
+  &__head {
+    padding-right: 60px;
+  }
+}
+
+.slick {
+  &-slide {
+    &:focus {
+      outline: none;
+    }
+  }
+  &-arrow {
+    opacity: 1;
+    background: $color-white;
+    transition: all 0.35s;
+    &::before {
+      font-family: $font-icomoon;
+      font-size: 14px;
+      opacity: 1;
+      color: $color-white;
+      transition: all 0.35s;
+    }
+    &:hover {
+      background: $color-white;
+      &::before {
+        color: $primary-color;
+      }
+    }
+    .j-gallery-row & {
+      top: -55px;
+      transform: translateY(0);
+    }
+  }
+  &-prev, &-next {
+    width: 32px;
+    height: 32px;
+    border: 2px solid $color-white;
+    z-index: 10;
+  }
+  &-prev {
+    left: 20px;
+    &::before {
+      content: '\e92c';
+    }
+    .j-gallery-row & {
+      width: 22px;
+      height: 22px;
+      border-color: $add-color-blue;
+      border-width: 1px;
+      background: $add-color-blue;
+      left: auto;
+      right: 27px;
+      top: -42px;
+      &::before {
+        color: $color-white;
+        font-size: 9px;
+      }
+    }
+  }
+  &-next {
+    right: 20px;
+    z-index: 12;
+    &::before {
+      content: '\e92d';
+    }
+    .j-gallery-row & {
+      border-color: $add-color-blue;
+      right: 0;
+      &::before {
+        color: $add-color-blue;
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &-prev, &-next {
+      width: 42px;
+      height: 42px;
+    }
+    &-prev {
+      .j-gallery-row & {
+        width: 29px;
+        height: 29px;
+        right: 34px;
+        top: -45px;
+        &::before {
+          font-size: 12px;
+        }
+        &:hover {
+          background: $color-white;
+          border-color: $add-color-blue;
+          &::before {
+            color: $add-color-blue;
+          }
+        }
+      }
+    }
+    &-next {
+      .j-gallery-row & {
+        top: -65px;
+        &::before {
+          font-size: 17px;
+        }
+        &:hover {
+          background: $add-color-blue;
+          border-color: $add-color-blue;
+          &::before {
+            color: $color-white;
+          }
+        }
+      }
     }
   }
 }

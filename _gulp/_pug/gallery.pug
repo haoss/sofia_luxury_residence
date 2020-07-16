@@ -1,0 +1,146 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Галерея' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Галерея' + ' - SOFIA' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    .base
+      // Preloader
+      include ./_include/_preloader
+
+      include ./_include/_header
+
+      // Top row
+      .top-row
+        .top-row__wrapper
+          img(src="./tmp/img-gallery.png", alt="")
+        .top-row__title
+          .container
+            h1 Галерея 
+
+      // Content
+      .content
+        .container
+
+          .gallery-row
+            .gallery-row__head
+              .content__head
+                .h1.--xs-fs26 Территория апартаментов
+            .gallery-row__wrapper
+              .j-gallery-row
+                .gallery-row__block
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-1.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-1.png", alt="")
+                .gallery-row__block
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-2.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-2.png", alt="")
+                .gallery-row__block
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-3.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-3.png", alt="")
+                .gallery-row__block
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-4.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-4.png", alt="")
+                .gallery-row__block
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-5.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-5.png", alt="")
+                .gallery-row__block
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-6.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-6.png", alt="")
+                .gallery-row__block
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-1.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-1.png", alt="")
+                .gallery-row__block
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-2.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-2.png", alt="")
+
+          .gallery-row
+            .gallery-row__head
+              .content__head
+                .h1.--xs-fs26 Апартаменты
+            .gallery-row__wrapper
+              .j-gallery-row
+                .col-12
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-3.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-3.png", alt="")
+                .col-12
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-4.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-4.png", alt="")
+                .col-12
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-5.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-5.png", alt="")
+                .col-12
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-6.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-6.png", alt="")
+                .col-12
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-1.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-1.png", alt="")
+                .col-12
+                  .content__thumb
+                    a(href="./tmp/gallery-thumb-2.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-2.png", alt="")
+
+          .gallery-row
+            .gallery-row__head
+              .content__head
+                .h1.--xs-fs26 Видео
+
+            .gallery-row__wrapper
+              .j-gallery-row
+                .col-12
+                  .content__thumb.--video
+                    a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                      img(src="./tmp/gallery-thumb-5.png", alt="")
+                .col-12
+                  .content__thumb.--video
+                    a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                      img(src="./tmp/gallery-thumb-6.png", alt="")
+                .col-12
+                  .content__thumb.--video
+                    a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                      img(src="./tmp/gallery-thumb-1.png", alt="")
+                .col-12
+                  .content__thumb.--video
+                    a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                      img(src="./tmp/gallery-thumb-2.png", alt="")
+                .col-12
+                  .content__thumb.--video
+                    a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                      img(src="./tmp/gallery-thumb-3.png", alt="")
+                .col-12
+                  .content__thumb.--video
+                    a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                      img(src="./tmp/gallery-thumb-4.png", alt="")
+                .col-12
+                  .content__thumb.--video
+                    a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                      img(src="./tmp/gallery-thumb-5.png", alt="")
+                .col-12
+                  .content__thumb.--video
+                    a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                      img(src="./tmp/gallery-thumb-6.png", alt="")
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

@@ -65,6 +65,33 @@ $(document).on('ready', function(){
   countTest();
   dateTest();
 
+  $('.j-gallery-row').slick({
+    mobileFirst: true,
+    infinite: true,
+    dots: false,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: false,
+    centerPadding: 0,
+    rows: 2,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          rows: 1,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: false,
+        }
+      }
+    ]
+  });
+
+  $('[data-fancybox="gallery"]').fancybox({
+    backFocus: false
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();

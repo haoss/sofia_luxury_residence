@@ -44,6 +44,11 @@ body {
   font-weight: 600;
   margin-bottom: 20px;
   line-height: 1.15;
+  @media (min-width: 0px) and (max-width: 479px) {
+    &.--xs-fs26 {
+      font-size: 26px;
+    }
+  }
   @include media-breakpoint-up(xxl) {
     font-size: rem(40px);
   }

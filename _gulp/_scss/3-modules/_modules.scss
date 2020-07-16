@@ -494,7 +494,7 @@
       border-width: 1px;
       background: $add-color-blue;
       left: auto;
-      right: 27px;
+      right: 42px;
       top: -42px;
       &::before {
         color: $color-white;
@@ -510,7 +510,7 @@
     }
     .j-gallery-row & {
       border-color: $add-color-blue;
-      right: 0;
+      right: 15px;
       &::before {
         color: $add-color-blue;
       }
@@ -525,7 +525,7 @@
       .j-gallery-row & {
         width: 29px;
         height: 29px;
-        right: 34px;
+        right: 49px;
         top: -45px;
         &::before {
           font-size: 12px;

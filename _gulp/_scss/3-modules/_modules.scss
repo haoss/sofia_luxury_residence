@@ -265,6 +265,8 @@
       letter-spacing: 0;
       margin-bottom: 0;
       font-weight: 900;
+      overflow: hidden;
+      text-overflow: ellipsis;
       @include media-breakpoint-up(md) {
         font-size: rem(100px);
       }

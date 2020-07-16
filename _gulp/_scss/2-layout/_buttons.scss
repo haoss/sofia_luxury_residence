@@ -31,4 +31,10 @@ button {
   &--block {
     width: 100%;
   }
+  &[href] {
+    line-height: 49px;
+    &:hover {
+      color: $color-white;
+    }
+  }
 }

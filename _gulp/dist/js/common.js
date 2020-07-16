@@ -55,6 +55,7 @@ $(document).on('ready', function(){
 
   $(document).on('click', function(e){
     $('.j-modal-btn').parent().removeClass('is-active');
+    $('body').removeClass('is-fixed');
   });
 
   $(document).on('click', '.lang, .m-search, .nav, .d-search, .d-search .datepicker-here', function(e){

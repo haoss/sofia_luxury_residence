@@ -1,0 +1,115 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Контакты' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Контакты' + ' - SOFIA' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    .base
+      // Preloader
+      include ./_include/_preloader
+
+      include ./_include/_header
+
+      // Top row
+      .top-row
+        .top-row__wrapper
+          img(src="./tmp/img-contacts.png", alt="")
+        .top-row__title
+          .container
+            h1 Контакты 
+
+      // Content
+      .content
+        .container
+          
+          .row
+            .col-12.col-xl-6
+              .content__inside
+                .content__head.--outside
+                  .h1 Комплекс Апартаментов SOFIA Luxury Residence
+                p Комплекс Апартаментов SOFIA Luxury Residence расположен в тихом районе Като Пафос города Пафос, недалеко от средневекового замка Пафоса и церкви Агия Соломони.
+                p Апартаменты находятся в непосредственной близости от Археологического парка и в 700 метрах от теплого средиземного моря. На закрытой охраняемой территории комплекса к услугам для гостей располагается сезонный открытый бассейн с подогревом и гидромассажем, в котором вы можете позволить себе наслаждаться приятным отдыхом круглый год.
+                p Климат в апартаментах поддерживается современными VRV системами, а в зимние вечера уют обеспечат центральный подогрев полов и современная система «Умный Дом». Бесплатный паркинг оснащен пунктом для зарядки электромобилей. Во всех апартаментах бесплатный Wi-Fi.
+
+                .content__head.--outside
+                  h2 Информация
+
+                p 
+                  strong Время работы:
+                  br
+                  | &nbsp; &nbsp; &nbsp; С 06:00 до 22:00 без выходных
+                  br
+                  strong Контакты:
+                  br
+                  | &nbsp; &nbsp; &nbsp; 
+                  a(href="#!") +1 800 987 654 321
+                  br
+                  strong Координаты:
+                  br
+                  | &nbsp; &nbsp; &nbsp; Ayiou Ayapitikou 31, (34.761473, 32.415642) Пафос (Кипр)
+                  br
+                  strong Аэропорт Пафос
+                  br
+                  | &nbsp; &nbsp; &nbsp;  20 минут на машине.
+                  br
+                  strong Аэропорт Ларнака
+                  br
+                  | &nbsp; &nbsp; &nbsp;  1 час 30 минут на машине.
+
+                p По предварительному заказу мы организовываем встречу и трансфер в аэропорт. Стоимость трансфера составляет от 30 евро.
+                p Аренда автомобиля возможна у нашего Партнера - компании Camel Car Hire Ltd.
+            
+            .col-12.col-xl-6
+              p 1
+
+          .gallery-row
+            .gallery-row__head
+              .content__head
+                .h1.--xs-fs26 Лучшие виды
+            .gallery-row__wrapper
+              .j-gallery-list.row
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-1.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-1.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-2.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-2.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-3.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-3.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-4.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-4.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-5.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-5.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-6.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-6.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-1.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-1.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-2.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-2.png", alt="")
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

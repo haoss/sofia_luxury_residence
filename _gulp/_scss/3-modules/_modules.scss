@@ -393,6 +393,9 @@
     @include media-breakpoint-up(md) {
       margin-left: -15px;
     }
+    @include media-breakpoint-up(xxl) {
+      margin-left: 0px;
+    }
   }
 }
 

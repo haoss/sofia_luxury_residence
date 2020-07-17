@@ -76,6 +76,36 @@ $(document).on('ready', function(){
     ]
   });
 
+  // Gallery list carousel
+  $('.j-gallery-list').slick({
+    mobileFirst: true,
+    infinite: true,
+    dots: false,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: false,
+    centerPadding: 0,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: false,
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: false,
+        }
+      }
+    ]
+  });
+
   // Gallery fix
   $('[data-fancybox="gallery"]').fancybox({
     backFocus: false

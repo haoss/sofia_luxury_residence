@@ -6,6 +6,11 @@
   left: 0;
   right: 0;
   z-index: 100;
+  box-shadow: 0 0 0px rgba($color-black,0.3);
+  transition: all 0.35s;
+  &.is-scroll {
+    box-shadow: 0 0 10px rgba($color-black,0.3);
+  }
   &-holder {
     height: 100px;
   }

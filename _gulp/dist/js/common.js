@@ -99,7 +99,11 @@ $(document).on('ready', function(){
 
 $(window).on('load', function() { });
 
-$(window).on('scroll', function() { });
+$(window).on('scroll', function() {
+  // Header scroll
+  headerScroll();
+});
+
 $(window).on('resize', function() {
   var width = $(window).width();
   

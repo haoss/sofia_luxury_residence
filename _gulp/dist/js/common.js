@@ -3,72 +3,26 @@
 // Document ready
 $(document).on('ready', function(){
 
-  // Magnific popup gallery
-  $('.gallery').each(function() {
-    $(this).magnificPopup({
-      delegate: '.gallery-item',
-      type: 'image',
-      gallery:{
-        enabled:true
-      }
-    });
-  });
-
-  // Magnific popup one image
-  $('.image-popup').magnificPopup({
-    type: 'image',
-    closeOnContentClick: true,
-    mainClass: 'mfp-img-mobile',
-    image: {
-      verticalFit: true
-    }
-  });
-
-  // Magnific popup video
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-    fixedContentPos: false
-  });
-
+  // Open custom modal 
   $('.open-popup-link').magnificPopup({
     type: 'inline',
-    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    midClick: true
   });
 
-  $('.j-modal-btn').on('click', function(e) {
-    var block = $(this).parent();
-    var body = $('body');
-    
-    if (block.hasClass('is-active')) {
-      block.removeClass('is-active');
-      body.removeClass('is-fixed');
-    } else {
-      $('.j-modal-btn').parent().removeClass('is-active');
-      block.addClass('is-active');
-      body.addClass('is-fixed');
-    }
-  });
-
-  $(document).on('click', function(e){
-    $('.j-modal-btn').parent().removeClass('is-active');
-    $('body').removeClass('is-fixed');
-  });
-
-  $(document).on('click', '.lang, .m-search, .nav, .d-search, .d-search .datepicker-here', function(e){
-    e.stopPropagation();
-  });
-
+  // Modal open
+  modal();
   // Footer menu mobile animation
   footerNav();
+  // Input focus animate
   inputFocus();
+  // Header scroll
+  headerScroll();
 
+  // Test function
   countTest();
   dateTest();
 
+  // Gallery list carousel
   $('.j-gallery-row').slick({
     mobileFirst: true,
     infinite: true,
@@ -92,6 +46,7 @@ $(document).on('ready', function(){
     ]
   });
 
+  // Services list carousel
   $('.j-services-row').slick({
     mobileFirst: true,
     infinite: true,
@@ -121,10 +76,12 @@ $(document).on('ready', function(){
     ]
   });
 
+  // Gallery fix
   $('[data-fancybox="gallery"]').fancybox({
     backFocus: false
   });
 
+  // Datepicker fix
   $('.datepicker-input').datepicker({
     autoClose: true
   });
@@ -242,5 +199,44 @@ function dateTest() {
 
   btnCountTest.on('click', function() {
     btnCountTest.addClass('is-fill').text('4 чел');
+  });
+}
+
+function headerScroll() {
+  var header = $('.header');
+  var width = $(window).width();
+
+  if ($(window).scrollTop() > header.height()) {
+    header.addClass('is-scroll');
+  } else {
+    header.removeClass('is-scroll');
+  }
+}
+
+function modal() {
+  // Modal open
+  $('.j-modal-btn').on('click', function(e) {
+    var block = $(this).parent();
+    var body = $('body');
+    
+    if (block.hasClass('is-active')) {
+      block.removeClass('is-active');
+      body.removeClass('is-fixed');
+    } else {
+      $('.j-modal-btn').parent().removeClass('is-active');
+      block.addClass('is-active');
+      body.addClass('is-fixed');
+    }
+  });
+
+  // Click cancel
+  $(document).on('click', function(e){
+    $('.j-modal-btn').parent().removeClass('is-active');
+    $('body').removeClass('is-fixed');
+  });
+
+  // Blocks click stoped fix
+  $(document).on('click', '.lang, .m-search, .nav, .d-search, .d-search .datepicker-here', function(e){
+    e.stopPropagation();
   });
 }

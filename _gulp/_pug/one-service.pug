@@ -26,9 +26,10 @@ html(lang="ru")
       // Content
       .content
         .container
-          .content__inside
-            .row
-              .col-12.col-md-6
+          
+          .row
+            .col-12.col-xl-6
+              .content__inside
                 .content__head.--outside
                   .h1 Аренда автомобиля
                 p Прекрасная опция для пребывания на острове Кипр - арендовать автомобиль на любой срок! Сотрудники компании Компания Camel Car Rental подберут для вас оптимальный вариант. Это наш надежный партнер, который предоставляет отличный сервис.
@@ -56,46 +57,177 @@ html(lang="ru")
                     a(href="mailto:") reservation@sofiaresidence.ru
 
                 p Сообщите нам о вашем решении, и наши партнеры свяжутся с вами для бронирования и доставки автомобиля.
+            
+            .col-12.col-xl-6
               
-              .col-12.col-md-6
-                
-                // Rent table
-                .rent__table
-                  .rent__table-head
-                    .div1 Класс 
-                    .div2 Марка 
-                    .div3 Стоимость аренды в сутки, $ 
-                  .rent__table-body
-                    .rent__table-row
-                      .div1
-                        .rent__table-class A
-                      .div2
-                        img(src="./tmp/rent-img-auto-1.png", alt="").rent__table-img
-                      .div3
-                        .rent__table-title Mazda Demio 
-                          br
-                          | или подобный класc
-                    .rent__table-row.--price
-                      .div1
-                        .rent__table-price
-                          strong 50
-                          br
-                          | от 1 суток
-                      .div2
-                        .rent__table-price
-                          strong 50
-                          br
-                          | от 1 суток
-                      .div3
-                        .rent__table-price
-                          strong 25
-                          br
-                          | от 14 суток
-                      .div4
-                        .rent__table-price
-                          strong 20
-                          br
-                          | от 30 суток
+              // Rent table
+              .rent__table
+                .rent__table-head
+                  .div1 Класс 
+                  .div2 Марка 
+                  .div3 Стоимость аренды в сутки, $ 
+                .rent__table-body
+                  .rent__table-row.--top
+                    .div1
+                      .rent__table-class A
+                    .div2
+                      img(src="./tmp/rent-img-auto-1.png", alt="").rent__table-img
+                    .div3
+                      .rent__table-title
+                        strong Mazda Demio 
+                        | или подобный класc
+                  .rent__table-row.--bottom
+                    .div1
+                      .rent__table-price
+                        strong 50
+                        | от 1 суток
+                    .div2
+                      .rent__table-price
+                        strong 40
+                        | от 3 суток
+                    .div3
+                      .rent__table-price
+                        strong 25
+                        | от 14 суток
+                    .div4
+                      .rent__table-price
+                        strong 20
+                        | от 30 суток
+                .rent__table-body
+                  .rent__table-row.--top
+                    .div1
+                      .rent__table-class B
+                    .div2
+                      img(src="./tmp/rent-img-auto-2.png", alt="").rent__table-img
+                    .div3
+                      .rent__table-title
+                        strong Toyota Vitz 
+                        | или подобный класc
+                  .rent__table-row.--bottom
+                    .div1
+                      .rent__table-price
+                        strong 55
+                        | от 1 суток
+                    .div2
+                      .rent__table-price
+                        strong 40
+                        | от 3 суток
+                    .div3
+                      .rent__table-price
+                        strong 25
+                        | от 14 суток
+                    .div4
+                      .rent__table-price
+                        strong 20
+                        | от 30 суток
+                .rent__table-body
+                  .rent__table-row.--top
+                    .div1
+                      .rent__table-class C
+                    .div2
+                      img(src="./tmp/rent-img-auto-3.png", alt="").rent__table-img
+                    .div3
+                      .rent__table-title
+                        strong VW Polo 
+                        | или подобный класc
+                  .rent__table-row.--bottom
+                    .div1
+                      .rent__table-price
+                        strong 60
+                        | от 1 суток
+                    .div2
+                      .rent__table-price
+                        strong 40
+                        | от 3 суток
+                    .div3
+                      .rent__table-price
+                        strong 25
+                        | от 14 суток
+                    .div4
+                      .rent__table-price
+                        strong 20
+                        | от 30 суток
+                .rent__table-body
+                  .rent__table-row.--top
+                    .div1
+                      .rent__table-class D
+                    .div2
+                      img(src="./tmp/rent-img-auto-4.png", alt="").rent__table-img
+                    .div3
+                      .rent__table-title
+                        strong Nissan Juke  
+                        | или подобный класc
+                  .rent__table-row.--bottom
+                    .div1
+                      .rent__table-price
+                        strong 70
+                        | от 1 суток
+                    .div2
+                      .rent__table-price
+                        strong 45
+                        | от 3 суток
+                    .div3
+                      .rent__table-price
+                        strong 35
+                        | от 14 суток
+                    .div4
+                      .rent__table-price
+                        strong 25
+                        | от 30 суток
+                .rent__table-body
+                  .rent__table-row.--top
+                    .div1
+                      .rent__table-class E
+                    .div2
+                      img(src="./tmp/rent-img-auto-5.png", alt="").rent__table-img
+                    .div3
+                      .rent__table-title
+                        strong Nissan Qashqai 
+                        | или подобный класc
+                  .rent__table-row.--bottom
+                    .div1
+                      .rent__table-price
+                        strong 80
+                        | от 1 суток
+                    .div2
+                      .rent__table-price
+                        strong 45
+                        | от 3 суток
+                    .div3
+                      .rent__table-price
+                        strong 35
+                        | от 14 суток
+                    .div4
+                      .rent__table-price
+                        strong 25
+                        | от 30 суток
+                .rent__table-body
+                  .rent__table-row.--top
+                    .div1
+                      .rent__table-class F
+                    .div2
+                      img(src="./tmp/rent-img-auto-6.png", alt="").rent__table-img
+                    .div3
+                      .rent__table-title
+                        strong Nissan NV200  
+                        | или подобный класc
+                  .rent__table-row.--bottom
+                    .div1
+                      .rent__table-price
+                        strong 90
+                        | от 1 суток
+                    .div2
+                      .rent__table-price
+                        strong 45
+                        | от 3 суток
+                    .div3
+                      .rent__table-price
+                        strong 40
+                        | от 14 суток
+                    .div4
+                      .rent__table-price
+                        strong 30
+                        | от 30 суток
 
           // One service form
           .services-form

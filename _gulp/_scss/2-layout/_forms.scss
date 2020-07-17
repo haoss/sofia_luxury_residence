@@ -31,8 +31,8 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 }
 
 .form-group {
-  margin-bottom: 18px;
-  @media only screen and (max-width: 479px) {
+  margin-bottom: 10px;
+  @include media-breakpoint-up(md) {
     margin-bottom: 15px;
   }
 }
@@ -94,12 +94,14 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 }
 
 legend {
-  font-size: rem(16px);
+  font-size: rem(22px);
   display: block;
   border: 0;
-  line-height: 21px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: $primary-color;
+  font-weight: bold;
+  line-height: 26px;
+  color: #22486B;
 }
 
 .field-text {
@@ -108,13 +110,13 @@ legend {
   display: block;
   $this: &;
   &__name {
-    color: #ccc;
-    font-size: rem(14px);
-    line-height: 18px;
+    color: $primary-color;
+    font-size: rem(13px);
+    font-weight: bold;
     cursor: text;
     display: block;
-    margin-bottom: 11px;
-    font-weight: 400;
+    margin-bottom: 10px;
+    text-transform: uppercase;
     sup {
       color: $color-red;
       top: -3px;
@@ -137,7 +139,7 @@ legend {
     display: block;
     width: 100%;
     height: 50px;
-    padding: 6px 10px;
+    padding: 6px 15px;
     font-size: rem(24px);
     line-height: 1.42857143;
     color: $primary-color;
@@ -148,9 +150,11 @@ legend {
       size: 20px 20px;
     }
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 35px;
     box-shadow: none;
     transition: color 0.35s, border 0.35s, background 0.35s;
+    font-family: $font-source;
+    font-weight: bold;
     &:hover {
       border-color: $primary-color;
     }
@@ -209,8 +213,7 @@ legend {
   &--md {
     #{$this} {
       &__name {
-        font-size: rem(14px);
-        margin-bottom: 9px;
+        margin-bottom: 5px;
         &.css-label {
           top: 10px;
           left: 10px;
@@ -252,14 +255,14 @@ legend {
   &--has-icon {
     #{$this} {
       &__input {
-        padding-right: 40px;
+        padding-left: 40px;
         &~[class*="icon-"] {
-          font-size: rem(20px);
+          font-size: rem(14px);
           position: absolute;
-          right: 10px;
+          left: 15px;
           top: 50%;
           transform: translateY(-50%);
-          color: $color-black;
+          color: $add-color-brown;
           pointer-events: none;
         }
       }
@@ -326,7 +329,7 @@ textarea.field-text__input {
 
 .field-checkbox, .field-radio {
   position: relative;
-  padding-left: 34px;
+  padding-left: 25px;
   margin: 0;
   display: flex;
   text-decoration: none;
@@ -336,30 +339,30 @@ textarea.field-text__input {
     position: absolute;
     left: 0;
     top: 0;
-    color: $color-white;
+    color: $add-color-blue;
     line-height: 1;
-    font-size: rem(19px);
-    border: 1px solid #ccc;
-    width: 24px;
-    height: 24px;
-    border-radius: 2px;
+    font-size: rem(15px);
+    border: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 0;
     &::before {
-      content: '\1f6a8';
+      content: '\e927';
       font-family: $font-icomoon;
       display: inline-block;
       vertical-align: middle;
       line-height: 1;
       position: absolute;
-      left: 2px;
+      left: 0;
       top: 1px;
     }
   }
   &__label {
-    line-height: 16px;
+    line-height: 18px;
     font-size: rem(14px);
     color: $primary-color;
     display: block;
-    padding: 4px 0 0 0;
+    padding: 0;
     cursor: pointer;
   }
   &__input {
@@ -367,9 +370,10 @@ textarea.field-text__input {
     &:checked {
       &~#{$this} {
         &__span-input {
-          color: $color-white;
-          border-color: $primary-color;
-          background: $primary-color;
+          color: $add-color-pink;
+          &::before {
+            content: '\e928';
+          }
         }
         &__label {
           color: $primary-color;
@@ -378,8 +382,6 @@ textarea.field-text__input {
       &:disabled {
         &~#{$this} {
           &__span-input {
-            background: #ccc;
-            border-color: #ccc;
             &::before {
               color: $color-white;
             }

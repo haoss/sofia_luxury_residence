@@ -1,0 +1,184 @@
+doctype
+
+html(lang="ru")
+
+  -var active = '1 услуга' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 услуга' + ' - SOFIA' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    .base
+      // Preloader
+      include ./_include/_preloader
+
+      include ./_include/_header
+
+      // Top row
+      .top-row
+        .top-row__wrapper
+          img(src="./tmp/img-services-one.png", alt="")
+        .top-row__title
+          .container
+            h1 Аренда 
+
+      // Content
+      .content
+        .container
+          .content__inside
+            .row
+              .col-12.col-md-6
+                .content__head.--outside
+                  .h1 Аренда автомобиля
+                p Прекрасная опция для пребывания на острове Кипр - арендовать автомобиль на любой срок! Сотрудники компании Компания Camel Car Rental подберут для вас оптимальный вариант. Это наш надежный партнер, который предоставляет отличный сервис.
+
+                p
+                  strong Обращаем ваше внимание на то, что цена включает:
+                ul
+                  li Налог
+                  li Страхование OCAГО
+                  li Доставку автомобиля к месту назначения в черте города Пафос
+                  li Неограниченный пробег на время аренды
+                  li Детское кресло
+                  li Доставку автомобиля в аэропорт города Пафос в рабочее время с 8.00-20.00
+
+                p
+                  strong Дополнительно оплачивается:
+                ul
+                  li Доставка автомобиля в аэропорт города Пафос в ночное время с 20.00 до 8.00
+                  li КАСКО оплачивается отдельно, по желанию клиента, цена зависит от категории
+                  li По всем вопросам и дополнительной информации, пожалуйста, обращайтесь по телефону 
+                    a(href="tel:") +7495 142 2571
+                    | , 
+                    a(href="tel:") + 357 99 855 277
+                    | , e-mail 
+                    a(href="mailto:") reservation@sofiaresidence.ru
+
+                p Сообщите нам о вашем решении, и наши партнеры свяжутся с вами для бронирования и доставки автомобиля.
+              
+              .col-12.col-md-6
+                p 2
+
+          // One service form
+          .services-form
+            .services-form__wrapper
+              form(action="#!")
+                legend Оставить заявку на 
+                  span.color--pink аренду авто
+                fieldset
+                  .row
+                    .col-12.col-xl-6
+                      .form-group
+                        +field-text({
+                          title: 'Ваше имя',
+                          hasJs: false,
+                          isTextarea: false,
+                          hasError: false,
+                          helpText: '',
+                          mods: 'md,has-icon',
+                          val: '',
+                          attrs: {
+                            name: 'rent-name',
+                            placeholder: ''
+                          }
+                        })()
+                          i.icon-user
+                    .col-12.col-xl-6
+                      .form-group
+                        +field-text({
+                          title: 'Телефон',
+                          hasJs: false,
+                          isTextarea: false,
+                          hasError: false,
+                          helpText: '',
+                          mods: 'md,has-icon',
+                          val: '',
+                          attrs: {
+                            name: 'rent-phone',
+                            placeholder: ''
+                          }
+                        })()
+                          i.icon-phone
+                    .col-12
+                      .form-group.mb30
+                        +field-text({
+                          title: 'Желаемая дата',
+                          hasJs: false,
+                          isTextarea: false,
+                          hasError: false,
+                          helpText: '',
+                          mods: 'md,has-icon',
+                          val: '',
+                          attrs: {
+                            name: 'rent-date',
+                            placeholder: '',
+                            readonly: 'readonly',
+                            class: 'datepicker-input'
+                          }
+                        })()
+                          i.icon-calendar
+                  .form-group.mb15
+                    button(type="button").btn.btn--block забронировать
+                  +field-checkbox({
+                    title: 'Согласен на обработку персональных данных',
+                    isLink: false,
+                    mods: '',
+                    attrs: {
+                      name: 'checkbox',
+                      checked: true,
+                    }
+                  })
+            img(src="./tmp/one-service-form.png", alt="").services-form__img
+
+          // Services carousel
+          .services-row
+            .services-row__head
+              .content__head
+                .h1.--xs-fs26 Услуги которые вас могут заинтересовать
+            .services-row__wrapper
+              .j-services-row.row
+                .col-12
+                  .services__block.mb0
+                    .services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-1.png", alt="")
+                    .services__block-title
+                      a(href="#!") Организация праздника
+                    .d-none.d-lg-block
+                      p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+                .col-12
+                  .services__block.mb0
+                    .services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-2.png", alt="")
+                    .services__block-title
+                      a(href="#!") Доставка еды
+                    .d-none.d-lg-block
+                      p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+                .col-12
+                  .services__block.mb0
+                    .services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-3.png", alt="")
+                    .services__block-title
+                      a(href="#!") Встреча из аэропорта
+                    .d-none.d-lg-block
+                      p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+                .col-12
+                  .services__block.mb0
+                    .services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-1.png", alt="")
+                    .services__block-title
+                      a(href="#!") Организация праздника
+                    .d-none.d-lg-block
+                      p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана.
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

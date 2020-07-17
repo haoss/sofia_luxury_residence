@@ -315,6 +315,15 @@ ol li {
   &--white {
     color: $color-white !important;
   }
+  &--pink {
+    color: $add-color-pink !important;
+  }
+  &--blue {
+    color: $add-color-blue !important;
+  }
+  &--brown {
+    color: $add-color-brown !important;
+  }
 }
 
 @for $i from 0 through 100 {

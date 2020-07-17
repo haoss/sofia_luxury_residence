@@ -58,7 +58,44 @@ html(lang="ru")
                 p Сообщите нам о вашем решении, и наши партнеры свяжутся с вами для бронирования и доставки автомобиля.
               
               .col-12.col-md-6
-                p 2
+                
+                // Rent table
+                .rent__table
+                  .rent__table-head
+                    .div1 Класс 
+                    .div2 Марка 
+                    .div3 Стоимость аренды в сутки, $ 
+                  .rent__table-body
+                    .rent__table-row
+                      .div1
+                        .rent__table-class A
+                      .div2
+                        img(src="./tmp/rent-img-auto-1.png", alt="").rent__table-img
+                      .div3
+                        .rent__table-title Mazda Demio 
+                          br
+                          | или подобный класc
+                    .rent__table-row.--price
+                      .div1
+                        .rent__table-price
+                          strong 50
+                          br
+                          | от 1 суток
+                      .div2
+                        .rent__table-price
+                          strong 50
+                          br
+                          | от 1 суток
+                      .div3
+                        .rent__table-price
+                          strong 25
+                          br
+                          | от 14 суток
+                      .div4
+                        .rent__table-price
+                          strong 20
+                          br
+                          | от 30 суток
 
           // One service form
           .services-form

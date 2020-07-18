@@ -62,6 +62,7 @@
     font-size: rem(20px);
     line-height: 1.4;
     margin-bottom: 20px;
+    cursor: pointer;
     &::before, &::after {
       content: '';
       top: 14px;
@@ -148,6 +149,7 @@
       font-size: rem(14px);
       padding-left: 42px;
       line-height: 1.7;
+      cursor: default;
       &::before {
         width: 30px;
         left: 0;

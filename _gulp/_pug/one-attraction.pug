@@ -1,0 +1,131 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Гавань Пафоса' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Гавань Пафоса' + ' - SOFIA' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    .base
+      // Preloader
+      include ./_include/_preloader
+
+      include ./_include/_header
+
+      // Top row
+      .top-row
+        .top-row__wrapper
+          img(src="./tmp/img-attractions-one.png", alt="")
+        .top-row__title
+          .container
+            h1 Гавань Пафоса 
+
+      // Content
+      .content
+        .container
+          
+          .row
+            .col-12.col-md-6
+              .content__inside
+                .content__head.--outside
+                  .h1 Гавань Пафоса
+                p Один из старейших портов Кипра, который был построен еще во времена империи Александра Македонского. Сегодня Пафос является крупным туристическим центром. Ежедневно в гавань заходят рыболовные судна и прогулочные яхты. 
+                p Набережная гавани - прекрасное место для отдыха и отличного времяпровождения. Кафе, рыбные таверны и ресторанчики, в которых можно насладиться разнообразием свежих морепродуктов, выпить бокал кипрского вина или чашечку отменного кофе, полюбоваться заревом заката, отражающимся в морской глади. В гавани также расположена средневековая крепость. Набережная - место, откуда начинается маршрут многих экскурсий по островам или городу. Вдоль набережной расположены сувенирные лавки, откуда ни один гость не уходит без сувениров на память о прекрасном отдыхе.
+
+                .clear
+
+                .d-none.d-lg-block
+                  .content__head.--outside
+                    h2 Информация
+
+                  p 
+                    strong Время работы:
+                    br
+                    | &nbsp; &nbsp; &nbsp; С 06:00 до 22:00 без выходных
+                    br
+                    strong Контакты:
+                    br
+                    | &nbsp; &nbsp; &nbsp; 
+                    a(href="#!") +1 800 987 654 321
+                    br
+                    strong Посещение:
+                    br
+                    | &nbsp; &nbsp; &nbsp; Детям до 6 лет вход запрещен
+            
+            .col-12.col-md-6
+              
+              .col-container.--right
+                .content__thumb
+                  a(href="./tmp/attraction-thumb-1.png" data-fancybox="images")
+                    img(src="./tmp/attraction-thumb-1.png", alt="")
+              
+              .d-lg-none
+                .content__inside
+                  .content__head.--outside
+                    h2 Информация
+
+                  p 
+                    strong Время работы:
+                    br
+                    | &nbsp; &nbsp; &nbsp; С 06:00 до 22:00 без выходных
+                    br
+                    strong Контакты:
+                    br
+                    | &nbsp; &nbsp; &nbsp; 
+                    a(href="#!") +1 800 987 654 321
+                    br
+                    strong Посещение:
+                    br
+                    | &nbsp; &nbsp; &nbsp; Детям до 6 лет вход запрещен
+
+          .gallery-row
+            .gallery-row__head
+              .content__head
+                .h1.--xs-fs26 Лучшие виды
+            .gallery-row__wrapper
+              .j-gallery-list.row
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-1.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-1.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-2.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-2.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-3.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-3.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-4.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-4.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-5.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-5.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-6.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-6.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-1.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-1.png", alt="")
+                .col-12
+                  .content__thumb.mb0
+                    a(href="./tmp/gallery-thumb-2.png" data-fancybox="gallery")
+                      img(src="./tmp/gallery-thumb-2.png", alt="")
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+  
+  
+  

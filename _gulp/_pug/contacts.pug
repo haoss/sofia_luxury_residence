@@ -28,7 +28,7 @@ html(lang="ru")
         .container
           
           .row
-            .col-12.col-xl-6
+            .col-12.col-lg-6.col-xl-5
               .content__inside
                 .content__head.--outside
                   .h1 Комплекс Апартаментов SOFIA Luxury Residence
@@ -36,36 +36,93 @@ html(lang="ru")
                 p Апартаменты находятся в непосредственной близости от Археологического парка и в 700 метрах от теплого средиземного моря. На закрытой охраняемой территории комплекса к услугам для гостей располагается сезонный открытый бассейн с подогревом и гидромассажем, в котором вы можете позволить себе наслаждаться приятным отдыхом круглый год.
                 p Климат в апартаментах поддерживается современными VRV системами, а в зимние вечера уют обеспечат центральный подогрев полов и современная система «Умный Дом». Бесплатный паркинг оснащен пунктом для зарядки электромобилей. Во всех апартаментах бесплатный Wi-Fi.
 
-                .content__head.--outside
-                  h2 Информация
+                .clear
 
-                p 
-                  strong Время работы:
-                  br
-                  | &nbsp; &nbsp; &nbsp; С 06:00 до 22:00 без выходных
-                  br
-                  strong Контакты:
-                  br
-                  | &nbsp; &nbsp; &nbsp; 
-                  a(href="#!") +1 800 987 654 321
-                  br
-                  strong Координаты:
-                  br
-                  | &nbsp; &nbsp; &nbsp; Ayiou Ayapitikou 31, (34.761473, 32.415642) Пафос (Кипр)
-                  br
-                  strong Аэропорт Пафос
-                  br
-                  | &nbsp; &nbsp; &nbsp;  20 минут на машине.
-                  br
-                  strong Аэропорт Ларнака
-                  br
-                  | &nbsp; &nbsp; &nbsp;  1 час 30 минут на машине.
+                .d-none.d-lg-block
+                  .content__head.--outside
+                    h2 Информация
 
-                p По предварительному заказу мы организовываем встречу и трансфер в аэропорт. Стоимость трансфера составляет от 30 евро.
-                p Аренда автомобиля возможна у нашего Партнера - компании Camel Car Hire Ltd.
+                  p 
+                    strong Время работы:
+                    br
+                    | &nbsp; &nbsp; &nbsp; С 06:00 до 22:00 без выходных
+                    br
+                    strong Контакты:
+                    br
+                    | &nbsp; &nbsp; &nbsp; 
+                    a(href="#!") +1 800 987 654 321
+                    br
+                    strong Координаты:
+                    br
+                    | &nbsp; &nbsp; &nbsp; Ayiou Ayapitikou 31, (34.761473, 32.415642) Пафос (Кипр)
+                    br
+                    strong Аэропорт Пафос
+                    br
+                    | &nbsp; &nbsp; &nbsp;  20 минут на машине.
+                    br
+                    strong Аэропорт Ларнака
+                    br
+                    | &nbsp; &nbsp; &nbsp;  1 час 30 минут на машине.
+
+                  p По предварительному заказу мы организовываем встречу и трансфер в аэропорт. Стоимость трансфера составляет от 30 евро.
+                  p Аренда автомобиля возможна у нашего Партнера - компании Camel Car Hire Ltd.
             
-            .col-12.col-xl-6
-              p 1
+            .col-12.col-lg-6.col-xl-7
+              
+              // Map
+              .map
+                .map__block
+                  h2 8041, Cyprus, Paphos, Ayiou Ayapitikou, 31
+                  table
+                    tbody
+                      tr
+                        td Москва:
+                        td
+                          a(href="tel:") +7 (495) 142-25-70
+                      tr
+                        td Кипр, Пафос: 
+                        td
+                          a(href="tel:") +357-99-855-277
+                      tr
+                        td Аренда: 
+                        td
+                          a(href="mailto:") reservation@sofiaresidence.ru
+                      tr
+                        td Продажа:
+                        td 
+                          a(href="mailto:") sales@sofiaresidence.ru
+
+                #map.map__container
+              
+              .d-lg-none
+                .content__inside
+                  .content__head.--outside
+                    h2 Информация
+
+                  p 
+                    strong Время работы:
+                    br
+                    | &nbsp; &nbsp; &nbsp; С 06:00 до 22:00 без выходных
+                    br
+                    strong Контакты:
+                    br
+                    | &nbsp; &nbsp; &nbsp; 
+                    a(href="#!") +1 800 987 654 321
+                    br
+                    strong Координаты:
+                    br
+                    | &nbsp; &nbsp; &nbsp; Ayiou Ayapitikou 31, (34.761473, 32.415642) Пафос (Кипр)
+                    br
+                    strong Аэропорт Пафос
+                    br
+                    | &nbsp; &nbsp; &nbsp;  20 минут на машине.
+                    br
+                    strong Аэропорт Ларнака
+                    br
+                    | &nbsp; &nbsp; &nbsp;  1 час 30 минут на машине.
+
+                  p По предварительному заказу мы организовываем встречу и трансфер в аэропорт. Стоимость трансфера составляет от 30 евро.
+                  p Аренда автомобиля возможна у нашего Партнера - компании Camel Car Hire Ltd.
 
           .gallery-row
             .gallery-row__head
@@ -113,3 +170,30 @@ html(lang="ru")
     include ./_include/_footer-js
     script(src="./js/common.js")
 
+    script(src='https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU' type='text/javascript')
+    script(type='text/javascript').
+      ymaps.ready(init);
+      function init(){ 
+        var myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 7
+          }),
+
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Sofia Luxury residence'
+          }, {
+            iconLayout: 'default#image',
+            iconImageHref: './tmp/map-marker.png',
+            iconImageSize: [225, 225],
+            iconImageOffset: [-112, -225]
+          });
+
+        myMap.geoObjects
+          .add(myPlacemark);
+        
+        myMap.behaviors.disable('drag');
+        myMap.behaviors.disable('scrollZoom');
+      }
+  
+  
+  

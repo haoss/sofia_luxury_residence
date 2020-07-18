@@ -394,7 +394,7 @@
       margin-left: -15px;
     }
     @include media-breakpoint-up(xxl) {
-      margin-left: 0px;
+      margin-left: 0;
     }
   }
 }
@@ -1206,6 +1206,95 @@
           width: 455px;
         }
       }
+    }
+  }
+}
+
+.map {
+  margin: 0 -15px 30px -15px;
+  &__container {
+    position: relative;
+    height: 600px;
+    background: #eee;
+    overflow: hidden;
+    &>iframe,&>ymaps {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      * {
+        touch-action: auto
+      }
+    }
+  }
+  &__block {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    padding: 20px 15px;
+    position: relative;
+    z-index: 10;
+    border-radius: 6px;
+    margin-bottom: -50px;
+    background: $color-white;
+    h2, .h2 {
+      font-size: 20px;
+      line-height: 35px;
+    }
+    table {
+      tr {
+        td:first-child {
+          color: #6B92A8;
+        }
+        td {
+          &+td {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &__block {
+      max-width: 326px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    margin-left: 47px;
+    margin-right: 0;
+    &__block {
+      margin-left: -47px;
+      margin-bottom: -165px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    margin-left: -15px;
+    &__block {
+      margin-left: 0;
+      margin-bottom: -50px;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: 83px;
+    &__block {
+      margin-left: -50px;
+      margin-bottom: -138px;
+      max-width: 490px;
+      font-size: 18px;
+      padding: 40px 20px 42px 60px;
+      h2, .h2 {
+        font-size: 30px;
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    margin-left: 112px;
+    &__block {
+      margin-left: -60px;
     }
   }
 }

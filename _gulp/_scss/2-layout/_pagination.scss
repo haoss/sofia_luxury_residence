@@ -1,0 +1,239 @@
+/* pagination */
+.pagination {
+  $this: &;
+  font-size: rem(16px);
+  text-align: left;
+  font-weight: 600;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    &>li {
+      list-style: none;
+      margin: 0;
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+      &#{$this} {
+        &__prev, &__next {
+          font-size: rem(13px);
+          &>a, &>span {
+            border: 0;
+            width: auto;
+            color: $add-color-blue;
+            &::before {
+              font-family: $font-icomoon;
+              vertical-align: -5px;
+              line-height: 1;
+              display: inline-block;
+            }
+          }
+        }
+        &__prev {
+          margin-right: 0px;
+          &>a, &>span {
+            &::before {
+              content: '\e935';
+            }
+          }
+        }
+        &__next {
+          margin-left: 13px;
+          &>a, &>span {
+            &::before {
+              content: '\e92b';
+            }
+          }
+        }
+      }
+      &+li {
+        margin-left: 13px;
+      }
+      &>a, &>span {
+        display: inline-block;
+        width: auto;
+        height: 40px;
+        text-align: center;
+        line-height: 39px;
+        color: $primary-color;
+        text-decoration: none;
+        border-radius: 0;
+        border: 0;
+        background: $color-white;
+        transform: translateY(0px);
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        vertical-align: middle;
+        // background: pink;
+      }
+      &>a {
+        &:hover {
+          z-index: 2;
+          color: $add-color-pink;
+        }
+      }
+      &.active {
+        font-size: 26px;
+        &>a, &>span {
+          color: $add-color-blue;
+        }
+      }
+      &.disabled {
+        display: none;
+        &>a, &>span {
+          cursor: auto;
+          border-color: #ccc;
+          color: #ccc;
+          box-shadow: none;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+  &--center {
+    ul {
+      justify-content: center;
+    }
+  }
+  &--right {
+    ul {
+      justify-content: flex-end;
+    }
+  }
+  &--justify {
+    ul {
+      justify-content: center;
+      li {
+        flex-shrink: 0;
+      }
+    }
+    #{$this} {
+      &__prev {
+        flex-grow: 1;
+      }
+      &__next {
+        flex-grow: 1;
+        text-align: right;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: rem(20px);
+    ul {
+      li {
+        &.active {
+          &>a, &>span {
+            font-size: 30px;
+          }
+        }
+        &+li {
+          margin-left: 20px;
+        }
+        &.pagination__next {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  &.--top {
+    position: relative;
+    justify-content: flex-end !important;
+    top: -55px;
+    #{$this} {
+      &__item {
+        display: none;
+      }
+      &__prev, &__next {
+        position: absolute;
+        transform: translateY(0);
+      }
+      &__prev {
+        right: 26px;
+        top: 13px;
+        a {
+          width: 22px;
+          height: 22px;
+          border: 1px solid $add-color-blue;
+          background: $add-color-blue;
+          left: auto;
+          &::before {
+            color: $color-white;
+            font-size: 9px;
+            content: '\e92c';
+            vertical-align: 9px;
+            font-weight: 400;
+          }
+        }
+      }
+      &__next {
+        right: 0px;
+        a {
+          width: 32px;
+          height: 32px;
+          border: 2px solid $add-color-blue;
+          z-index: 10;
+          &::before {
+            content: '\e92d';
+            vertical-align: 4px;
+            font-weight: 400;
+          }
+          &:hover {
+            color: $add-color-blue;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      #{$this} {
+        &__prev {
+          a {
+            &:hover {
+              background: $color-white;
+              color: $add-color-blue;
+              &::before {
+                color: $add-color-blue;
+              }
+            }
+          }
+        }
+        &__next {
+          a {
+            &:hover {
+              background: $add-color-blue;
+              color: $color-white;
+            }
+          }
+        }
+      }
+    }
+    @include media-breakpoint-up(xxl) {
+      top: -65px;
+      #{$this} {
+        &__prev {
+          right: 34px;
+          top: 19px;
+          a {
+            width: 29px;
+            height: 29px;
+            &::before {
+              font-size: 12px;
+              vertical-align: 5px;
+            }
+          }
+        }
+        &__next {
+          a {
+            width: 42px;
+            height: 42px;
+            &::before {
+              font-size: 17px;
+              vertical-align: -3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

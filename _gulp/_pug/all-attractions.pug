@@ -1,0 +1,99 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Интересное' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Интересное' + ' - SOFIA' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    .base
+      // Preloader
+      include ./_include/_preloader
+
+      include ./_include/_header
+
+      // Top row
+      .top-row
+        .top-row__wrapper
+          img(src="./tmp/img-attractions.png", alt="")
+        .top-row__title
+          .container
+            h1 Интересное
+
+      // Content
+      .content
+        .container
+
+          .content__head
+            .h1.--xs-fs26 В окрестностях 
+
+          +pagination('center --top')
+            +pagination-item('01', '#!', true)
+            +pagination-item('02', '#!')
+            +pagination-item('03', '#!')
+            +pagination-item('04', '#!')
+            +pagination-item('05', '#!')
+            +pagination-item('06', '#!')
+          
+          .row
+            .col-12.col-md-6
+              .attraction__block
+                .attraction__block-thumb
+                  a(href="#!")
+                    img(src="./tmp/attractions-img-1.png", alt="")
+                .attraction__block-content
+                  .attraction__block-title Пафосский замок 
+                    small.small (греч. Κάστρο της Πάφου)
+                  p средневековый замок на западном краю гавани в Пафосе. За время существования служил крепостью, тюрьмой и даже складом соли во время британской оккупации острова.
+                  a(href="#!").attraction__block-more Подробнее
+            .col-12.col-md-6
+              .attraction__block
+                .attraction__block-thumb
+                  a(href="#!")
+                    img(src="./tmp/attractions-img-2.png", alt="")
+                .attraction__block-content
+                  .attraction__block-title Храм Святых Бессребреников 
+                    small.small (греч. Κάστρο της Πάφου)
+                  p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+                  a(href="#!").attraction__block-more Подробнее
+            .col-12.col-md-6
+              .attraction__block
+                .attraction__block-thumb
+                  a(href="#!")
+                    img(src="./tmp/attractions-img-3.png", alt="")
+                .attraction__block-content
+                  .attraction__block-title Agia Solomoni Catacomb 
+                    small.small (греч. Κάστρο της Πάφου)
+                  p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+                  a(href="#!").attraction__block-more Подробнее
+            .col-12.col-md-6
+              .attraction__block
+                .attraction__block-thumb
+                  a(href="#!")
+                    img(src="./tmp/attractions-img-4.png", alt="")
+                .attraction__block-content
+                  .attraction__block-title Колонна Святого Павла, церковь 
+                    small.small (греч. Κάστρο της Πάφου)
+                  p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+                  a(href="#!").attraction__block-more Подробнее
+
+          +pagination('center')
+            +pagination-item('01', '#!', true)
+            +pagination-item('02', '#!')
+            +pagination-item('03', '#!')
+            +pagination-item('04', '#!')
+            +pagination-item('05', '#!')
+            +pagination-item('06', '#!')
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+  
+  
+  

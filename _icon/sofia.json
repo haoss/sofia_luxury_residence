@@ -2,7 +2,7 @@
   "metadata": {
     "name": "sofia",
     "lastOpened": 0,
-    "created": 1594798715923
+    "created": 1595002086913
   },
   "iconSets": [
     {
@@ -1506,7 +1506,7 @@
           "tempChar": ""
         },
         {
-          "order": 74,
+          "order": 87,
           "id": 2,
           "name": "arrow-right-with-up",
           "prevSize": 32,
@@ -1514,12 +1514,20 @@
           "tempChar": ""
         },
         {
+          "order": 88,
+          "id": 25,
+          "name": "arrow-left-with-up",
+          "prevSize": 32,
+          "code": 59701,
+          "tempChar": ""
+        },
+        {
           "order": 75,
           "id": 0,
           "name": "arrow-left",
           "prevSize": 32,
           "code": 59692,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 76,
@@ -1527,7 +1535,7 @@
           "name": "arrow-right",
           "prevSize": 32,
           "code": 59693,
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 2,
@@ -1886,6 +1894,21 @@
           "colorPermutations": {}
         },
         {
+          "id": 25,
+          "paths": [
+            "M953.995 50.411l-929.434 929.433h2992.581v-146.286h-2639.419l679.709-679.708-103.439-103.439z"
+          ],
+          "attrs": [],
+          "width": 3072,
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 0,
+          "tags": [
+            "arrow-left-with-up"
+          ],
+          "colorPermutations": {}
+        },
+        {
           "id": 0,
           "paths": [
             "M227.537 472.046l455.694-455.687c10.54-10.549 24.609-16.359 39.61-16.359s29.072 5.811 39.612 16.359l33.559 33.551c21.837 21.863 21.837 57.394 0 79.222l-382.658 382.658 383.084 383.084c10.54 10.547 16.359 24.608 16.359 39.598 0 15.013-5.82 29.074-16.359 39.629l-33.559 33.548c-10.549 10.547-24.609 16.352-39.612 16.352s-29.072-5.806-39.61-16.352l-456.12-456.106c-10.565-10.582-16.367-24.709-16.334-39.728-0.033-15.077 5.769-29.196 16.334-39.769z"
@@ -1988,7 +2011,9 @@
       "png": true,
       "useClassSelector": true,
       "color": 0,
-      "bgColor": 16777215
+      "bgColor": 16777215,
+      "name": "icomoon",
+      "classSelector": ".icon"
     },
     "historySize": 50,
     "gridSize": 16,

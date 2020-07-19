@@ -1,0 +1,265 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Апартаменты' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Апартаменты' + ' - SOFIA' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    .base
+      // Preloader
+      include ./_include/_preloader
+
+      include ./_include/_header
+
+      // Top row
+      .top-row
+        .top-row__wrapper
+          img(src="./tmp/img-apartments-all.png", alt="")
+        .top-row__title
+          .container
+            h1 Апартаменты 
+
+      // Content
+      .content
+        .container
+          .content__inside
+
+            // Rooms row
+            .all-rooms__head
+              .content__head.--outside
+                .h1 Апартаменты “Аврора” с 2 спальнями
+              .all-rooms__star
+                i.icon-star
+                span.span 
+                  b 5.0 
+                  | (123 отзыва)
+            .all-rooms__row
+              .first
+                .all-rooms__row-thumb.--big
+                  img(src="./tmp/img-apartments-all-img-1.png", alt="").first
+                  img(src="./tmp/img-apartments-all-img-1.png", alt="").last
+                .all-rooms__row-option
+                  div
+                    .option-info
+                      i.icon-properties-14
+                      div Гостиная 
+                        br
+                        | с кухней
+                  div
+                    .option-info
+                      i.icon-properties-2
+                      div 2 спальни
+                  div
+                    .option-info
+                      i.icon-properties-4
+                      div 2 ванные 
+                        br
+                        | комнаты
+                  div
+                    .option-info
+                      i.icon-properties-5
+                      div 101,29 кв2
+                  div
+                    .option-info
+                      i.icon-properties-15
+                      div Терраса
+                .d-md-none
+                  .all-rooms__row-price
+                    b.b 
+                      small от 
+                      | 9 876 
+                      small 
+                        i.icon-rouble 
+                        | / ночь
+                    a(href="#!").btn.btn--block Подробнее
+              .last
+                .all-rooms__row-thumb.--small
+                  img(src="./tmp/img-apartments-all-img-1.png", alt="")
+                .all-rooms__row-thumb.last.--small
+                  img(src="./tmp/img-apartments-all-img-1.png", alt="")
+                  a(href="#!").btn.btn--md.btn--block Подробнее
+                .d-none.d-md-block
+                  .all-rooms__row-price
+                    b.b 
+                      small от 
+                      | 9 876 
+                      small 
+                        i.icon-rouble 
+                        | / ночь
+
+            // Rooms row
+            .all-rooms__head
+              .content__head.--outside
+                .h1 Пентхаус “Luxury”
+              .all-rooms__star
+                i.icon-star
+                span.span 
+                  b 5.0 
+                  | (123 отзыва)
+            .all-rooms__row
+              .first
+                .all-rooms__row-thumb.--big
+                  img(src="./tmp/img-apartments-all-img-1.png", alt="").first
+                  img(src="./tmp/img-apartments-all-img-1.png", alt="").last
+                .all-rooms__row-option
+                  div
+                    .option-info
+                      i.icon-properties-14
+                      div Гостиная 
+                        br
+                        | с кухней
+                  div
+                    .option-info
+                      i.icon-properties-2
+                      div 2 спальни
+                  div
+                    .option-info
+                      i.icon-properties-4
+                      div 2 ванные 
+                        br
+                        | комнаты
+                  div
+                    .option-info
+                      i.icon-properties-5
+                      div 101,29 кв2
+                  div
+                    .option-info
+                      i.icon-properties-15
+                      div Терраса
+                .d-md-none
+                  .all-rooms__row-price
+                    b.b 
+                      small от 
+                      | 9 876 
+                      small 
+                        i.icon-rouble 
+                        | / ночь
+                    a(href="#!").btn.btn--block Подробнее
+              .last
+                .all-rooms__row-thumb.--small
+                  img(src="./tmp/img-apartments-all-img-1.png", alt="")
+                .all-rooms__row-thumb.last.--small
+                  img(src="./tmp/img-apartments-all-img-1.png", alt="")
+                  a(href="#!").btn.btn--md.btn--block Подробнее
+                .d-none.d-md-block
+                  .all-rooms__row-price
+                    b.b 
+                      small от 
+                      | 9 876 
+                      small 
+                        i.icon-rouble 
+                        | / ночь
+
+            // Rooms row
+            .all-rooms__head
+              .content__head.--outside
+                .h1 Апартаменты “Делюкс” 
+              .all-rooms__star
+                i.icon-star
+                span.span 
+                  b 5.0 
+                  | (123 отзыва)
+            .all-rooms__row
+              .first
+                .all-rooms__row-thumb.--big
+                  img(src="./tmp/img-apartments-all-img-1.png", alt="").first
+                  img(src="./tmp/img-apartments-all-img-1.png", alt="").last
+                .all-rooms__row-option
+                  div
+                    .option-info
+                      i.icon-properties-14
+                      div Гостиная 
+                        br
+                        | с кухней
+                  div
+                    .option-info
+                      i.icon-properties-2
+                      div 2 спальни
+                  div
+                    .option-info
+                      i.icon-properties-4
+                      div 2 ванные 
+                        br
+                        | комнаты
+                  div
+                    .option-info
+                      i.icon-properties-5
+                      div 101,29 кв2
+                  div
+                    .option-info
+                      i.icon-properties-15
+                      div Терраса
+                .d-md-none
+                  .all-rooms__row-price
+                    b.b 
+                      small от 
+                      | 9 876 
+                      small 
+                        i.icon-rouble 
+                        | / ночь
+                    a(href="#!").btn.btn--block Подробнее
+              .last
+                .all-rooms__row-thumb.--small
+                  img(src="./tmp/img-apartments-all-img-1.png", alt="")
+                .all-rooms__row-thumb.last.--small
+                  img(src="./tmp/img-apartments-all-img-1.png", alt="")
+                  a(href="#!").btn.btn--md.btn--block Подробнее
+                .d-none.d-md-block
+                  .all-rooms__row-price
+                    b.b 
+                      small от 
+                      | 9 876 
+                      small 
+                        i.icon-rouble 
+                        | / ночь
+
+          .rooms__bottom.mb50
+            img(src="./tmp/apartments-scheme.png", alt="").img-fluid
+
+          // Services carousel
+          .services-row
+            .services-row__head
+              .content__head
+                .h1.--xs-fs26 Мы можем сделать Ваш отдых комфортней и ярче
+            .services-row__wrapper
+              .j-services-row.row
+                .col-12
+                  .services__block.mb0
+                    .services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-1.png", alt="")
+                    .services__block-title
+                      a(href="#!") Организация праздника
+                .col-12
+                  .services__block.mb0
+                    .services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-2.png", alt="")
+                    .services__block-title
+                      a(href="#!") Доставка еды
+                .col-12
+                  .services__block.mb0
+                    .services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-3.png", alt="")
+                    .services__block-title
+                      a(href="#!") Встреча из аэропорта
+                .col-12
+                  .services__block.mb0
+                    .services__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/services-img-1.png", alt="")
+                    .services__block-title
+                      a(href="#!") Организация праздника
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

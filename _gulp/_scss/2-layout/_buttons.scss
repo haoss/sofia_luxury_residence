@@ -37,4 +37,11 @@ button {
       color: $color-white;
     }
   }
+  &--md {
+    height: 40px;
+    font-size: 14px;
+    &[href] {
+      line-height: 39px;
+    }
+  }
 }

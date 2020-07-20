@@ -1,0 +1,269 @@
+doctype
+
+html(lang="ru")
+
+  -var active = '1 номер' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 номер' + ' - SOFIA' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    .base
+      // Preloader
+      include ./_include/_preloader
+
+      include ./_include/_header
+
+      // Top row
+      .top-row
+        .top-row__wrapper
+          img(src="./tmp/img-apartments-all.png", alt="")
+
+      // Content
+      .content
+        .container
+          
+          .row
+            .col-12.col-md-6.col-lg-7.col-xl-8
+
+              .content__inside
+                .content__head.--outside
+                  .h1 Апартаменты “Аврора” с 2 спальнями
+                
+                .one-room__option
+                  div
+                    .option-info
+                      i.icon-properties-14
+                      div Гостиная с 
+                        br
+                        | кухней
+                  div
+                    .option-info
+                      i.icon-properties-2
+                      div 2 спальни
+                  div
+                    .option-info
+                      i.icon-properties-4
+                      div 2 ванные 
+                        br
+                        | комнаты
+                  div
+                    .option-info
+                      i.icon-properties-5
+                      div 101,29 кв2
+                  div
+                    .option-info
+                      i.icon-properties-15
+                      div Терраса
+
+                .content__head.--outside
+                  .h2 Завтрак "шведский стол"
+                p Завтрак "шведский стол"
+                  br
+                  | Посещение бассейна, кедровой финской сауны, Аромасауны, хамама, джакузи с 7:30 до 10:00 утра
+                  br
+                  | Тренажерного зала с 7:30 до 23:00.
+
+                .content__head.--outside
+                  .h2 Большенство отметило
+                p
+                  strong Отличное расположение
+                  br
+                  | 95% недавних гостей оценили расположение жилья на пять звезд.
+                p 
+                  strong Прибытие организовано отлично
+                  br
+                  | 100% недавних гостей оценили прибытие на пять звезд.
+                p
+                  strong Жилье целиком
+                  br
+                  | Кондоминиум полностью в вашем распоряжении.
+                p 
+                  strong Самостоятельное прибытие
+                  br
+                  | Легкое самостоятельное прибытие с помощью мини-сейфа.
+
+                .content__head.--outside
+                  .h2 Все удобства и услуги
+                p 
+                  strong Домашние животные
+                  br
+                  | Размещение домашних животных не допускается.
+                p 
+                  strong Интернет
+                  br
+                  | Бесплатно! Wi-Fi предоставляется на территории всего отеля бесплатно.
+                p
+                  strong Стойка регистрации
+                  br
+                  | Хранение багажа
+                  br
+                  | Ускоренная регистрация заезда/отъезда
+                
+                p ------------- Показать больше --------------
+
+                .content__head.--outside
+                  .h2 Что нужно помнить
+                p
+                  strong Прибытие: После 15:00
+                  br
+                  strong Выезд: 10:00
+                ul
+                  li Курение запрещено
+                  li Нельзя с питомцами
+                  li Без вечеринок и мероприятий
+                  li Залог за сохранность имущества: если вы нанесете ущерб жилью, с вас могут списать деньги (максимальная сумма — 14505₽)
+                p
+                  strong Бесплатная отмена в течение 48 ч.
+                  br
+                  strong При отмене до 3:00 PM 17 апр. вы получите возврат в размере 50% за вычетом сбора за услуги.
+
+            .col-12.col-md-6.col-lg-5.col-xl-4
+
+              .one-room__form
+                .one-room__form-top
+                  .one-room__form-price
+                    small от 
+                    b 9 876 
+                    small 
+                      i.icon-rouble 
+                      | / ночь
+                  .one-room__form-star
+                    i.icon-star
+                    span.span
+                      b 5.0 
+                      | (123 отзыва)
+                .one-room__form-bottom
+                  form(action="#!")
+                    .form-group
+                      +field-text({
+                        title: 'Заезд',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: 'md,has-icon',
+                        val: '',
+                        attrs: {
+                          name: 'date-from',
+                          placeholder: '',
+                          readonly: 'readonly',
+                          class: 'datepicker-input'
+                        }
+                      })()
+                        i.icon-calendar
+                    .form-group.mb20
+                      +field-text({
+                        title: 'Отъезд',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: 'md,has-icon',
+                        val: '',
+                        attrs: {
+                          name: 'date-to',
+                          placeholder: '',
+                          readonly: 'readonly',
+                          class: 'datepicker-input'
+                        }
+                      })()
+                        i.icon-calendar
+                    .d-search__input-row.mb15
+                      div
+                        label.d-search__input-label Взрослых
+                        p.d-search__input-p Возраст: от 18 лет
+                      div
+                        .form-count.j-people-count
+                          button(type="button").btn-minus
+                          button(type="button").btn-plus
+                          input(type='text' value='2 чел')
+                    .d-search__input-row.mb30
+                      div
+                        label.d-search__input-label Детей
+                        p.d-search__input-p Возраст: от 6  до 18 лет
+                      div
+                        .form-count.j-people-count
+                          button(type="button").btn-minus
+                          button(type="button").btn-plus
+                          input(type='text' value='2 чел')
+                    .text--center
+                      button(type="button").btn.btn--block.mb15 забронировать
+                      a(href="#!").btn.btn--on-map 
+                        i.icon-map
+                        span Посмотреть на карте
+
+              // Comments
+              .comments
+                .comments__collumn
+                  h2 Отзывы
+                  .comments__block
+                    .comments__block-thumb
+                      img(src="./tmp/user-img-1.png", alt="")
+                    .comments__block-wrapper
+                      .comments__block-head
+                        .comments__block-title 
+                          b Петручио
+                          small.small Гваделупа
+                        .comments__block-star
+                          i.icon-star
+                          b 5.0
+                      p Далеко-далеко за словесными горами в стране гласных и согласных живут Далеко-далеко за словесными горами в стране гласных и согласных живут
+                  .comments__block
+                    .comments__block-thumb
+                      img(src="./tmp/user-img-2.png", alt="")
+                    .comments__block-wrapper
+                      .comments__block-head
+                        .comments__block-title 
+                          b Петручио
+                          small.small Гваделупа
+                        .comments__block-star
+                          i.icon-star
+                          b 5.0
+                      p Далеко-далеко за словесными горами в стране гласных и согласных живут Далеко-далеко за словесными горами в стране гласных и согласных живут
+                  .comments__block
+                    .comments__block-thumb
+                      img(src="./tmp/user-img-3.png", alt="")
+                    .comments__block-wrapper
+                      .comments__block-head
+                        .comments__block-title 
+                          b Петручио
+                          small.small Гваделупа
+                        .comments__block-star
+                          i.icon-star
+                          b 5.0
+                      p Далеко-далеко за словесными горами в стране гласных и согласных живут Далеко-далеко за словесными горами в стране гласных и согласных живут
+                  .comments__block
+                    .comments__block-thumb
+                      img(src="./tmp/user-img-4.png", alt="")
+                    .comments__block-wrapper
+                      .comments__block-head
+                        .comments__block-title 
+                          b Петручио
+                          small.small Гваделупа
+                        .comments__block-star
+                          i.icon-star
+                          b 5.0
+                      p Далеко-далеко за словесными горами в стране гласных и согласных живут Далеко-далеко за словесными горами в стране гласных и согласных живут
+                  .comments__block
+                    .comments__block-thumb
+                      img(src="./tmp/user-img-5.png", alt="")
+                    .comments__block-wrapper
+                      .comments__block-head
+                        .comments__block-title 
+                          b Петручио
+                          small.small Гваделупа
+                        .comments__block-star
+                          i.icon-star
+                          b 5.0
+                      p Далеко-далеко за словесными горами в стране гласных и согласных живут Далеко-далеко за словесными горами в стране гласных и согласных живут
+                  a(href="#!").btn.btn--border.btn--md.btn--block все отзывы
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

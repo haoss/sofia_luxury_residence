@@ -1,0 +1,101 @@
+doctype
+
+html(lang="ru")
+
+  -var active = '1 aпартамент' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 aпартамент' + ' - SOFIA' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    .base
+      // Preloader
+      include ./_include/_preloader
+
+      include ./_include/_header
+
+      // Top row
+      .top-row
+        .top-row__wrapper
+          img(src="./tmp/img-apartments.png", alt="")
+
+      // Content
+      .content
+        .container
+          .content__inside
+            
+            // Apartment row
+            .content__head.--outside
+              .h1.--xs-fs26 Апартаменты А101
+          
+            .one-apartment__row
+              .first
+                .one-apartment__option
+                  div
+                    .option-info
+                      i.icon-properties-14
+                      div Гостиная с 
+                        br
+                        | кухней
+                  div
+                    .option-info
+                      i.icon-properties-2
+                      div 2 спальни
+                  div
+                    .option-info
+                      i.icon-properties-4
+                      div 2 ванные 
+                        br
+                        | комнаты
+                  div
+                    .option-info
+                      i.icon-properties-5
+                      div 101,29 кв2
+                  div
+                    .option-info
+                      i.icon-properties-15
+                      div Терраса
+              .last
+                .one-apartment__price
+                  b.b 550 000 
+                    small €
+                a(href="tel:").btn.btn--block заказать звонок
+          
+            .content__head.--outside
+              .h2 Высокие стандарты контроля
+            
+            .row
+              .col-12.col-lg-6
+                p Мы предлагаем удобный формат по коммерческому управлению Вашей недвижимостью, а именно: Обслуживаемые Апартаменты. Это прекрасная возможность для тех, кто любит несколько раз в год летать на море на отдых, каждый раз останавливаться в собственной квартире и получать полный спектр услуг, не уступающий гостиничному.
+                p Преимущество покупки апартаментов в нашем Комплексе в рамках паспортной программы Кипра «гражданство за инвестиции»: предлагаемые к продаже апартаменты относятся к премиум-сегменту, полностью оснащены для комфортного проживания и не требуют дополнительных вложений.
+                p Наша Управляющая компания полностью берёт на себя обязательства по аренде и обслуживанию апартаментов и проведение расчетов с Гостями. Вы будете получать доход в виде процента, установленного Договором Доверительного управления.
+                p Приобретая у нас апартаменты в собственность, Вы заключаете с нашей Компанией Договор управления на услуги по обслуживанию вашей недвижимости.
+
+              .col-12.col-lg-6
+                .one-apartment__table
+                  table
+                    tbody
+                      tr
+                        td.first Первый этаж (склад):
+                        td.last 2,88 м2
+                      tr
+                        td.first Первый этаж:
+                        td.last 75,58 м2
+                      tr
+                        td.first Крытая веранда:
+                        td.last 20,63 м2
+                      tr
+                        td.first Всего:
+                        td.last 96,21 м2
+                      tr
+                        td.first Общая площадь:
+                        td.last 94,7 м2
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

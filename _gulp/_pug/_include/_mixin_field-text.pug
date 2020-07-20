@@ -41,7 +41,6 @@ mixin field-text(props)
   label.field-text(class=allMods, class=(typeof(props.hasError) !== 'undefined' && props.hasError) ? 'has-error' : '', class=(typeof(props.hasJs) !== 'undefined' && props.hasJs) ? 'j-field-text' : '')&attributes(attributes)
     if(typeof(props.title) !== 'undefined' && props.title)
       span.field-text__name(class=(typeof(props.hasJs) !== 'undefined' && props.hasJs) ? 'css-label' : '')!= props.title
-        sup *
     span.field-text__input-wrap
       if(typeof(props.isTextarea) !== 'undefined' && props.isTextarea)
         textarea.field-text__input(class=(typeof(props.hasJs) !== 'undefined' && props.hasJs) ? 'css-input' : '')&attributes(props.attrs)= props.val

@@ -37,6 +37,46 @@ button {
       color: $color-white;
     }
   }
+  &--border {
+    background: transparent;
+    color: $add-color-pink;
+    border: 1px solid $add-color-pink;
+    box-shadow: none;
+    &:hover {
+      color: $color-white;
+      background: #EA1FD9;
+      border-color: #EA1FD9;
+    }
+  }
+  &--on-map {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    font-size: 14px;
+    color: $add-color-brown;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    height: 35px;
+    line-height: 37px;
+    &[href] {
+      line-height: 37px;
+    }
+    .icon-map {
+      font-weight: 400;
+      font-size: 27px;
+      margin-right: 10px;
+      vertical-align: -6px;
+    }
+    &:hover {
+      background: transparent;
+      color: $add-color-blue;
+      box-shadow: none;
+      &[href] {
+        color: $add-color-blue;
+      }
+    }
+  }
   &--md {
     height: 40px;
     font-size: 14px;

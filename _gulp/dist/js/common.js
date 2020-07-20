@@ -9,7 +9,7 @@ $(document).on('ready', function(){
     midClick: true
   });
 
-  $('.popup-yamaps').magnificPopup({
+  $('.js-popup-yamaps').magnificPopup({
 		type: 'inline',
 		preloader: false,
 		focus: '#yamaps'

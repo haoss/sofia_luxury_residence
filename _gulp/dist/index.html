@@ -16,6 +16,44 @@
         <link rel="stylesheet" href="./css/style.min.css">
     </head>
     <body>
+        <div class="modal modal--senks mfp-hide" id="senks">
+            <div class="modal__wrapper">
+                <div class="text-center">
+                    <div class="h1">Спасибо!</div>
+                    <p>Ваша заявка принята, в течении 5 минут Вам перезвонят для уточнения деталей.</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal--map mfp-hide" id="map2">
+            <div class="modal__wrapper">
+                <div class="modal-map">
+                    <div class="modal__map-container">
+                        <h2>8041, Cyprus, Paphos, Ayiou Ayapitikou, 31</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Москва:</td>
+                                    <td><a href="tel:">+7 (495) 142-25-70</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Кипр, Пафос: </td>
+                                    <td><a href="tel:">+357-99-855-277</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Аренда: </td>
+                                    <td><a href="mailto:">reservation@sofiaresidence.ru</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Продажа:</td>
+                                    <td> <a href="mailto:">sales@sofiaresidence.ru</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal__map" id="yamaps"></div>
+                </div>
+            </div>
+        </div>
         <div class="base">
             <!-- Preloader-->
             <!-- Header-->
@@ -76,6 +114,70 @@
             <!-- Content-->
             <div class="content-main">
                 <div class="content-main__head"></div>
+                <div class="container">
+                    <!-- Section-->
+                    <div class="section">
+                        <div class="content__inside">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <div class="content__head --outside">
+                                        <div class="h1 --xs-fs26">Устройте себе отпуск, который не сможете забыть!</div>
+                                    </div>
+                                    <p>Комплекс Апартаментов SOFIA Luxury Residence расположен в тихом районе Като Пафос города Пафос, недалеко от средневекового замка Пафоса и церкви Агия Соломони.</p>
+                                    <p>Апартаменты находятся в непосредственной близости от Археологического парка и в 700 метрах от теплого средиземного моря. На закрытой охраняемой территории комплекса к услугам для гостей располагается сезонный открытый бассейн с подогревом и гидромассажем, в котором вы можете позволить себе наслаждаться приятным отдыхом круглый год.</p>
+                                    <p>Климат в апартаментах поддерживается современными VRV системами, а в зимние вечера уют обеспечат центральный подогрев полов и современная система «Умный Дом». Бесплатный паркинг оснащен пунктом для зарядки электромобилей. Во всех апартаментах бесплатный Wi-Fi.</p>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="on-map"><a class="btn js-popup-yamaps" href="#map2"></a></div>
+                                </div>
+                            </div>
+                            <div class="main-"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- One service form-->
+                <div class="container">
+                    <div class="main-form">
+                        <div class="main-form__img"><img src="./tmp/one-service-form.png" alt=""></div>
+                        <div class="main-form__wrapper">
+                            <form action="#!">
+                                <legend>Бронируйте современные <span class="color--pink">роскошные апартаменты </span>и будущие <span class="color--pink">Ваши яркие впечатления</span></legend>
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="col-12 col-xl-6">
+                                            <div class="form-group">
+                                                    <label class="field-text  field-text--md field-text--has-icon"><span class="field-text__name">Ваше имя</span><span class="field-text__input-wrap">
+                                                            <input class="field-text__input" type="text" value="" name="rent-name" placeholder=""><i class="icon-user"></i></span>
+                                                    </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-xl-6">
+                                            <div class="form-group">
+                                                    <label class="field-text  field-text--md field-text--has-icon"><span class="field-text__name">Телефон</span><span class="field-text__input-wrap">
+                                                            <input class="field-text__input" type="text" value="" name="rent-phone" placeholder=""><i class="icon-phone"></i></span>
+                                                    </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group mb30">
+                                                    <label class="field-text  field-text--md field-text--has-icon"><span class="field-text__name">Желаемая дата</span><span class="field-text__input-wrap">
+                                                            <input class="field-text__input datepicker-input" type="text" value="" name="rent-date" placeholder="" readonly="readonly"><i class="icon-calendar"></i></span>
+                                                    </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb15">
+                                        <button class="btn btn--block" type="button">Проверить цены</button>
+                                    </div>
+                                        <label class="field-checkbox">
+                                            <input class="field-checkbox__input" type="checkbox" name="checkbox" checked><span class="field-checkbox__span-input"></span><span class="field-checkbox__label">Согласен на обработку персональных данных</span>
+                                        </label>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section-->
                 <div class="section">
                     <div class="container">
                         <!-- Services carousel-->
@@ -238,6 +340,30 @@
               
               myMap.behaviors.disable('drag');
               myMap.behaviors.disable('scrollZoom');
+            }
+            var myMap2;
+            ymaps.ready(init2);
+            
+            function init2 () {
+                myMap2 = new ymaps.Map('yamaps', {
+                  center: [55.76, 37.64],
+                  zoom: 7
+                }),
+            
+                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                  hintContent: 'Sofia Luxury residence'
+                }, {
+                  iconLayout: 'default#image',
+                  iconImageHref: './tmp/map-marker.png',
+                  iconImageSize: [225, 225],
+                  iconImageOffset: [-112, -225]
+                });
+            
+              myMap2.geoObjects
+                .add(myPlacemark);
+              
+              myMap2.behaviors.disable('drag');
+              myMap2.behaviors.disable('scrollZoom');
             }
         </script>
     </body>

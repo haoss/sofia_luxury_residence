@@ -9,8 +9,39 @@ html(lang="ru")
   include ./_include/_head
 
   body
+    #senks.modal.modal--senks.mfp-hide
+      .modal__wrapper
+        .text-center
+          .h1 Спасибо!
+          p Ваша заявка принята, в течении 5 минут Вам перезвонят для уточнения деталей.
+
+    #map2.modal.modal--map.mfp-hide
+      .modal__wrapper
+        .modal-map
+          .modal__map-container
+            h2 8041, Cyprus, Paphos, Ayiou Ayapitikou, 31
+            table
+              tbody
+                tr
+                  td Москва:
+                  td
+                    a(href="tel:") +7 (495) 142-25-70
+                tr
+                  td Кипр, Пафос: 
+                  td
+                    a(href="tel:") +357-99-855-277
+                tr
+                  td Аренда: 
+                  td
+                    a(href="mailto:") reservation@sofiaresidence.ru
+                tr
+                  td Продажа:
+                  td 
+                    a(href="mailto:") sales@sofiaresidence.ru
+          #yamaps.modal__map
 
     .base
+
       // Preloader
       include ./_include/_preloader
 
@@ -21,12 +52,106 @@ html(lang="ru")
         .container.main-row__container
           p 1
 
-
       // Content
       .content-main
         .content-main__head
 
+        .container
+
+          // Section
+          .section
+            .content__inside
+
+              .row
+                .col-12.col-lg-6
+                  .content__head.--outside
+                    .h1.--xs-fs26 Устройте себе отпуск, который не сможете забыть!
+                  p Комплекс Апартаментов SOFIA Luxury Residence расположен в тихом районе Като Пафос города Пафос, недалеко от средневекового замка Пафоса и церкви Агия Соломони.
+                  p Апартаменты находятся в непосредственной близости от Археологического парка и в 700 метрах от теплого средиземного моря. На закрытой охраняемой территории комплекса к услугам для гостей располагается сезонный открытый бассейн с подогревом и гидромассажем, в котором вы можете позволить себе наслаждаться приятным отдыхом круглый год.
+                  p Климат в апартаментах поддерживается современными VRV системами, а в зимние вечера уют обеспечат центральный подогрев полов и современная система «Умный Дом». Бесплатный паркинг оснащен пунктом для зарядки электромобилей. Во всех апартаментах бесплатный Wi-Fi.
+                .col-12.col-lg-6
+                  .on-map
+                    a(href="#map2").btn.js-popup-yamaps
+
+              .main-
+
+        // One service form
+        .container
+          .main-form
+            .main-form__img
+              img(src="./tmp/one-service-form.png", alt="")
+            .main-form__wrapper
+              form(action="#!")
+                legend Бронируйте современные 
+                  span.color--pink роскошные апартаменты 
+                  | и будущие 
+                  span.color--pink Ваши яркие впечатления
+                fieldset
+                  .row
+                    .col-12.col-xl-6
+                      .form-group
+                        +field-text({
+                          title: 'Ваше имя',
+                          hasJs: false,
+                          isTextarea: false,
+                          hasError: false,
+                          helpText: '',
+                          mods: 'md,has-icon',
+                          val: '',
+                          attrs: {
+                            name: 'rent-name',
+                            placeholder: ''
+                          }
+                        })()
+                          i.icon-user
+                    .col-12.col-xl-6
+                      .form-group
+                        +field-text({
+                          title: 'Телефон',
+                          hasJs: false,
+                          isTextarea: false,
+                          hasError: false,
+                          helpText: '',
+                          mods: 'md,has-icon',
+                          val: '',
+                          attrs: {
+                            name: 'rent-phone',
+                            placeholder: ''
+                          }
+                        })()
+                          i.icon-phone
+                    .col-12
+                      .form-group.mb30
+                        +field-text({
+                          title: 'Желаемая дата',
+                          hasJs: false,
+                          isTextarea: false,
+                          hasError: false,
+                          helpText: '',
+                          mods: 'md,has-icon',
+                          val: '',
+                          attrs: {
+                            name: 'rent-date',
+                            placeholder: '',
+                            readonly: 'readonly',
+                            class: 'datepicker-input'
+                          }
+                        })()
+                          i.icon-calendar
+                  .form-group.mb15
+                    button(type="button").btn.btn--block Проверить цены
+                  +field-checkbox({
+                    title: 'Согласен на обработку персональных данных',
+                    isLink: false,
+                    mods: '',
+                    attrs: {
+                      name: 'checkbox',
+                      checked: true,
+                    }
+                  })
+            
         
+        // Section
         .section
           .container
             // Services carousel
@@ -121,4 +246,28 @@ html(lang="ru")
         
         myMap.behaviors.disable('drag');
         myMap.behaviors.disable('scrollZoom');
+      }
+      var myMap2;
+      ymaps.ready(init2);
+      
+      function init2 () {
+          myMap2 = new ymaps.Map('yamaps', {
+            center: [55.76, 37.64],
+            zoom: 7
+          }),
+
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Sofia Luxury residence'
+          }, {
+            iconLayout: 'default#image',
+            iconImageHref: './tmp/map-marker.png',
+            iconImageSize: [225, 225],
+            iconImageOffset: [-112, -225]
+          });
+
+        myMap2.geoObjects
+          .add(myPlacemark);
+        
+        myMap2.behaviors.disable('drag');
+        myMap2.behaviors.disable('scrollZoom');
       }

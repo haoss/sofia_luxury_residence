@@ -2206,6 +2206,14 @@
 }
 
 .one-room {
+  &__option {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    &>div {
+      width: 50%;
+    }
+  }
   &__form {
     background: $color-white;
     background: $color-white;
@@ -2276,6 +2284,47 @@
         margin-right: -30px;
         padding-left: 30px;
         padding-right: 30px;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__form {
+      max-width: 380px;
+      margin-right: 0;
+      &-bottom {
+        .form-count {
+          width: 176px;
+        }
+        .btn--block {
+          max-width: 304px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &__option {
+      &>div {
+        width: auto;
+        min-width: 170px;
+        padding-right: 10px;
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &__option {
+      &>div {
+        width: 25%;
+      }
+    }
+    &__form {
+      max-width: 450px;
+      padding-left: 40px;
+      padding-right: 40px;
+      &-bottom {
+        margin-left: -40px;
+        margin-right: -40px;
+        padding-left: 40px;
+        padding-right: 40px;
       }
     }
   }

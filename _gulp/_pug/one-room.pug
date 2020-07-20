@@ -34,28 +34,38 @@ html(lang="ru")
                 .one-room__option
                   div
                     .option-info
-                      i.icon-properties-14
-                      div Гостиная с 
-                        br
-                        | кухней
+                      i.icon-properties-1
+                      div 4 гостя
                   div
                     .option-info
                       i.icon-properties-2
                       div 2 спальни
                   div
                     .option-info
+                      i.icon-properties-3
+                      div 2 кровати
+                  div
+                    .option-info
                       i.icon-properties-4
-                      div 2 ванные 
+                      div 1 ванная
+                  div
+                    .option-info
+                      i.icon-properties-10
+                      div Бесплатный 
                         br
-                        | комнаты
+                        | Wi-Fi
                   div
                     .option-info
-                      i.icon-properties-5
-                      div 101,29 кв2
+                      i.icon-properties-11
+                      div Номера для 
+                        br
+                        | некурящих
                   div
                     .option-info
-                      i.icon-properties-15
-                      div Терраса
+                      i.icon-properties-12
+                      div Хранение 
+                        br
+                        | багажа
 
                 .content__head.--outside
                   .h2 Завтрак "шведский стол"
@@ -103,22 +113,6 @@ html(lang="ru")
                 
                 p ------------- Показать больше --------------
 
-                .content__head.--outside
-                  .h2 Что нужно помнить
-                p
-                  strong Прибытие: После 15:00
-                  br
-                  strong Выезд: 10:00
-                ul
-                  li Курение запрещено
-                  li Нельзя с питомцами
-                  li Без вечеринок и мероприятий
-                  li Залог за сохранность имущества: если вы нанесете ущерб жилью, с вас могут списать деньги (максимальная сумма — 14505₽)
-                p
-                  strong Бесплатная отмена в течение 48 ч.
-                  br
-                  strong При отмене до 3:00 PM 17 апр. вы получите возврат в размере 50% за вычетом сбора за услуги.
-
             .col-12.col-md-6.col-lg-5.col-xl-4
 
               .one-room__form
@@ -136,40 +130,43 @@ html(lang="ru")
                       | (123 отзыва)
                 .one-room__form-bottom
                   form(action="#!")
-                    .form-group
-                      +field-text({
-                        title: 'Заезд',
-                        hasJs: false,
-                        isTextarea: false,
-                        hasError: false,
-                        helpText: '',
-                        mods: 'md,has-icon',
-                        val: '',
-                        attrs: {
-                          name: 'date-from',
-                          placeholder: '',
-                          readonly: 'readonly',
-                          class: 'datepicker-input'
-                        }
-                      })()
-                        i.icon-calendar
-                    .form-group.mb20
-                      +field-text({
-                        title: 'Отъезд',
-                        hasJs: false,
-                        isTextarea: false,
-                        hasError: false,
-                        helpText: '',
-                        mods: 'md,has-icon',
-                        val: '',
-                        attrs: {
-                          name: 'date-to',
-                          placeholder: '',
-                          readonly: 'readonly',
-                          class: 'datepicker-input'
-                        }
-                      })()
-                        i.icon-calendar
+                    .row
+                      .col-12.col-xxl-6
+                        .form-group
+                          +field-text({
+                            title: 'Заезд',
+                            hasJs: false,
+                            isTextarea: false,
+                            hasError: false,
+                            helpText: '',
+                            mods: 'md,has-icon',
+                            val: '',
+                            attrs: {
+                              name: 'date-from',
+                              placeholder: '',
+                              readonly: 'readonly',
+                              class: 'datepicker-input'
+                            }
+                          })()
+                            i.icon-calendar
+                      .col-12.col-xxl-6
+                        .form-group.mb20
+                          +field-text({
+                            title: 'Отъезд',
+                            hasJs: false,
+                            isTextarea: false,
+                            hasError: false,
+                            helpText: '',
+                            mods: 'md,has-icon',
+                            val: '',
+                            attrs: {
+                              name: 'date-to',
+                              placeholder: '',
+                              readonly: 'readonly',
+                              class: 'datepicker-input'
+                            }
+                          })()
+                            i.icon-calendar
                     .d-search__input-row.mb15
                       div
                         label.d-search__input-label Взрослых
@@ -259,6 +256,23 @@ html(lang="ru")
                           b 5.0
                       p Далеко-далеко за словесными горами в стране гласных и согласных живут Далеко-далеко за словесными горами в стране гласных и согласных живут
                   a(href="#!").btn.btn--border.btn--md.btn--block все отзывы
+
+          .content__inside
+            .content__head.--outside
+              .h2 Что нужно помнить
+            p
+              strong Прибытие: После 15:00
+              br
+              strong Выезд: 10:00
+            ul
+              li Курение запрещено
+              li Нельзя с питомцами
+              li Без вечеринок и мероприятий
+              li Залог за сохранность имущества: если вы нанесете ущерб жилью, с вас могут списать деньги (максимальная сумма — 14505₽)
+            p
+              strong Бесплатная отмена в течение 48 ч.
+              br
+              strong При отмене до 3:00 PM 17 апр. вы получите возврат в размере 50% за вычетом сбора за услуги.
 
       include ./_include/_footer
       //- div(style="height: 1000px; background-color: #000")

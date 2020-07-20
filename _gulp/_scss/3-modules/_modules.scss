@@ -2,6 +2,7 @@
 .content {
   padding-top: 54px;
   padding-bottom: 50px;
+  position: relative;
   background: {
     image: url('../images/content-bg.png');
     repeat: no-repeat;
@@ -102,6 +103,37 @@
     &:hover {
       img {
         transform: scale(1.1);
+      }
+    }
+  }
+  &-main {
+    position: relative;
+    padding-top: 40px;
+    &__head {
+      width: 97px;
+      height: 22px;
+      position: absolute;
+      top: -22px;
+      z-index: 5;
+      left: 50%;
+      transform: translateX(-50%);
+      &::before, &::after {
+        position: absolute;
+        font-family: $font-icomoon;
+      }
+      &::before {
+        color: $color-white;
+        content: '\e92e';
+        line-height: 1;
+        font-size: 1.375rem;
+      }
+      &::after {
+        color: #6b92a8;
+        font-size: .5625rem;
+        content: '\e92a';
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
       }
     }
   }
@@ -2327,5 +2359,31 @@
         padding-right: 40px;
       }
     }
+  }
+}
+
+.main-row {
+  background: {
+    color: #eee;
+    position: top center;
+    size: cover;
+  };
+  min-height: 545px;
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 55px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(#22486B,.5);
+    z-index: 1;
+  }
+  &__container {
+    position: relative;
+    z-index: 5;
   }
 }

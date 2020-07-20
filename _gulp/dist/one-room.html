@@ -18,11 +18,21 @@
     <body>
         <div class="base">
             <!-- Preloader-->
+            <div class="modal modal--map mfp-hide" id="map">
+                <div class="modal__wrapper">
+                    <div class="modal-map">
+                        <div class="modal__map-container">
+                            <p>text</p>
+                        </div>
+                        <div class="modal__map" id="yamaps"></div>
+                    </div>
+                </div>
+            </div>
             <!-- Header-->
             <header class="header">
                 <div class="container">
                     <div class="header__wrapper">
-                        <div class="logo header__logo"><a href="#!"><img src="./images/log_alt.png" alt=""></a></div>
+                        <div class="logo header__logo"><a href="#!"><img src="./images/sp.gif" alt="" style="background-image: url('./images/logo_alt.png')"></a></div>
                         <div class="header__phones"><a href="tel:">+357 <b>99 855 277</b></a></div>
                         <div class="header__search">
                             <div class="d-search">
@@ -278,7 +288,7 @@
                                             </div>
                                         </div>
                                         <div class="text--center">
-                                            <button class="btn btn--block mb15" type="button">забронировать</button><a class="btn btn--on-map" href="#!"> <i class="icon-map"></i><span>Посмотреть на карте</span></a>
+                                            <button class="btn btn--block mb15" type="button">забронировать</button><a class="btn btn--on-map popup-yamaps" href="#map"><i class="icon-map"></i><span>Посмотреть на карте</span></a>
                                         </div>
                                     </form>
                                 </div>
@@ -425,5 +435,32 @@
         <script src="./js/libs/air-datepicker/js/datepicker.min.js"></script>
         <script src="./js/libs/fancybox/jquery.fancybox.min.js"></script>
         <script src="./js/common.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=&lt;ваш API-ключ&gt;&amp;lang=ru_RU" type="text/javascript"></script>
+        <script>
+            var myMap;
+              ymaps.ready(init);
+              
+              function init () {
+                myMap = new ymaps.Map('yamaps', {
+                  center: [55.76, 37.64],
+                  zoom: 7
+                }),
+            
+                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                  hintContent: 'Sofia Luxury residence'
+                }, {
+                  iconLayout: 'default#image',
+                  iconImageHref: './tmp/map-marker.png',
+                  iconImageSize: [225, 225],
+                  iconImageOffset: [-112, -225]
+                });
+            
+              myMap.geoObjects
+                .add(myPlacemark);
+              
+              myMap.behaviors.disable('drag');
+              myMap.behaviors.disable('scrollZoom');
+            }
+        </script>
     </body>
 </html>

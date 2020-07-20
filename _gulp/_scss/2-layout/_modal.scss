@@ -1,0 +1,43 @@
+.modal {
+  background: $color-white;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1530px;
+  width: 100%;
+  min-height: 200px;
+  .mfp-close {
+    width: 43px;
+    height: 42px;
+    background: $add-color-blue;
+    opacity: 1;
+    font-size: 0;
+    top: 0 !important;
+    &::before {
+      font-family: $font-icomoon;
+      content: '\e926';
+      color: $color-white;
+      opacity: 1;
+      font-size: 12px;
+      transition: all 0.35s;
+    }
+    &:hover {
+      &::before {
+        color: $add-color-pink;
+      }
+    }
+  }
+  &__map {
+    height: 500px;
+  }
+  &__map-container {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    width: 490px;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 135px
+  }
+}

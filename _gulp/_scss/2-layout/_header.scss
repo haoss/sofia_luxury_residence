@@ -1,5 +1,6 @@
 /* header */
 .header {
+  $this: &;
   background-color: $color-white;
   position: fixed;
   top: 0;
@@ -46,6 +47,20 @@
         }
       }
     }
+    .--main & {
+      ul {
+        li {
+          &>a, &>span {
+            color: $color-white;
+          }
+          &.active {
+            &>a, &>span {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
   }
   &__phones {
     display: none;
@@ -56,16 +71,35 @@
         font-size: rem(20px);
       }
     }
+    .--main & {
+      a {
+        color: $color-white;
+      }
+    }
   }
   &__logo {
     flex-grow: 1;
     flex-shrink: 0;
+    img {
+      width: 56px;
+      height: 56px;
+      background-size: cover;
+    }
   }
   &__lang {
     margin-left: 22px;
   }
   &__nav {
     margin-left: 20px;
+  }
+  &.--main {
+    background-color: transparent;
+    #{$this} {
+      
+    }
+    &+.header-holder {
+      display: none;
+    }
   }
   @include media-breakpoint-up(sm) {
     &__logo {
@@ -91,6 +125,9 @@
           font-size: rem(24px);
         }
       }
+      .--main & {
+        flex-grow: 1;
+      }
     }
     &__search {
       flex-grow: 1;
@@ -101,17 +138,44 @@
       margin-left: 0;
     }
   }
+  @include media-breakpoint-up(lg) {
+    &__phones {
+      .--main & {
+        flex-grow: 0;
+      }
+    }
+    &__menu {
+      .--main & {
+        display: block;
+        flex-grow: 1;
+        text-align: center;
+      }
+    }
+  }
   @include media-breakpoint-up(xl) {
     &__search {
       flex-grow: 0;
     }
     &__phones {
       margin-right: 48px;
+      .--main & {
+        margin-right: 0;
+      }
     }
     &__menu {
       display: block;
       flex-grow: 1;
       text-align: center;
+    }
+    &__logo {
+      .--main & {
+        margin-right: 37px;
+      }
+      img {
+        .--main & {
+          width: 236px;
+        }
+      }
     }
   }
   @include media-breakpoint-up(xxl) {
@@ -135,6 +199,9 @@
             padding: 0 15px;
           }
         }
+      }
+      .--main & {
+        text-align: right;
       }
     }
   }
@@ -163,6 +230,11 @@
     z-index: 5;
     cursor: pointer;
     transition: all 0.35s;
+    .--main & {
+      background-color: transparent;
+      border-color: $color-white;
+      color: $color-white;
+    }
   }
   &__ul {
     position: absolute;
@@ -206,6 +278,9 @@
       &__head {
         background: $add-color-blue;
         border-color: $add-color-blue;
+        .--main & {
+          color: $primary-color;
+        }
       }
     }
   }
@@ -220,6 +295,9 @@
       &__head {
         background: $add-color-blue;
         border-color: $add-color-blue;
+        .--main & {
+          color: $primary-color;
+        }
       }
     }
   }

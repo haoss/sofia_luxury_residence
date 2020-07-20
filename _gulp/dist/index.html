@@ -1,9 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Document</title>
+        <meta charset="utf-8">
+        <title>1 номер - SOFIA</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="date=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="format-detection" content="email=no">
+        <meta content="notranslate" name="google">
+        <link rel="stylesheet" href="https://i.icomoon.io/public/temp/e3c54c33a7/sofia/style.css">
+        <link rel="stylesheet" href="./js/libs/fancybox/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="./css/style.min.css">
     </head>
-    <body></body>
+    <body>
+        <div class="base">
+            <!-- Preloader-->
+            <div class="modal modal--map mfp-hide" id="map">
+                <div class="modal__wrapper">
+                    <div class="modal-map">
+                        <div class="modal__map-container">
+                            <p>text</p>
+                        </div>
+                        <div class="modal__map" id="yamaps"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header-->
+            <header class="header --main">
+                <div class="container">
+                    <div class="header__wrapper">
+                        <div class="logo header__logo"><a href="#!"><img src="./images/sp.gif" alt="" style="background-image: url('./images/logo.png')"></a></div>
+                        <div class="header__phones"><a href="tel:">+357 <b>99 855 277</b></a></div>
+                        <nav class="header__menu">
+                            <ul>
+                                <li><a href="#!">НОМЕРА</a></li>
+                                <li><a href="#!">УСЛУГИ</a></li>
+                                <li><a href="#!">ОТЗЫВЫ</a></li>
+                                <li><a href="#!">КОНТАКТЫ</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="nav header__nav" role="navigation">
+                            <button class="menu-btn j-modal-btn" type="button"><span>Меню</span></button>
+                            <div class="nav__dropdown">
+                                <div class="nav__dropdown-head"></div>
+                                <div class="nav__dropdown-wrapper">
+                                    <ul>
+                                        <li class="active"><span>Главная</span></li>
+                                        <li><a href="#!">Номера</a></li>
+                                        <li><a href="#!">Услуги</a></li>
+                                        <li><a href="#!">Отзывы</a></li>
+                                        <li><a href="#!">Контакты</a></li>
+                                    </ul>
+                                    <div class="nav__dropdown-foot">
+                                        <div>
+                                            <div class="div">Москва</div><a href="tel:">+7 (495) <b>142 25 70</b></a>
+                                        </div>
+                                        <div>
+                                            <div class="div">Кипр, Пафос:</div><a href="tel:">+357 <b>99 855 277</b></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="lang header__lang">
+                            <div class="lang__head j-modal-btn">RU</div>
+                            <ul class="lang__ul">
+                                <li><a href="#!">En</a></li>
+                                <li><a href="#!">Fr</a></li>
+                                <li><a href="#!">Ru</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="header-holder"></div>
+            <!-- Main row-->
+            <div class="main-row" style="background-image: url('./tmp/main-row.png');">
+                <div class="container main-row__container">
+                    <p>1</p>
+                </div>
+            </div>
+            <!-- Content-->
+            <div class="content-main">
+                <div class="content-main__head"></div>
+                <div class="container">
+                    <p>text</p>
+                </div>
+            </div>
+            <!-- Footer-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__top">
+                        <div class="footer__top-row --first">
+                            <div class="div1">
+                                <div class="footer__title text-uppercase j-footer-nav">О нас</div>
+                                <div class="footer__nav">
+                                    <ul>
+                                        <li><a href="#!">Личностное многообразие и принятие</a></li>
+                                        <li><a href="#!">Доступность</a></li>
+                                        <li><a href="#!">Доверие и безопасность</a></li>
+                                        <li><a href="#!">Пресс-центр</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="div2">
+                                <div class="footer__title text-uppercase j-footer-nav">Организация</div>
+                                <div class="footer__nav">
+                                    <ul>
+                                        <li><a href="#!">Впечатление</a></li>
+                                        <li><a href="#!">Ответственный прием гостей</a></li>
+                                        <li><a href="#!">Развлекательные мероприятия </a></li>
+                                        <li><a href="#!">Центр ресурсов</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="div3">
+                                <div class="footer__title text-uppercase j-footer-nav">Поддержка</div>
+                                <div class="footer__nav">
+                                    <ul>
+                                        <li><a href="#!">Центр помощи</a></li>
+                                        <li><a href="#!">Поддержка посетителей</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__top-row --second">
+                            <div class="div4">
+                                <div class="footer__title">8041, Cyprus, Paphos, Ayiou Ayapitikou, 31</div>
+                                <div class="social footer__social"><a href="#!"><i class="icon-instagram"></i></a><a href="#!"><i class="icon-facebook"></i></a></div>
+                            </div>
+                            <div class="div5">
+                                <div class="footer__bonus">
+                                    <div class="footer__bonus-title">Бонусная программа<b class="b">SLR-CLUB</b></div>
+                                    <div class="footer__bonus-app">
+                                        <div><a href="#!" target="_blank"><img src="./tmp/app-apple.png" alt=""></a></div>
+                                        <div><a href="#!" target="_blank"><img src="./tmp/app-google.png" alt=""></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__bottom">
+                        <div>© 2020 Комплекс Апартаментов Sofia Luxury Residence, Paphos. Официальный сайт.</div>
+                        <div>Разработка и поддержка <a href="#!" target="_blank">Piarme</a></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- Load Scripts-->
+        <!-- Footer js-->
+        <script src="./js/libs/jquery/jquery-3.3.1.min.js"></script>
+        <script src="./js/libs/jquery/jquery-migrate-3.0.1.min.js"></script>
+        <script src="./js/libs/slick/slick.js"></script>
+        <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="./js/libs/air-datepicker/js/datepicker.min.js"></script>
+        <script src="./js/libs/fancybox/jquery.fancybox.min.js"></script>
+        <script src="./js/common.js"></script>
+    </body>
 </html>

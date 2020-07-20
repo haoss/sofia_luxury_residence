@@ -1,115 +1,165 @@
 // Header
-header.header
-  .container
+if index == true
+  header.header.--main
+    .container
 
-    .header__wrapper
-      .logo.header__logo
-        a(href="#!")
-          img(src="./images/log_alt.png", alt="")
-      .header__phones
-        a(href="tel:") +357 
-          b 99 855 277
+      .header__wrapper
+        .logo.header__logo
+          a(href="#!")
+            img(src="./images/sp.gif", alt="" style="background-image: url('./images/logo.png')")
+        .header__phones
+          a(href="tel:") +357 
+            b 99 855 277
 
-      .header__search
-        .d-search
-          .d-search__date
-            .d-search__date-btn.j-modal-btn.j-m-date-test
-              div(data-date="from") Заезд
-              div(data-date="to") Выезд
-            .d-search__dropdown.--calendar
-              .d-search__dropdown-wrapper
-                .datepicker-here(data-range="true")
-                
-          .d-search__input
-            .d-search__input-btn.j-modal-btn.j-m-count-test Сколько гостей?
-            .d-search__dropdown
-              .d-search__dropdown-wrapper
-                .d-search__input-row.mb15
-                  div
-                    label.d-search__input-label Взрослых
-                    p.d-search__input-p Возраст: от 18 лет
-                  div
+        nav.header__menu
+          ul
+            li: a(href="#!") НОМЕРА
+            li: a(href="#!") УСЛУГИ
+            li: a(href="#!") ОТЗЫВЫ
+            li: a(href="#!") КОНТАКТЫ
+
+        nav.nav.header__nav(role="navigation")
+          button(type="button").menu-btn.j-modal-btn
+            span Меню
+          .nav__dropdown
+            .nav__dropdown-head
+            .nav__dropdown-wrapper
+              ul
+                li.active: span Главная
+                li: a(href="#!") Номера
+                li: a(href="#!") Услуги
+                li: a(href="#!") Отзывы
+                li: a(href="#!") Контакты
+              .nav__dropdown-foot
+                div
+                  .div Москва
+                  a(href="tel:") +7 (495) 
+                    b 142 25 70
+                div
+                  .div Кипр, Пафос:
+                  a(href="tel:") +357 
+                    b 99 855 277
+        
+        .lang.header__lang
+          .lang__head.j-modal-btn RU
+          ul.lang__ul
+            li: a(href="#!") En
+            li: a(href="#!") Fr
+            li: a(href="#!") Ru
+
+  .header-holder
+else
+  header.header
+    .container
+
+      .header__wrapper
+        .logo.header__logo
+          a(href="#!")
+            img(src="./images/sp.gif", alt="" style="background-image: url('./images/logo_alt.png')")
+        .header__phones
+          a(href="tel:") +357 
+            b 99 855 277
+
+        .header__search
+          .d-search
+            .d-search__date
+              .d-search__date-btn.j-modal-btn.j-m-date-test
+                div(data-date="from") Заезд
+                div(data-date="to") Выезд
+              .d-search__dropdown.--calendar
+                .d-search__dropdown-wrapper
+                  .datepicker-here(data-range="true")
+                  
+            .d-search__input
+              .d-search__input-btn.j-modal-btn.j-m-count-test Сколько гостей?
+              .d-search__dropdown
+                .d-search__dropdown-wrapper
+                  .d-search__input-row.mb15
+                    div
+                      label.d-search__input-label Взрослых
+                      p.d-search__input-p Возраст: от 18 лет
+                    div
+                      .form-count.j-people-count
+                        button(type="button").btn-minus
+                        button(type="button").btn-plus
+                        input(type='text' value='2 чел')
+                  .d-search__input-row
+                    div
+                      label.d-search__input-label Детей
+                      p.d-search__input-p Возраст: от 6  до 18 лет
+                    div
+                      .form-count.j-people-count
+                        button(type="button").btn-minus
+                        button(type="button").btn-plus
+                        input(type='text' value='2 чел')
+            button(type="button").d-search__btn
+          .m-search
+            button(type="button").m-search-btn.j-modal-btn
+              span Начать поиск
+            .m-search__dropdown
+              .m-search__dropdown-head
+              .m-search__dropdown-wrapper
+                form(action="#!")
+                  .m-search__group
+                    .m-search__date.j-m-date-test
+                      div(data-date="from") Заезд
+                      div(data-date="to") Выезд
+                  .m-search__group
+                    .datepicker-here.m-search__datepicker(data-range="true")
+                  .m-search__group
+                    .m-search__input.j-people-value.j-m-count-test Сколько гостей?
+                  .m-search__group.mb20
+                    label.m-search__group-label Взрослых
+                    p.m-search__group-p Возраст: от 18 лет
                     .form-count.j-people-count
                       button(type="button").btn-minus
                       button(type="button").btn-plus
                       input(type='text' value='2 чел')
-                .d-search__input-row
-                  div
-                    label.d-search__input-label Детей
-                    p.d-search__input-p Возраст: от 6  до 18 лет
-                  div
+
+                  .m-search__group
+                    label.m-search__group-label Детей
+                    p.m-search__group-p Возраст: от 6  до 18 лет
                     .form-count.j-people-count
                       button(type="button").btn-minus
                       button(type="button").btn-plus
                       input(type='text' value='2 чел')
-          button(type="button").d-search__btn
-        .m-search
-          button(type="button").m-search-btn.j-modal-btn
-            span Начать поиск
-          .m-search__dropdown
-            .m-search__dropdown-head
-            .m-search__dropdown-wrapper
-              form(action="#!")
-                .m-search__group
-                  .m-search__date.j-m-date-test
-                    div(data-date="from") Заезд
-                    div(data-date="to") Выезд
-                .m-search__group
-                  .datepicker-here.m-search__datepicker(data-range="true")
-                .m-search__group
-                  .m-search__input.j-people-value.j-m-count-test Сколько гостей?
-                .m-search__group.mb20
-                  label.m-search__group-label Взрослых
-                  p.m-search__group-p Возраст: от 18 лет
-                  .form-count.j-people-count
-                    button(type="button").btn-minus
-                    button(type="button").btn-plus
-                    input(type='text' value='2 чел')
 
-                .m-search__group
-                  label.m-search__group-label Детей
-                  p.m-search__group-p Возраст: от 6  до 18 лет
-                  .form-count.j-people-count
-                    button(type="button").btn-minus
-                    button(type="button").btn-plus
-                    input(type='text' value='2 чел')
+                  button(type="button").btn.btn--block Проверить цены
 
-                button(type="button").btn.btn--block Проверить цены
+        nav.header__menu
+          ul
+            li: a(href="#!") НОМЕРА
+            li: a(href="#!") УСЛУГИ
+            li: a(href="#!") ОТЗЫВЫ
+            li: a(href="#!") КОНТАКТЫ
 
-      nav.header__menu
-        ul
-          li: a(href="#!") НОМЕРА
-          li: a(href="#!") УСЛУГИ
-          li: a(href="#!") ОТЗЫВЫ
-          li: a(href="#!") КОНТАКТЫ
+        nav.nav.header__nav(role="navigation")
+          button(type="button").menu-btn.j-modal-btn
+            span Меню
+          .nav__dropdown
+            .nav__dropdown-head
+            .nav__dropdown-wrapper
+              ul
+                li.active: span Главная
+                li: a(href="#!") Номера
+                li: a(href="#!") Услуги
+                li: a(href="#!") Отзывы
+                li: a(href="#!") Контакты
+              .nav__dropdown-foot
+                div
+                  .div Москва
+                  a(href="tel:") +7 (495) 
+                    b 142 25 70
+                div
+                  .div Кипр, Пафос:
+                  a(href="tel:") +357 
+                    b 99 855 277
+        
+        .lang.header__lang
+          .lang__head.j-modal-btn RU
+          ul.lang__ul
+            li: a(href="#!") En
+            li: a(href="#!") Fr
+            li: a(href="#!") Ru
 
-      nav.nav.header__nav(role="navigation")
-        button(type="button").menu-btn.j-modal-btn
-          span Меню
-        .nav__dropdown
-          .nav__dropdown-head
-          .nav__dropdown-wrapper
-            ul
-              li.active: span Главная
-              li: a(href="#!") Номера
-              li: a(href="#!") Услуги
-              li: a(href="#!") Отзывы
-              li: a(href="#!") Контакты
-            .nav__dropdown-foot
-              div
-                .div Москва
-                a(href="tel:") +7 (495) 
-                  b 142 25 70
-              div
-                .div Кипр, Пафос:
-                a(href="tel:") +357 
-                  b 99 855 277
-      
-      .lang.header__lang
-        .lang__head.j-modal-btn RU
-        ul.lang__ul
-          li: a(href="#!") En
-          li: a(href="#!") Fr
-          li: a(href="#!") Ru
-
-.header-holder
+  .header-holder

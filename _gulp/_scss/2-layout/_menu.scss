@@ -315,7 +315,9 @@
   display: flex;
   align-items: center;
   height: 40px;
-  // background: pink;
+  .--main & {
+    color: $color-white;
+  }
   &::after {
     // transition: all 0.35s;
     font-size: rem(31px);

@@ -1,7 +1,38 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
+doctype
+
+html(lang="ru")
+
+  -var active = '1 номер' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 номер' + ' - SOFIA' //title страницы для генерации верстки
+  -var index = true;
+
+  include ./_include/_head
+
   body
+
+    .base
+      // Preloader
+      include ./_include/_preloader
+
+      include ./_include/_header
+
+      // Main row
+      .main-row(style="background-image: url('./tmp/main-row.png');")
+        .container.main-row__container
+          p 1
+
+
+      // Content
+      .content-main
+        .content-main__head
+        .container
+
+          p text
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

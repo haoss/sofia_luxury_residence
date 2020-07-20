@@ -16,18 +16,46 @@
         <link rel="stylesheet" href="./css/style.min.css">
     </head>
     <body>
-        <div class="base">
-            <!-- Preloader-->
-            <div class="modal modal--map mfp-hide" id="map">
-                <div class="modal__wrapper">
-                    <div class="modal-map">
-                        <div class="modal__map-container">
-                            <p>text</p>
-                        </div>
-                        <div class="modal__map" id="yamaps"></div>
-                    </div>
+        <div class="modal modal--senks mfp-hide" id="senks">
+            <div class="modal__wrapper">
+                <div class="text-center">
+                    <div class="h1">Спасибо!</div>
+                    <p>Ваша заявка принята, в течении 5 минут Вам перезвонят для уточнения деталей.</p>
                 </div>
             </div>
+        </div>
+        <div class="modal modal--map mfp-hide" id="map">
+            <div class="modal__wrapper">
+                <div class="modal-map">
+                    <div class="modal__map-container">
+                        <h2>8041, Cyprus, Paphos, Ayiou Ayapitikou, 31</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Москва:</td>
+                                    <td><a href="tel:">+7 (495) 142-25-70</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Кипр, Пафос: </td>
+                                    <td><a href="tel:">+357-99-855-277</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Аренда: </td>
+                                    <td><a href="mailto:">reservation@sofiaresidence.ru</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Продажа:</td>
+                                    <td> <a href="mailto:">sales@sofiaresidence.ru</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal__map" id="yamaps"></div>
+                </div>
+            </div>
+        </div>
+        <div class="base">
+            <!-- Preloader-->
             <!-- Header-->
             <header class="header">
                 <div class="container">
@@ -287,8 +315,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="text--center">
-                                            <button class="btn btn--block mb15" type="button">забронировать</button><a class="btn btn--on-map popup-yamaps" href="#map"><i class="icon-map"></i><span>Посмотреть на карте</span></a>
+                                        <div class="text--center"><a class="btn btn--block mb15 open-popup-link" href="#senks">забронировать</a>
+                                            <!-- button(type="button").btn.btn--block.mb15 забронировать--><a class="btn btn--on-map popup-yamaps" href="#map"><i class="icon-map"></i><span>Посмотреть на карте</span></a>
                                         </div>
                                     </form>
                                 </div>

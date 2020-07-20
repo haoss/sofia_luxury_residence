@@ -12,6 +12,9 @@
   &.is-scroll {
     box-shadow: 0 0 10px rgba($color-black,0.3);
   }
+  &.--main {
+    position: absolute !important;
+  }
   &-holder {
     height: 100px;
   }
@@ -53,6 +56,11 @@
           &>a, &>span {
             color: $color-white;
           }
+          &>a {
+            &:hover {
+              color: $add-color-pink;
+            }
+          }
           &.active {
             &>a, &>span {
               text-decoration: underline;
@@ -74,6 +82,9 @@
     .--main & {
       a {
         color: $color-white;
+        &:hover {
+          color: $add-color-pink;
+        }
       }
     }
   }

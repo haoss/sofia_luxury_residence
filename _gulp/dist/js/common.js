@@ -12,16 +12,7 @@ $(document).on('ready', function(){
   $('.popup-yamaps').magnificPopup({
 		type: 'inline',
 		preloader: false,
-		focus: '#yamaps',
-		callbacks: {
-			beforeOpen: function() {
-				if($(window).width() < 700) {
-					this.st.focus = false;
-				} else {
-					this.st.focus = '#yamaps';
-				}
-			}
-		}
+		focus: '#yamaps'
 	});
 
   // Modal open

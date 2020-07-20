@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>1 номер - SOFIA</title>
+        <title>Главная - SOFIA</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -18,16 +18,6 @@
     <body>
         <div class="base">
             <!-- Preloader-->
-            <div class="modal modal--map mfp-hide" id="map">
-                <div class="modal__wrapper">
-                    <div class="modal-map">
-                        <div class="modal__map-container">
-                            <p>text</p>
-                        </div>
-                        <div class="modal__map" id="yamaps"></div>
-                    </div>
-                </div>
-            </div>
             <!-- Header-->
             <header class="header --main">
                 <div class="container">
@@ -86,8 +76,74 @@
             <!-- Content-->
             <div class="content-main">
                 <div class="content-main__head"></div>
-                <div class="container">
-                    <p>text</p>
+                <div class="section">
+                    <div class="container">
+                        <!-- Services carousel-->
+                        <div class="services-row">
+                            <div class="services-row__head">
+                                <div class="content__head">
+                                    <div class="h1 --xs-fs26">Услуги которые вас могут заинтересовать</div>
+                                </div>
+                            </div>
+                            <div class="services-row__wrapper">
+                                <div class="j-services-row row">
+                                    <div class="col-12">
+                                        <div class="services__block mb0">
+                                            <div class="services__block-thumb"><a href="#!"><img src="./tmp/services-img-1.png" alt=""></a></div>
+                                            <div class="services__block-title"><a href="#!">Организация праздника</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="services__block mb0">
+                                            <div class="services__block-thumb"><a href="#!"><img src="./tmp/services-img-2.png" alt=""></a></div>
+                                            <div class="services__block-title"><a href="#!">Доставка еды</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="services__block mb0">
+                                            <div class="services__block-thumb"><a href="#!"><img src="./tmp/services-img-3.png" alt=""></a></div>
+                                            <div class="services__block-title"><a href="#!">Встреча из аэропорта</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="services__block mb0">
+                                            <div class="services__block-thumb"><a href="#!"><img src="./tmp/services-img-1.png" alt=""></a></div>
+                                            <div class="services__block-title"><a href="#!">Организация праздника</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Map-->
+                <div class="map-main">
+                    <div class="container">
+                        <div class="map-main__block">
+                            <h2>8041, Cyprus, Paphos, Ayiou Ayapitikou, 31</h2>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Москва:</td>
+                                        <td><a href="tel:">+7 (495) 142-25-70</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Кипр, Пафос: </td>
+                                        <td><a href="tel:">+357-99-855-277</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Аренда: </td>
+                                        <td><a href="mailto:">reservation@sofiaresidence.ru</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Продажа:</td>
+                                        <td> <a href="mailto:">sales@sofiaresidence.ru</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="map-main__container" id="map"></div>
                 </div>
             </div>
             <!-- Footer-->
@@ -159,5 +215,30 @@
         <script src="./js/libs/air-datepicker/js/datepicker.min.js"></script>
         <script src="./js/libs/fancybox/jquery.fancybox.min.js"></script>
         <script src="./js/common.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=&lt;ваш API-ключ&gt;&amp;lang=ru_RU" type="text/javascript"></script>
+        <script type="text/javascript">
+            ymaps.ready(init);
+            function init(){ 
+              var myMap = new ymaps.Map("map", {
+                  center: [55.76, 37.64],
+                  zoom: 7
+                }),
+            
+                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                  hintContent: 'Sofia Luxury residence'
+                }, {
+                  iconLayout: 'default#image',
+                  iconImageHref: './tmp/map-marker.png',
+                  iconImageSize: [225, 225],
+                  iconImageOffset: [-112, -225]
+                });
+            
+              myMap.geoObjects
+                .add(myPlacemark);
+              
+              myMap.behaviors.disable('drag');
+              myMap.behaviors.disable('scrollZoom');
+            }
+        </script>
     </body>
 </html>

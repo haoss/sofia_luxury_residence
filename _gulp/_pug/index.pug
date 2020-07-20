@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
 
-  -var active = '1 номер' //активный пункт меню, список в header.jade
-  -var pageTitle = '1 номер' + ' - SOFIA' //title страницы для генерации верстки
+  -var active = 'Главная' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная' + ' - SOFIA' //title страницы для генерации верстки
   -var index = true;
 
   include ./_include/_head
@@ -25,9 +25,71 @@ html(lang="ru")
       // Content
       .content-main
         .content-main__head
-        .container
 
-          p text
+        
+        .section
+          .container
+            // Services carousel
+            .services-row
+              .services-row__head
+                .content__head
+                  .h1.--xs-fs26 Услуги которые вас могут заинтересовать
+              .services-row__wrapper
+                .j-services-row.row
+                  .col-12
+                    .services__block.mb0
+                      .services__block-thumb
+                        a(href="#!")
+                          img(src="./tmp/services-img-1.png", alt="")
+                      .services__block-title
+                        a(href="#!") Организация праздника
+                  .col-12
+                    .services__block.mb0
+                      .services__block-thumb
+                        a(href="#!")
+                          img(src="./tmp/services-img-2.png", alt="")
+                      .services__block-title
+                        a(href="#!") Доставка еды
+                  .col-12
+                    .services__block.mb0
+                      .services__block-thumb
+                        a(href="#!")
+                          img(src="./tmp/services-img-3.png", alt="")
+                      .services__block-title
+                        a(href="#!") Встреча из аэропорта
+                  .col-12
+                    .services__block.mb0
+                      .services__block-thumb
+                        a(href="#!")
+                          img(src="./tmp/services-img-1.png", alt="")
+                      .services__block-title
+                        a(href="#!") Организация праздника
+
+        // Map
+        .map-main
+          .container
+            .map-main__block
+              h2 8041, Cyprus, Paphos, Ayiou Ayapitikou, 31
+              table
+                tbody
+                  tr
+                    td Москва:
+                    td
+                      a(href="tel:") +7 (495) 142-25-70
+                  tr
+                    td Кипр, Пафос: 
+                    td
+                      a(href="tel:") +357-99-855-277
+                  tr
+                    td Аренда: 
+                    td
+                      a(href="mailto:") reservation@sofiaresidence.ru
+                  tr
+                    td Продажа:
+                    td 
+                      a(href="mailto:") sales@sofiaresidence.ru
+
+          #map.map-main__container
 
       include ./_include/_footer
       //- div(style="height: 1000px; background-color: #000")
@@ -36,3 +98,27 @@ html(lang="ru")
     include ./_include/_footer-js
     script(src="./js/common.js")
 
+    script(src='https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU' type='text/javascript')
+    script(type='text/javascript').
+      ymaps.ready(init);
+      function init(){ 
+        var myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 7
+          }),
+
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Sofia Luxury residence'
+          }, {
+            iconLayout: 'default#image',
+            iconImageHref: './tmp/map-marker.png',
+            iconImageSize: [225, 225],
+            iconImageOffset: [-112, -225]
+          });
+
+        myMap.geoObjects
+          .add(myPlacemark);
+        
+        myMap.behaviors.disable('drag');
+        myMap.behaviors.disable('scrollZoom');
+      }

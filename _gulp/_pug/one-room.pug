@@ -9,6 +9,37 @@ html(lang="ru")
 
   body
 
+    #senks.modal.modal--senks.mfp-hide
+      .modal__wrapper
+        .text-center
+          .h1 Спасибо!
+          p Ваша заявка принята, в течении 5 минут Вам перезвонят для уточнения деталей.
+
+    #map.modal.modal--map.mfp-hide
+      .modal__wrapper
+        .modal-map
+          .modal__map-container
+            h2 8041, Cyprus, Paphos, Ayiou Ayapitikou, 31
+            table
+              tbody
+                tr
+                  td Москва:
+                  td
+                    a(href="tel:") +7 (495) 142-25-70
+                tr
+                  td Кипр, Пафос: 
+                  td
+                    a(href="tel:") +357-99-855-277
+                tr
+                  td Аренда: 
+                  td
+                    a(href="mailto:") reservation@sofiaresidence.ru
+                tr
+                  td Продажа:
+                  td 
+                    a(href="mailto:") sales@sofiaresidence.ru
+          #yamaps.modal__map
+
     .base
       // Preloader
       include ./_include/_preloader
@@ -186,7 +217,8 @@ html(lang="ru")
                           button(type="button").btn-plus
                           input(type='text' value='2 чел')
                     .text--center
-                      button(type="button").btn.btn--block.mb15 забронировать
+                      a(href="#senks").btn.btn--block.mb15.open-popup-link забронировать
+                      // button(type="button").btn.btn--block.mb15 забронировать
                       a(href="#map").btn.btn--on-map.popup-yamaps
                         i.icon-map
                         span Посмотреть на карте

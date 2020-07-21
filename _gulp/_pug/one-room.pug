@@ -320,25 +320,25 @@ html(lang="ru")
       ymaps.ready(init);
       
       function init () {
-        myMap = new ymaps.Map('yamaps', {
-          center: [55.76, 37.64],
-          zoom: 7
-        }),
+          myMap = new ymaps.Map('yamaps', {
+            center: [55.76, 37.64],
+            zoom: 7,
+          }),
 
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Sofia Luxury residence'
-        }, {
-          iconLayout: 'default#image',
-          iconImageHref: './tmp/map-marker.png',
-          iconImageSize: [225, 225],
-          iconImageOffset: [-112, -225]
-        });
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Sofia Luxury residence'
+          }, {
+            iconLayout: 'default#image',
+            iconImageHref: './tmp/map-marker.png',
+            iconImageSize: [225, 225],
+            iconImageOffset: [-112, -225]
+          });
 
-      myMap.geoObjects
-        .add(myPlacemark);
-      
-      myMap.behaviors.disable('drag');
-      myMap.behaviors.disable('scrollZoom');
-    }
+        myMap.geoObjects
+          .add(myPlacemark);
+        
+        myMap.behaviors.disable('drag');
+        myMap.behaviors.disable('scrollZoom');
+      }
   
 

@@ -122,6 +122,16 @@ $(document).on('ready', function(){
     autoClose: true
   });
 
+  $('.insta__carousel').slick({
+    mobileFirst: true,
+    dots: false,
+    arrows: false,
+    infinite: true,
+    // autoplay: true,
+    // autoplaySpeed: 4000,
+    variableWidth: true,
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();

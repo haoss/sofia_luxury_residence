@@ -842,7 +842,7 @@
 
 .option-info {
   position: relative;
-  min-height: 31px;
+  min-height: 36px;
   display: flex;
   font-style: normal;
   font-weight: 600;
@@ -850,7 +850,7 @@
   align-items: center;
   margin-bottom: 15px;
   i {
-    font-size: 31px;
+    font-size: 36px;
     flex-shrink: 0;
   }
   div {
@@ -2155,6 +2155,7 @@
             white-space: nowrap;
             font-weight: bold;
             font-size: 22px;
+            padding-right: 15px;
           }
           &.first {
             padding-left: 15px;
@@ -2245,6 +2246,22 @@
     }
   }
   @include media-breakpoint-up(xl) {
+    &__table {
+      table {
+        tbody {
+          tr {
+            td {
+              &.last {
+                padding-right: 25px;
+              }
+              &.first {
+                padding-left: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
     &__row {
       .last {
         width: 390px;
@@ -2298,6 +2315,7 @@
       }
     }
     &-wrapper {
+      margin-top: -7px;
       p {
         margin-bottom: 0;
         display: -webkit-box;
@@ -2451,7 +2469,7 @@
       margin-right: 0;
       &-bottom {
         .form-count {
-          width: 176px;
+          width: 170px;
         }
         .btn--block {
           max-width: 304px;
@@ -2575,6 +2593,206 @@
     }
     &__img {
       width: 765px;
+    }
+  }
+}
+
+.on-map {
+  height: 152px;
+  margin-bottom: 40px;
+  position: relative;
+  .btn {
+    height: 35px;
+    line-height: 34px;
+    font-size: 13px;
+    position: absolute;
+    width: 210px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  &__wrapper {
+    max-width: 444px;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #eee url('../images/one-map-bg.png') top center no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &::before {
+    content: '';
+    width: 643px;
+    height: 454px;
+    background: url('../images/content-bg.png') 0 0 no-repeat;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    pointer-events: none;
+  }
+  @include media-breakpoint-up(sm) {
+    margin-left: -47px;
+    height: 233px;
+    margin-bottom: 60px;
+    .btn {
+      height: 50px;
+      line-height: 49px;
+      width: 293px;
+      font-size: 16px;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &::before {
+      left: 0;
+      transform: translate(-30%,-50%);
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &::before {
+      transform: translate(-35%,-50%);
+    }
+  }
+}
+
+.main-about {
+  &__option {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    &>div {
+      width: 50%;
+      padding: 0 10px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__option {
+      margin-left: -47px;
+      &>div {
+        min-width: 170px;
+        width: auto;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__option {
+      margin-left: -47px;
+      &>div {
+        width: 25%;
+      }
+    }
+    .content__head {
+      margin-bottom: 40px;
+      .h1, h1 {
+        max-width: 620px;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &__option {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &__content {
+      margin-left: -50px;
+    }
+  }
+}
+
+.column-xl-2 {
+  @include media-breakpoint-up(xl) {
+    column-count: 2;
+  }
+  @include media-breakpoint-up(xxl) {
+    column-count: 1;
+  }
+}
+.column-xxl-2 {
+  @include media-breakpoint-up(xxl) {
+    column-count: 2;
+  }
+}
+
+.insta {
+  &__head {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 65px;
+    strong {
+      display: block;
+      font-weight: bold;
+      font-size: 25px;
+      margin-top: 10px;
+    }
+  }
+  &__block {
+    position: relative;
+    padding: 38px 0 41px 0;
+    .first {
+      width: 181px;
+      height: 181px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .last {
+      position: absolute;
+      object-fit: cover;
+      left: 0px;
+      bottom: 0;
+      width: 67px;
+      height: 67px;
+      border: 10px solid $color-white;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 4px rgba($color-black,.25);
+      border-radius: 6px;
+      transform: translateX(calc(-50% - 6.5px));
+    }
+    &.--one {
+      .last {
+        width: 94px;
+        height: 94px;
+      }
+    }
+    &.--two {
+      .last {
+        width: 76px;
+        height: 76px;
+        top: 0;
+        bottom: auto;
+      }
+    }
+    &.--four, &.--six {
+      .last {
+        top: 0;
+        bottom: auto;
+      }
+    }
+  }
+  &__wrapper {
+    position: relative;
+    margin: 0 -15px;
+    height: 259px;
+    width: 100vw;
+  }
+  &__carousel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    .slick-slide {
+      width: 195px;
+      padding-left: 13px;
+      transition: all 0.35s;
+      &[data-slick-index="0"] {
+        width: 240px;
+        padding-left: 58px;
+      }
     }
   }
 }

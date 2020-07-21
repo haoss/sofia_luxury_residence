@@ -16,9 +16,32 @@ html(lang="ru")
       include ./_include/_header
 
       // Top row
-      .top-row
-        .top-row__wrapper
-          img(src="./tmp/img-apartments.png", alt="")
+      .one-apartment
+        .one-apartment__header
+          .first
+            .one-apartment__header-thumb.--big
+              img(src="./tmp/img-apartments-all-img-1.png", alt="")
+          .last
+            .one-apartment__header-thumb.--small
+              img(src="./tmp/img-apartments-all-img-1.png", alt="")
+            .one-apartment__header-thumb.last.--small
+              img(src="./tmp/img-apartments-all-img-1.png", alt="")
+              .one-apartment__header-info
+                p +50 фотографий
+                a(href="#!").btn.btn--border.btn--md.btn--block Посмотреть
+        .one-apartment__carousel
+          .j-one-apartment
+            .one-apartment__carousel-block
+              img(src="./tmp/img-apartments-all-img-1.png", alt="")
+            .one-apartment__carousel-block
+              img(src="./tmp/img-apartments-all-img-1.png", alt="")
+            .one-apartment__carousel-block
+              img(src="./tmp/img-apartments-all-img-1.png", alt="")
+            .one-apartment__carousel-block
+              img(src="./tmp/img-apartments-all-img-1.png", alt="")
+            .one-apartment__carousel-block
+              img(src="./tmp/img-apartments-all-img-1.png", alt="")
+          .one-apartment__carousel-pagination 
 
       // Content
       .content

@@ -23,6 +23,8 @@ $(document).on('ready', function(){
   inputFocus();
   // Header scroll
   headerScroll();
+  // One apartment carousel
+  oneCarousel();
 
   // Test function
   countTest();
@@ -159,6 +161,8 @@ $(window).on('resize', function() {
     $('body').removeClass('is-fixed');
     $('.footer__nav').attr('style','');
   }
+
+  oneCarousel();
 });
 
 function footerNav() {
@@ -289,4 +293,30 @@ function modal() {
   $(document).on('click', '.lang, .m-search, .nav, .d-search, .d-search .datepicker-here', function(e){
     e.stopPropagation();
   });
+}
+
+function oneCarousel() {
+  var width = $(window).width();
+
+  var $slickElementPagination = $('.one-apartment__carousel-pagination');
+  var $slickElement = $('.j-one-apartment');
+
+  if (width <= 767) {
+    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+      var i = (currentSlide ? currentSlide : 0) + 1;
+      $slickElementPagination.text(i + ' / ' + slick.slideCount);
+    });  
+    $slickElement.not('.slick-initialized').slick({
+      mobileFirst: true,
+      arrows: false,
+      infinite: true,
+      dots: false
+    });
+  } else {
+    if($slickElement.hasClass('slick-initialized')){
+      $slickElement.slick('unslick');
+    }
+  }
+  
 }

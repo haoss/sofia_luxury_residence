@@ -47,9 +47,20 @@ html(lang="ru")
       include ./_include/_header
 
       // Top row
-      .top-row
-        .top-row__wrapper
-          img(src="./tmp/img-apartments-all.png", alt="")
+      .one-room
+        .one-room__header
+          .first
+            .one-room__header-thumb.--big
+              img(src="./tmp/img-apartments-all-img-1.png", alt="").first
+              img(src="./tmp/img-apartments-all-img-1.png", alt="").last
+          .last
+            .one-room__header-thumb.--small
+              img(src="./tmp/img-apartments-all-img-1.png", alt="")
+            .one-room__header-thumb.last.--small
+              img(src="./tmp/img-apartments-all-img-1.png", alt="")
+              .one-room__header-info
+                p +50 фотографий
+                a(href="#!").btn.btn--border.btn--md.btn--block Посмотреть
 
       // Content
       .content

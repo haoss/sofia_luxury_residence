@@ -540,6 +540,7 @@
     height: 32px;
     border: 2px solid $color-white;
     z-index: 10;
+    background: transparent;
   }
   &-prev {
     left: 20px;
@@ -2350,6 +2351,7 @@
     }
   }
   &__carousel {
+    position: relative;
     &-block {
       display: block;
       vertical-align: middle;
@@ -3116,3 +3118,140 @@
     }
   }
 }
+
+.gallery {
+  min-height: 700px;
+  display: flex;
+  &__center {
+    flex-grow: 1;
+    // background: #eee;
+    width: calc(100% - 368px);
+  }
+  &__thumb-carousel {
+    // margin-bottom: 25px;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 298px;
+      background: linear-gradient(to left, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      content: '';
+      z-index: 5;
+      pointer-events: none;
+    }
+    .slick-slide {
+      margin-right: 12px;
+    }
+  }
+  &__right {
+    flex-shrink: 0;
+    width: 368px;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+    font-size: 14px;
+    &-wrapper {
+      padding: 60px 40px 40px 40px;
+    }
+  }
+  &__btn {
+    max-width: 288px;
+    margin-bottom: 35px;
+  }
+  &__head {
+    margin-bottom: 25px;
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    line-height: 35px;
+  }
+  &__star {
+    font-size: 0;
+    white-space: nowrap;
+    color: #6B92A8;
+    display: block;
+    i.icon-star {
+      font-size: 17px;
+      color: #F2C94C;
+      margin-right: 5px;
+      vertical-align: -1px;
+    }
+    .span {
+      font-size: 12px;
+      b {
+        font-size: 16px;
+      }
+    }
+  }
+  &__content {
+    &-title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__thumb {
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    img {
+      max-width: 100%;
+      height: 90px;
+      display: block;
+      border-radius: 6px;
+      object-fit: cover;
+      display: block;
+      opacity: 1;
+      transition: all 0.35s;
+    }
+    .slick-current & {
+      img {
+        opacity: 0.5;
+      }
+    }
+  }
+  &__ones {
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    img {
+      width: 100%;
+      height: 644px;
+      border-radius: 6px;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__thumb {
+      img {
+        height: 220px;
+      }
+    }
+  }
+}
+
+// .datepicker {
+//   &--cell {
+//     border-radius: 50% !important;
+//     font-weight: 400;
+//     color: $primary-color;
+//     &.-in-range- {
+//       border-radius: 0 !important;
+//       color: $primary-color;
+//     }
+//   }
+// }

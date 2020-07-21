@@ -8,11 +8,11 @@ html(lang="ru")
   include ./_include/_head
 
   body
+    // Preloader
+    include ./_include/_preloader
+    +modalGallery
 
     .base
-      // Preloader
-      include ./_include/_preloader
-
       include ./_include/_header
 
       // Top row
@@ -28,7 +28,7 @@ html(lang="ru")
               img(src="./tmp/img-apartments-all-img-1.png", alt="")
               .one-apartment__header-info
                 p +50 фотографий
-                a(href="#!").btn.btn--border.btn--md.btn--block Посмотреть
+                a(href="#gallery").btn.btn--border.btn--md.btn--block.j-open-gallery Посмотреть
         .one-apartment__carousel
           .j-one-apartment
             .one-apartment__carousel-block

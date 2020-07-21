@@ -16,8 +16,49 @@
         <link rel="stylesheet" href="./css/style.min.css">
     </head>
     <body>
+        <!-- Preloader-->
+                <div class="modal modal--gallery mfp-hide" id="gallery">
+                    <div class="modal__wrapper">
+                        <div class="gallery">
+                            <div class="gallery__center">
+                                <div class="gallery__ones-carousel j-gallery-one">
+                                    <div class="gallery__ones"><img src="./tmp/gallery-one-img.png" alt=""></div>
+                                    <div class="gallery__ones"><img src="./tmp/gallery-one-img.png" alt=""></div>
+                                    <div class="gallery__ones"><img src="./tmp/gallery-one-img.png" alt=""></div>
+                                    <div class="gallery__ones"><img src="./tmp/gallery-one-img.png" alt=""></div>
+                                    <div class="gallery__ones"><img src="./tmp/gallery-one-img.png" alt=""></div>
+                                    <div class="gallery__ones"><img src="./tmp/gallery-one-img.png" alt=""></div>
+                                    <div class="gallery__ones"><img src="./tmp/gallery-one-img.png" alt=""></div>
+                                </div>
+                                <div class="gallery__thumb-carousel j-gallery-thumb">
+                                    <div class="gallery__thumb"><img src="./tmp/gallery-thumb-1.png" alt=""></div>
+                                    <div class="gallery__thumb"><img src="./tmp/gallery-thumb-2.png" alt=""></div>
+                                    <div class="gallery__thumb"><img src="./tmp/gallery-thumb-3.png" alt=""></div>
+                                    <div class="gallery__thumb"><img src="./tmp/gallery-thumb-4.png" alt=""></div>
+                                    <div class="gallery__thumb"><img src="./tmp/gallery-thumb-5.png" alt=""></div>
+                                    <div class="gallery__thumb"><img src="./tmp/gallery-thumb-6.png" alt=""></div>
+                                    <div class="gallery__thumb"><img src="./tmp/gallery-thumb-1.png" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="gallery__right">
+                                <div class="gallery__right-wrapper">
+                                    <div class="gallery__head">
+                                        <div class="gallery__title">Апартаменты “Аврора” с 2 спальнями</div>
+                                        <div class="gallery__star"><i class="icon-star"></i><span class="span"><b>5.0 </b>(123 отзыва)</span></div>
+                                    </div><a class="btn btn--block gallery__btn" href="#!">Забронировать</a>
+                                    <div class="gallery__content">
+                                        <div class="gallery__content-title">Посетители отметили</div>
+                                        <p><strong>Жилье целиком</strong><br>Кондоминиум полностью в вашем распоряжении.</p>
+                                        <p><strong>Самостоятельное прибытие</strong><br>Легкое самостоятельное прибытие с помощью мини-сейфа.</p>
+                                        <p><strong>Отличное расположение</strong><br>95% недавних гостей оценили расположение жилья на пять звезд.</p>
+                                        <p><strong>Прибытие организовано отлично</strong><br>100% недавних гостей оценили прибытие на пять звезд.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         <div class="base">
-            <!-- Preloader-->
             <!-- Header-->
             <header class="header">
                 <div class="container">
@@ -33,7 +74,7 @@
                                     </div>
                                     <div class="d-search__dropdown --calendar">
                                         <div class="d-search__dropdown-wrapper">
-                                            <div class="datepicker-here" data-range="true"></div>
+                                            <div class="datepicker-div" data-range="true"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -85,7 +126,7 @@
                                                 </div>
                                             </div>
                                             <div class="m-search__group">
-                                                <div class="datepicker-here m-search__datepicker" data-range="true"></div>
+                                                <div class="datepicker-div m-search__datepicker" data-range="true"></div>
                                             </div>
                                             <div class="m-search__group">
                                                 <div class="m-search__input j-people-value j-m-count-test">Сколько гостей?</div>
@@ -167,7 +208,7 @@
                         <div class="one-apartment__header-thumb --small"><img src="./tmp/img-apartments-all-img-1.png" alt=""></div>
                         <div class="one-apartment__header-thumb last --small"><img src="./tmp/img-apartments-all-img-1.png" alt="">
                             <div class="one-apartment__header-info">
-                                <p>+50 фотографий</p><a class="btn btn--border btn--md btn--block" href="#!">Посмотреть</a>
+                                <p>+50 фотографий</p><a class="btn btn--border btn--md btn--block j-open-gallery" href="#gallery">Посмотреть</a>
                             </div>
                         </div>
                     </div>

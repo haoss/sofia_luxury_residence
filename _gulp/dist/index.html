@@ -16,46 +16,38 @@
         <link rel="stylesheet" href="./css/style.min.css">
     </head>
     <body>
-        <div class="modal modal--senks mfp-hide" id="senks">
-            <div class="modal__wrapper">
-                <div class="text-center">
-                    <div class="h1">Спасибо!</div>
-                    <p>Ваша заявка принята, в течении 5 минут Вам перезвонят для уточнения деталей.</p>
-                </div>
-            </div>
-        </div>
-        <div class="modal modal--map mfp-hide" id="map2">
-            <div class="modal__wrapper">
-                <div class="modal-map">
-                    <div class="modal__map-container">
-                        <h2>8041, Cyprus, Paphos, Ayiou Ayapitikou, 31</h2>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>Москва:</td>
-                                    <td><a href="tel:">+7 (495) 142-25-70</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Кипр, Пафос: </td>
-                                    <td><a href="tel:">+357-99-855-277</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Аренда: </td>
-                                    <td><a href="mailto:">reservation@sofiaresidence.ru</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Продажа:</td>
-                                    <td> <a href="mailto:">sales@sofiaresidence.ru</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+        <!-- Preloader-->
+                <div class="modal modal--map mfp-hide" id="mapModal">
+                    <div class="modal__wrapper">
+                        <div class="modal-map">
+                            <div class="modal__map-container">
+                                <h2>8041, Cyprus, Paphos, Ayiou Ayapitikou, 31</h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Москва:</td>
+                                            <td><a href="tel:">+7 (495) 142-25-70</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Кипр, Пафос: </td>
+                                            <td><a href="tel:">+357-99-855-277</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Аренда: </td>
+                                            <td><a href="mailto:">reservation@sofiaresidence.ru</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Продажа:</td>
+                                            <td> <a href="mailto:">sales@sofiaresidence.ru</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal__map" id="yamaps"></div>
+                        </div>
                     </div>
-                    <div class="modal__map" id="yamaps"></div>
                 </div>
-            </div>
-        </div>
         <div class="base">
-            <!-- Preloader-->
             <!-- Header-->
             <header class="header --main">
                 <div class="container">
@@ -185,7 +177,7 @@
                                             </div>
                                         </div>
                                         <div class="on-map">
-                                            <div class="on-map__wrapper"><a class="btn js-popup-yamaps" href="#map2">на карте</a></div>
+                                            <div class="on-map__wrapper"><a class="btn js-popup-yamaps" href="#mapModal">на карте</a></div>
                                         </div>
                                     </div>
                                 </div>

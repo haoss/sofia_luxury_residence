@@ -120,6 +120,12 @@ $(document).on('ready', function(){
   });
 
   // Datepicker fix
+  $('.datepicker-div').datepicker().on('changeDate', function(ev) {
+    // YOUR CODE
+  }).on('hide', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  });
   $('.datepicker-input').datepicker({
     autoClose: true
   });
@@ -132,6 +138,37 @@ $(document).on('ready', function(){
     // autoplay: true,
     // autoplaySpeed: 4000,
     variableWidth: true,
+  });
+
+  var slick1 = $('.j-gallery-one').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    asNavFor: '.j-gallery-thumb'
+  });
+  var slick2 = $('.j-gallery-thumb').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.j-gallery-one',
+    dots: false,
+    arrows: false,
+    centerMode: false,
+    focusOnSelect: true
+  });
+
+  $('.j-open-gallery').magnificPopup({
+    type: 'inline',
+    callbacks: {
+      open: function(){
+        slick1.slick('refresh');
+        slick2.slick('refresh');
+        // setTimeout(function(){
+        //   slick1.slick('refresh');
+        //   slick2.slick('refresh');
+        // }, 300)
+      }
+    }
   });
 
   // Chrome Smooth Scroll
@@ -290,7 +327,7 @@ function modal() {
   });
 
   // Blocks click stoped fix
-  $(document).on('click', '.lang, .m-search, .nav, .d-search, .d-search .datepicker-here', function(e){
+  $(document).on('click', '.lang, .m-search, .nav, .d-search', function(e){
     e.stopPropagation();
   });
 }

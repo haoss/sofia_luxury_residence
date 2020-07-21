@@ -3,3 +3,102 @@
 //-     div
 //-     div
 //-     div
+
+mixin modalSenks
+  #senks.modal.modal--senks.mfp-hide
+    .modal__wrapper
+      .text-center
+        .h1 Спасибо!
+        p Ваша заявка принята, в течении 5 минут Вам перезвонят для уточнения деталей.
+
+mixin modalMap
+  #mapModal.modal.modal--map.mfp-hide
+    .modal__wrapper
+      .modal-map
+        .modal__map-container
+          h2 8041, Cyprus, Paphos, Ayiou Ayapitikou, 31
+          table
+            tbody
+              tr
+                td Москва:
+                td
+                  a(href="tel:") +7 (495) 142-25-70
+              tr
+                td Кипр, Пафос: 
+                td
+                  a(href="tel:") +357-99-855-277
+              tr
+                td Аренда: 
+                td
+                  a(href="mailto:") reservation@sofiaresidence.ru
+              tr
+                td Продажа:
+                td 
+                  a(href="mailto:") sales@sofiaresidence.ru
+        #yamaps.modal__map
+
+mixin modalGallery
+  #gallery.modal.modal--gallery.mfp-hide
+    .modal__wrapper
+      .gallery
+        .gallery__center
+          .gallery__ones-carousel.j-gallery-one
+            .gallery__ones
+              img(src="./tmp/gallery-one-img.png", alt="")
+            .gallery__ones
+              img(src="./tmp/gallery-one-img.png", alt="")
+            .gallery__ones
+              img(src="./tmp/gallery-one-img.png", alt="")
+            .gallery__ones
+              img(src="./tmp/gallery-one-img.png", alt="")
+            .gallery__ones
+              img(src="./tmp/gallery-one-img.png", alt="")
+            .gallery__ones
+              img(src="./tmp/gallery-one-img.png", alt="")
+            .gallery__ones
+              img(src="./tmp/gallery-one-img.png", alt="")
+          .gallery__thumb-carousel.j-gallery-thumb
+            .gallery__thumb
+              img(src="./tmp/gallery-thumb-1.png", alt="")
+            .gallery__thumb
+              img(src="./tmp/gallery-thumb-2.png", alt="")
+            .gallery__thumb
+              img(src="./tmp/gallery-thumb-3.png", alt="")
+            .gallery__thumb
+              img(src="./tmp/gallery-thumb-4.png", alt="")
+            .gallery__thumb
+              img(src="./tmp/gallery-thumb-5.png", alt="")
+            .gallery__thumb
+              img(src="./tmp/gallery-thumb-6.png", alt="")
+            .gallery__thumb
+              img(src="./tmp/gallery-thumb-1.png", alt="")
+        .gallery__right
+          .gallery__right-wrapper
+            .gallery__head
+              .gallery__title Апартаменты “Аврора” с 2 спальнями
+              .gallery__star
+                i.icon-star
+                span.span
+                  b 5.0 
+                  | (123 отзыва)
+            
+            a(href="#!").btn.btn--block.gallery__btn Забронировать
+
+            .gallery__content
+              .gallery__content-title Посетители отметили
+              p
+                strong Жилье целиком
+                br
+                | Кондоминиум полностью в вашем распоряжении.
+              p
+                strong Самостоятельное прибытие
+                br
+                | Легкое самостоятельное прибытие с помощью мини-сейфа.
+              p
+                strong Отличное расположение
+                br
+                | 95% недавних гостей оценили расположение жилья на пять звезд.
+              p
+                strong Прибытие организовано отлично
+                br
+                | 100% недавних гостей оценили прибытие на пять звезд.

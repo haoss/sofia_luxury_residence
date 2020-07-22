@@ -3633,3 +3633,51 @@
     }
   }
 }
+
+.content-more {
+  margin-bottom: 35px;
+  $this: &;
+  &__top {
+    @include clearfix;
+  }
+  &__bottom {
+    display: none;
+  }
+  &__btn {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $add-color-brown;
+    opacity: 0.5;
+    padding: 0;
+    background: none;
+    display: flex;
+    width: 100%;
+    transition: all 0.35s;
+    &::before, &::after {
+      flex-grow: 1;
+      content: '----------------------------------------------------------------------------------------------------------------------------';
+      white-space: nowrap;
+      overflow: hidden;
+      color: $add-color-brown;
+    }
+    &>span {
+      flex-shrink: 0;
+      margin: 0 15px;
+    }
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  &.is-active {
+    #{$this} {
+      &__bottom {
+        display: block;
+      }
+      &__btn {
+        display: none;
+      }
+    }
+  }
+}

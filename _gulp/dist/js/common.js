@@ -196,6 +196,10 @@ $(document).on('ready', function(){
     }
   });
 
+  $('.content-more__btn').on('click', function(){
+    $(this).parent('.content-more').addClass('is-active');
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();

@@ -2988,6 +2988,9 @@
   @include media-breakpoint-up(md) {
     display: block;
     margin-bottom: 60px;
+    legend {
+      text-align: left;
+    }
     &__wrapper {
       order: 1;
       flex-grow: 0;

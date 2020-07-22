@@ -38,7 +38,7 @@ mixin modalMap
         #yamaps.modal__map
 
 mixin modalGallery
-  #gallery.modal.modal--gallery.mfp-hide
+  #gallery2.modal.modal--gallery.mfp-hide
     .modal__wrapper
       .gallery
         .gallery__center
@@ -72,6 +72,72 @@ mixin modalGallery
               img(src="./tmp/gallery-thumb-6.png", alt="")
             .gallery__thumb
               img(src="./tmp/gallery-thumb-1.png", alt="")
+        .gallery__right
+          .gallery__right-wrapper
+            .gallery__head
+              .gallery__title Апартаменты “Аврора” с 2 спальнями
+              .gallery__star
+                i.icon-star
+                span.span
+                  b 5.0 
+                  | (123 отзыва)
+            
+            a(href="#!").btn.btn--block.gallery__btn Забронировать
+
+            .gallery__content
+              .gallery__content-title Посетители отметили
+              p
+                strong Жилье целиком
+                br
+                | Кондоминиум полностью в вашем распоряжении.
+              p
+                strong Самостоятельное прибытие
+                br
+                | Легкое самостоятельное прибытие с помощью мини-сейфа.
+              p
+                strong Отличное расположение
+                br
+                | 95% недавних гостей оценили расположение жилья на пять звезд.
+              p
+                strong Прибытие организовано отлично
+                br
+                | 100% недавних гостей оценили прибытие на пять звезд.
+
+mixin modalGallerySwiper
+  #gallery.modal.modal--gallery.mfp-hide
+    .modal__wrapper
+      .gallery
+        .gallery__center
+          //  Swiper 
+          .swiper-container.gallery-top
+            .swiper-wrapper
+              .swiper-slide(style='background-image:url(./tmp/gallery-one-img.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-one-img.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-one-img.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-one-img.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-one-img.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-one-img.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-one-img.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-one-img.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-one-img.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-one-img.png)')
+            //  Add Arrows 
+            .swiper-button-next
+            .swiper-button-prev
+            .swiper-scrollbar
+          .swiper-container.gallery-thumbs
+            .swiper-wrapper
+              .swiper-slide(style='background-image:url(./tmp/gallery-thumb-1.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-thumb-2.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-thumb-3.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-thumb-4.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-thumb-5.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-thumb-6.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-thumb-1.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-thumb-2.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-thumb-3.png)')
+              .swiper-slide(style='background-image:url(./tmp/gallery-thumb-4.png)')
+            
         .gallery__right
           .gallery__right-wrapper
             .gallery__head

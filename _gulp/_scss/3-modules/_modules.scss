@@ -3123,6 +3123,7 @@
   min-height: 700px;
   display: flex;
   &__center {
+    position: relative;
     flex-grow: 1;
     // background: #eee;
     width: calc(100% - 368px);
@@ -3215,11 +3216,6 @@
       opacity: 1;
       transition: all 0.35s;
     }
-    .slick-current & {
-      img {
-        opacity: 0.5;
-      }
-    }
   }
   &__ones {
     border-radius: 6px;
@@ -3255,3 +3251,116 @@
 //     }
 //   }
 // }
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-top {
+  height: 880px;
+  width: 100%;
+  border-radius: 6px;
+  z-index: auto;
+  .swiper-slide {
+    border-radius: 6px;
+    height: 644px;
+  }
+  .swiper-scrollbar {
+    height: 8px;
+    background: rgba($color-white,.8);
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+    bottom: 15px;
+    z-index: 10;
+    .swiper-scrollbar-drag {
+      height: 14px;
+      background: linear-gradient(270deg, #AD009F 0%, #EA1FD9 100%);
+      box-shadow: 0px 4px 10px rgba(233, 31, 216, 0.5);
+      border-radius: 35px;
+      top: -4px;
+      cursor: pointer;
+      &::before {
+        content: '...';
+        position: absolute;
+        top: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 0;
+        color: $color-white;
+      }
+    }
+  }
+  .swiper-button-prev, .swiper-button-next {
+    background: transparent;
+    width: 42px;
+    height: 42px;
+    border: 2px solid $color-white;
+    top: calc(644px / 2);
+    transform: none;
+    transition: all 0.35s;
+    &:focus {
+      outline: none;
+    }
+    &::after {
+      transition: all 0.35s;
+      font-family: $font-icomoon;
+      font-size: 18px;
+      color: $color-white;
+    }
+    &:hover {
+      background: $color-white;
+      &::after {
+        color: $primary-color;
+      }
+    }
+  }
+  .swiper-button-prev {
+    left: 20px;
+    &::after {
+      content: '\e92c';
+    }
+  }
+  .swiper-button-next {
+    right: 20px;
+    &::after {
+      content: '\e92d';
+    }
+  }
+}
+
+.gallery-thumbs {
+  height: 220px;
+  box-sizing: border-box;
+  padding: 15px 0 20px 0;
+  position: absolute;
+  width: 100%;
+  margin-top: -236px;
+  .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  .swiper-slide-thumb-active {
+    opacity: 0.6;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 298px;
+    background: linear-gradient(to left, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    z-index: 5;
+    pointer-events: none;
+  }
+}

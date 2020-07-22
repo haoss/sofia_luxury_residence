@@ -145,28 +145,53 @@ $(document).on('ready', function(){
     slidesToScroll: 1,
     arrows: true,
     fade: true,
+    infinite: true,
+    waitForAnimate: false,
+    lazyLoaded: true,
     asNavFor: '.j-gallery-thumb'
   });
   var slick2 = $('.j-gallery-thumb').slick({
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     asNavFor: '.j-gallery-one',
     dots: false,
     arrows: false,
     centerMode: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    draggable: false,
+    infinite: true,
+    waitForAnimate: false,
+    lazyLoaded: true
   });
 
   $('.j-open-gallery').magnificPopup({
     type: 'inline',
     callbacks: {
       open: function(){
-        slick1.slick('refresh');
-        slick2.slick('refresh');
-        // setTimeout(function(){
-        //   slick1.slick('refresh');
-        //   slick2.slick('refresh');
-        // }, 300)
+        setTimeout(function(){
+          var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+          });
+          var galleryTop = new Swiper('.gallery-top', {
+            spaceBetween: 10,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            thumbs: {
+              swiper: galleryThumbs
+            },
+            scrollbar: {
+              el: '.swiper-scrollbar',
+              hide: false,
+              draggable: true
+            }
+          });
+        }, 300)
       }
     }
   });

@@ -200,6 +200,11 @@ $(document).on('ready', function(){
     $(this).parent('.content-more').addClass('is-active');
   });
 
+  $('.j-main-form-btn').on('click', function() {
+    $(this).hide();
+    $(this).parents('form').find('.j-main-form-fieldset').show();
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();

@@ -287,78 +287,138 @@ html(lang="ru")
                     a(href="#!").btn.btn--border.btn--md.btn--block все отзывы
 
           // One service form
-            .main-form
-              .main-form__img
-                img(src="./tmp/one-service-form.png", alt="")
-              .main-form__wrapper
-                form(action="#!")
-                  legend Бронируйте современные 
-                    span.color--pink роскошные апартаменты 
-                    | и будущие 
-                    span.color--pink Ваши яркие впечатления
-                  fieldset
-                    .row
-                      .col-12.col-xl-6
-                        .form-group
-                          +field-text({
-                            title: 'Ваше имя',
+          .main-form
+            .main-form__img(style="background-image: url('./tmp/main-form-bg.png');")
+              .main-form__img-link
+                span.main-form__img-threed 
+                a(href="#!").btn просмотреть 3d тур
+            .main-form__wrapper
+              form(action="#!")
+                legend Бронируйте современные 
+                  span.color--pink роскошные апартаменты 
+                  | и будущие 
+                  span.color--pink Ваши яркие впечатления
+                fieldset.fieldset.j-main-form-fieldset
+                  .row.--thin
+                    .col-12
+                      .form-group
+                        +field-select(
+                          {
+                            title: 'Класс номера',
                             hasJs: false,
-                            isTextarea: false,
                             hasError: false,
                             helpText: '',
-                            mods: 'md,has-icon',
-                            val: '',
-                            attrs: {
-                              name: 'rent-name',
-                              placeholder: ''
-                            }
-                          })()
-                            i.icon-user
-                      .col-12.col-xl-6
-                        .form-group
-                          +field-text({
-                            title: 'Телефон',
-                            hasJs: false,
-                            isTextarea: false,
-                            hasError: false,
-                            helpText: '',
-                            mods: 'md,has-icon',
-                            val: '',
-                            attrs: {
-                              name: 'rent-phone',
-                              placeholder: ''
-                            }
-                          })()
-                            i.icon-phone
-                      .col-12
-                        .form-group.mb30
-                          +field-text({
-                            title: 'Желаемая дата',
-                            hasJs: false,
-                            isTextarea: false,
-                            hasError: false,
-                            helpText: '',
-                            mods: 'md,has-icon',
-                            val: '',
-                            attrs: {
-                              name: 'rent-date',
-                              placeholder: '',
-                              readonly: 'readonly',
-                              class: 'datepicker-input'
-                            }
-                          })()
-                            i.icon-calendar
-                    .form-group.mb15
+                            mods: 'md'
+                          },
+                          {
+                            name: 'select',
+                            id: 'select'
+                          },
+                          [
+                            {
+                              title: 'Люкс апартаменты',
+                              attrs: {
+                                selected: true,
+                                hidden: true
+                              }
+                            },
+                            {
+                              title: 'Люкс апартаменты 2',
+                              attrs: {
+                                value: '',
+                              }
+                            },
+                            {
+                              title: 'Люкс апартаменты 3',
+                              attrs: {
+                                value: '',
+                              }
+                            },
+                            {
+                              title: 'Люкс апартаменты 4',
+                              attrs: {
+                                selected: true,
+                                hidden: true
+                              }
+                            },
+                            {
+                              title: 'Люкс апартаменты 5',
+                              attrs: {
+                                value: '',
+                              }
+                            },
+                            {
+                              title: 'Люкс апартаменты 6',
+                              attrs: {
+                                value: '',
+                              }
+                            },
+                          ]
+                        )
+                    .col-12.col-md-6
+                      .form-group
+                        +field-text({
+                          title: 'Заезд',
+                          hasJs: false,
+                          isTextarea: false,
+                          hasError: false,
+                          helpText: '',
+                          mods: 'md,has-icon',
+                          val: '',
+                          attrs: {
+                            name: 'arrival-date',
+                            placeholder: '',
+                            readonly: 'readonly',
+                            class: 'datepicker-input'
+                          }
+                        })()
+                          i.icon-calendar
+                    .col-12.col-md-6
+                      .form-group.mb25
+                        +field-text({
+                          title: 'Отъезд',
+                          hasJs: false,
+                          isTextarea: false,
+                          hasError: false,
+                          helpText: '',
+                          mods: 'md,has-icon',
+                          val: '',
+                          attrs: {
+                            name: 'leaving-date',
+                            placeholder: '',
+                            readonly: 'readonly',
+                            class: 'datepicker-input'
+                          }
+                        })()
+                          i.icon-calendar
+                    .col-12
+                      .main-form__input-row.mb15
+                        div
+                          label.d-search__input-label Взрослых
+                          p.d-search__input-p Возраст: от 18 лет
+                        div
+                          .form-count.j-people-count
+                            button(type="button").btn-minus
+                            button(type="button").btn-plus
+                            input(type='text' value='2 чел')
+                      .main-form__input-row.mb25
+                        div
+                          label.d-search__input-label Детей
+                          p.d-search__input-p Возраст: от 6  до 18 лет
+                        div
+                          .form-count.j-people-count
+                            button(type="button").btn-minus
+                            button(type="button").btn-plus
+                            input(type='text' value='2 чел')
+                  .main-form__btns
+                    div
                       button(type="button").btn.btn--block Проверить цены
-                    +field-checkbox({
-                      title: 'Согласен на обработку персональных данных',
-                      isLink: false,
-                      mods: '',
-                      attrs: {
-                        name: 'checkbox',
-                        checked: true,
-                      }
-                    })
+                    div
+                      a(href="#mapModal").btn.btn--on-map.js-popup-yamaps
+                        i.icon-map
+                        span Посмотреть на карте
+                .fieldset-mobile
+                  button(type="button").btn.btn--block.j-main-form-btn проверить цены
             
         // Section
         .section

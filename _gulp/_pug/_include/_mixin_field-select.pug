@@ -116,7 +116,6 @@ mixin field-select(props, attrs, options)
   label.field-select(class=allMods, class=(typeof(props.hasError) !== 'undefined' && props.hasError) ? 'has-error' : '', class=(typeof(props.hasJs) !== 'undefined' && props.hasJs) ? 'j-field-text' : '')&attributes(attributes)
     if(typeof(props.title) !== 'undefined' && props.title)
       span.field-select__name(class=(typeof(props.hasJs) !== 'undefined' && props.hasJs) ? 'css-label' : '')!= props.title
-        sup *
     span.field-select__select-wrap
       select.field-select__select(class=(typeof(props.hasJs) !== 'undefined' && props.hasJs) ? 'css-input' : '')&attributes(attrs)
         each option in options

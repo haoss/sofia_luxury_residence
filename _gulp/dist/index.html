@@ -331,81 +331,86 @@
                             </div>
                         </div>
                     </div>
-                    <!-- One service form
-                    .main-form
-                      .main-form__img
-                        img(src="./tmp/one-service-form.png", alt="")
-                      .main-form__wrapper
-                        form(action="#!")
-                          legend Бронируйте современные 
-                            span.color--pink роскошные апартаменты 
-                            | и будущие 
-                            span.color--pink Ваши яркие впечатления
-                          fieldset
-                            .row
-                              .col-12.col-xl-6
-                                .form-group
-                                  +field-text({
-                                    title: 'Ваше имя',
-                                    hasJs: false,
-                                    isTextarea: false,
-                                    hasError: false,
-                                    helpText: '',
-                                    mods: 'md,has-icon',
-                                    val: '',
-                                    attrs: {
-                                      name: 'rent-name',
-                                      placeholder: ''
-                                    }
-                                  })()
-                                    i.icon-user
-                              .col-12.col-xl-6
-                                .form-group
-                                  +field-text({
-                                    title: 'Телефон',
-                                    hasJs: false,
-                                    isTextarea: false,
-                                    hasError: false,
-                                    helpText: '',
-                                    mods: 'md,has-icon',
-                                    val: '',
-                                    attrs: {
-                                      name: 'rent-phone',
-                                      placeholder: ''
-                                    }
-                                  })()
-                                    i.icon-phone
-                              .col-12
-                                .form-group.mb30
-                                  +field-text({
-                                    title: 'Желаемая дата',
-                                    hasJs: false,
-                                    isTextarea: false,
-                                    hasError: false,
-                                    helpText: '',
-                                    mods: 'md,has-icon',
-                                    val: '',
-                                    attrs: {
-                                      name: 'rent-date',
-                                      placeholder: '',
-                                      readonly: 'readonly',
-                                      class: 'datepicker-input'
-                                    }
-                                  })()
-                                    i.icon-calendar
-                            .form-group.mb15
-                              button(type="button").btn.btn--block Проверить цены
-                            +field-checkbox({
-                              title: 'Согласен на обработку персональных данных',
-                              isLink: false,
-                              mods: '',
-                              attrs: {
-                                name: 'checkbox',
-                                checked: true,
-                              }
-                            })
-                    
-                    -->
+                    <!-- One service form-->
+                    <div class="main-form">
+                        <div class="main-form__img" style="background-image: url('./tmp/main-form-bg.png');">
+                            <div class="main-form__img-link"><span class="main-form__img-threed"> </span><a class="btn" href="#!">просмотреть 3d тур</a></div>
+                        </div>
+                        <div class="main-form__wrapper">
+                            <form action="#!">
+                                <legend>Бронируйте современные <span class="color--pink">роскошные апартаменты </span>и будущие <span class="color--pink">Ваши яркие впечатления</span></legend>
+                                <fieldset class="fieldset j-main-form-fieldset">
+                                    <div class="row --thin">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                    <label class="field-select  field-select--md"><span class="field-select__name">Класс номера</span><span class="field-select__select-wrap">
+                                                            <select class="field-select__select" name="select" id="select">
+                                                                <option selected hidden>Люкс апартаменты</option>
+                                                                <option value="">Люкс апартаменты 2</option>
+                                                                <option value="">Люкс апартаменты 3</option>
+                                                                <option selected hidden>Люкс апартаменты 4</option>
+                                                                <option value="">Люкс апартаменты 5</option>
+                                                                <option value="">Люкс апартаменты 6</option>
+                                                            </select></span>
+                                                    </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                    <label class="field-text  field-text--md field-text--has-icon"><span class="field-text__name">Заезд</span><span class="field-text__input-wrap">
+                                                            <input class="field-text__input datepicker-input" type="text" value="" name="arrival-date" placeholder="" readonly="readonly"><i class="icon-calendar"></i></span>
+                                                    </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group mb25">
+                                                    <label class="field-text  field-text--md field-text--has-icon"><span class="field-text__name">Отъезд</span><span class="field-text__input-wrap">
+                                                            <input class="field-text__input datepicker-input" type="text" value="" name="leaving-date" placeholder="" readonly="readonly"><i class="icon-calendar"></i></span>
+                                                    </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="main-form__input-row mb15">
+                                                <div>
+                                                    <label class="d-search__input-label">Взрослых</label>
+                                                    <p class="d-search__input-p">Возраст: от 18 лет</p>
+                                                </div>
+                                                <div>
+                                                    <div class="form-count j-people-count">
+                                                        <button class="btn-minus" type="button"></button>
+                                                        <button class="btn-plus" type="button"></button>
+                                                        <input type="text" value="2 чел">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="main-form__input-row mb25">
+                                                <div>
+                                                    <label class="d-search__input-label">Детей</label>
+                                                    <p class="d-search__input-p">Возраст: от 6  до 18 лет</p>
+                                                </div>
+                                                <div>
+                                                    <div class="form-count j-people-count">
+                                                        <button class="btn-minus" type="button"></button>
+                                                        <button class="btn-plus" type="button"></button>
+                                                        <input type="text" value="2 чел">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-form__btns">
+                                        <div>
+                                            <button class="btn btn--block" type="button">Проверить цены</button>
+                                        </div>
+                                        <div><a class="btn btn--on-map js-popup-yamaps" href="#mapModal"><i class="icon-map"></i><span>Посмотреть на карте</span></a></div>
+                                    </div>
+                                </fieldset>
+                                <div class="fieldset-mobile">
+                                    <button class="btn btn--block j-main-form-btn" type="button">проверить цены</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <!-- Section-->
                 <div class="section">

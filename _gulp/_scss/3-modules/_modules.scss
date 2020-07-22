@@ -2834,7 +2834,9 @@
     position: top center;
     size: cover;
   };
-  min-height: 545px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   position: relative;
   padding-top: 110px;
   padding-bottom: 55px;
@@ -3443,6 +3445,10 @@
     &__head {
       padding-left: 90px;
       width: 535px;
+      font-size: 25px;
+      strong {
+        font-size: 30px;
+      }
     }
     &__row {
       max-width: 1560px;

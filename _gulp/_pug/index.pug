@@ -398,88 +398,91 @@ html(lang="ru")
 
         // Section
         .section
-          .container
 
-              // Instagram carousel
-              .insta
-                .insta__row
-                  .insta__head Не верите словам, посмотрите эти превосходные фото в нашем Инстаграм
-                    strong @sofia_luxury_residence
-                  .insta__wrapper
-                    .insta__carousel
-                      div
-                        .insta__block.--one.--first
-                          img(src="./tmp/insta-img-1.png", alt="").first
-                          img(src="./tmp/insta-img-2.png", alt="").last
-                      div
-                        .insta__block.--two
-                          img(src="./tmp/insta-img-2.png", alt="").first
-                          img(src="./tmp/insta-img-3.png", alt="").last
-                      div
-                        .insta__block.--three
-                          img(src="./tmp/insta-img-3.png", alt="").first
-                          img(src="./tmp/insta-img-4.png", alt="").last
-                      div
-                        .insta__block.--four
-                          img(src="./tmp/insta-img-4.png", alt="").first
-                          img(src="./tmp/insta-img-5.png", alt="").last
-                      div
-                        .insta__block.--fiver
-                          img(src="./tmp/insta-img-5.png", alt="").first
-                          img(src="./tmp/insta-img-1.png", alt="").last
-                      div
-                        .insta__block.--six
-                          img(src="./tmp/insta-img-1.png", alt="").first
-                          img(src="./tmp/insta-img-2.png", alt="").last
-                      div
-                        .insta__block.--one
-                          img(src="./tmp/insta-img-1.png", alt="").first
-                          img(src="./tmp/insta-img-2.png", alt="").last
-                      div
-                        .insta__block.--two
-                          img(src="./tmp/insta-img-2.png", alt="").first
-                          img(src="./tmp/insta-img-3.png", alt="").last
-                      div
-                        .insta__block.--three
-                          img(src="./tmp/insta-img-3.png", alt="").first
-                          img(src="./tmp/insta-img-4.png", alt="").last
-                      div
-                        .insta__block.--four
-                          img(src="./tmp/insta-img-4.png", alt="").first
-                          img(src="./tmp/insta-img-5.png", alt="").last
-                      div
-                        .insta__block.--fiver
-                          img(src="./tmp/insta-img-5.png", alt="").first
-                          img(src="./tmp/insta-img-1.png", alt="").last
-                      div
-                        .insta__block.--six
-                          img(src="./tmp/insta-img-1.png", alt="").first
-                          img(src="./tmp/insta-img-2.png", alt="").last
-                      div
-                        .insta__block.--one
-                          img(src="./tmp/insta-img-1.png", alt="").first
-                          img(src="./tmp/insta-img-2.png", alt="").last
-                      div
-                        .insta__block.--two
-                          img(src="./tmp/insta-img-2.png", alt="").first
-                          img(src="./tmp/insta-img-3.png", alt="").last
-                      div
-                        .insta__block.--three
-                          img(src="./tmp/insta-img-3.png", alt="").first
-                          img(src="./tmp/insta-img-4.png", alt="").last
-                      div
-                        .insta__block.--four
-                          img(src="./tmp/insta-img-4.png", alt="").first
-                          img(src="./tmp/insta-img-5.png", alt="").last
-                      div
-                        .insta__block.--fiver
-                          img(src="./tmp/insta-img-5.png", alt="").first
-                          img(src="./tmp/insta-img-1.png", alt="").last
-                      div
-                        .insta__block.--six
-                          img(src="./tmp/insta-img-1.png", alt="").first
-                          img(src="./tmp/insta-img-2.png", alt="").last
-
+          // Instagram carousel
+          .insta
+            .insta__row
+              .insta__head
+                .insta__head-wrapper Не верите словам, посмотрите эти превосходные фото в нашем Инстаграм
+                  strong
+                    a(href="#!" target="_blank") @sofia_luxury_residence
+              .insta__wrapper
+                .insta-swiper.swiper-container
+                  .swiper-wrapper
+                    .swiper-slide.--first
+                      .insta__block.--one
+                        img(src="./tmp/insta-img-1.png", alt="").first
+                        img(src="./tmp/insta-img-2.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--two
+                        img(src="./tmp/insta-img-2.png", alt="").first
+                        img(src="./tmp/insta-img-3.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--three
+                        img(src="./tmp/insta-img-3.png", alt="").first
+                        img(src="./tmp/insta-img-4.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--four
+                        img(src="./tmp/insta-img-4.png", alt="").first
+                        img(src="./tmp/insta-img-5.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--five
+                        img(src="./tmp/insta-img-5.png", alt="").first
+                        img(src="./tmp/insta-img-1.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--six
+                        img(src="./tmp/insta-img-1.png", alt="").first
+                        img(src="./tmp/insta-img-2.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--one
+                        img(src="./tmp/insta-img-1.png", alt="").first
+                        img(src="./tmp/insta-img-2.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--two
+                        img(src="./tmp/insta-img-2.png", alt="").first
+                        img(src="./tmp/insta-img-3.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--three
+                        img(src="./tmp/insta-img-3.png", alt="").first
+                        img(src="./tmp/insta-img-4.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--four
+                        img(src="./tmp/insta-img-4.png", alt="").first
+                        img(src="./tmp/insta-img-5.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--five
+                        img(src="./tmp/insta-img-5.png", alt="").first
+                        img(src="./tmp/insta-img-1.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--six
+                        img(src="./tmp/insta-img-1.png", alt="").first
+                        img(src="./tmp/insta-img-2.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--one
+                        img(src="./tmp/insta-img-1.png", alt="").first
+                        img(src="./tmp/insta-img-2.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--two
+                        img(src="./tmp/insta-img-2.png", alt="").first
+                        img(src="./tmp/insta-img-3.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--three
+                        img(src="./tmp/insta-img-3.png", alt="").first
+                        img(src="./tmp/insta-img-4.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--four
+                        img(src="./tmp/insta-img-4.png", alt="").first
+                        img(src="./tmp/insta-img-5.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--five
+                        img(src="./tmp/insta-img-5.png", alt="").first
+                        img(src="./tmp/insta-img-1.png", alt="").last
+                    .swiper-slide
+                      .insta__block.--six
+                        img(src="./tmp/insta-img-1.png", alt="").first
+                        img(src="./tmp/insta-img-2.png", alt="").last
+                .insta-swiper__next
+                .insta-swiper__prev
 
         // Map
         .map-main

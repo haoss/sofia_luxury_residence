@@ -47,7 +47,7 @@ $(document).on('ready', function(){
         settings: {
           rows: 1,
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           centerMode: false,
         }
       }
@@ -69,7 +69,7 @@ $(document).on('ready', function(){
         breakpoint: 767,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           centerMode: false,
         }
       },
@@ -77,7 +77,7 @@ $(document).on('ready', function(){
         breakpoint: 991,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
           centerMode: false,
         }
       }
@@ -99,7 +99,7 @@ $(document).on('ready', function(){
         breakpoint: 767,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           centerMode: false,
         }
       },
@@ -107,7 +107,7 @@ $(document).on('ready', function(){
         breakpoint: 991,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
           centerMode: false,
         }
       }
@@ -130,14 +130,14 @@ $(document).on('ready', function(){
     autoClose: true
   });
 
-  $('.insta__carousel').slick({
-    mobileFirst: true,
-    dots: false,
-    arrows: false,
-    infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 4000,
-    variableWidth: true,
+  var swiper = new Swiper('.insta-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 15,
+    loop: true,
+    navigation: {
+      nextEl: '.insta-swiper__next',
+      prevEl: '.insta-swiper__prev',
+    },
   });
 
   var slick1 = $('.j-gallery-one').slick({

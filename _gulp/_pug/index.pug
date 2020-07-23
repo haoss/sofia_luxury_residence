@@ -319,7 +319,7 @@ html(lang="ru")
                               title: 'Люкс апартаменты',
                               attrs: {
                                 selected: true,
-                                hidden: true
+                                hidden: false
                               }
                             },
                             {
@@ -337,8 +337,7 @@ html(lang="ru")
                             {
                               title: 'Люкс апартаменты 4',
                               attrs: {
-                                selected: true,
-                                hidden: true
+                                value: '',
                               }
                             },
                             {
@@ -419,6 +418,46 @@ html(lang="ru")
                         span Посмотреть на карте
                 .fieldset-mobile
                   button(type="button").btn.btn--block.j-main-form-btn проверить цены
+        
+          // Section
+          .section
+            .attractions
+              .content__head.attractions__head
+                .h2 Не упустите увидеть популярные многолетние достопримечательности острова Кипр. Здесь и сразу!
+              .attractions__wrapper
+                .j-attractions-carousel
+                  .attractions__block
+                    .attractions__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/attractions-img-1.png", alt="")
+                    .attractions__block-content
+                      .attractions__block-title Пафосский замок 
+                        small.small (греч. Κάστρο της Πάφου)
+                      p средневековый замок на западном краю гавани в Пафосе. За время существования служил крепостью, тюрьмой и даже складом соли во время британской оккупации острова
+                  .attractions__block
+                    .attractions__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/attractions-img-2.png", alt="")
+                    .attractions__block-content
+                      .attractions__block-title Храм Святых Бессребреников 
+                        small.small (греч. Κάστρο της Πάφου)
+                      p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                  .attractions__block
+                    .attractions__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/attractions-img-3.png", alt="")
+                    .attractions__block-content
+                      .attractions__block-title Agia Solomoni Catacomb 
+                        small.small (греч. Κάστρο της Πάφου)
+                      p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. 
+                  .attractions__block
+                    .attractions__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/attractions-img-4.png", alt="")
+                    .attractions__block-content
+                      .attractions__block-title Колонна Святого Павла, церковь 
+                        small.small (греч. Κάστρο της Πάφου)
+                      p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
             
         // Section
         .section

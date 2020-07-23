@@ -205,6 +205,14 @@ $(document).on('ready', function(){
     $(this).parents('form').find('.j-main-form-fieldset').show();
   });
 
+  $('.j-attractions-carousel').slick({
+    mobileFirst: true,
+    infinite: true,
+    dots: false,
+    arrows: true,
+    fade: true
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();

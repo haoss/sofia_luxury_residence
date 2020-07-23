@@ -213,6 +213,34 @@ $(document).on('ready', function(){
     fade: true
   });
 
+  var mainGalleryThumbs = new Swiper('.main-gallery-thumbs', {
+    spaceBetween: 8,
+    slidesPerView: 2,
+    breakpoints: {
+      480: {
+        slidesPerView: 3
+      },
+      768: {
+        slidesPerView: 4
+      },
+      992: {
+        slidesPerView: 3
+      },
+      1200: {
+        slidesPerView: 4
+      },
+      1650: {
+        slidesPerView: 4
+      }
+    }
+  });
+  var mainGalleryTop = new Swiper('.main-gallery-top', {
+    spaceBetween: 0,
+    thumbs: {
+      swiper: mainGalleryThumbs
+    }
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();

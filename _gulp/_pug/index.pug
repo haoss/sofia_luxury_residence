@@ -19,7 +19,184 @@ html(lang="ru")
       // Main row
       .main-row(style="background-image: url('./tmp/main-row.png');")
         .container.main-row__container
-          p 1
+          
+          .main-row__wrapper
+            .main-row__form
+              .main-row__form-wrapper
+                form(action="#!")
+                  legend Бронируйте современные 
+                    span.color--pink роскошные апартаменты 
+                    | и будущие 
+                    span.color--pink Ваши яркие впечатления
+                  fieldset.fieldset
+                    .row.--thin
+                      .col-12
+                        .form-group
+                          +field-select(
+                            {
+                              title: 'Класс номера',
+                              hasJs: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: 'md'
+                            },
+                            {
+                              name: 'select',
+                              id: 'select'
+                            },
+                            [
+                              {
+                                title: 'Люкс апартаменты',
+                                attrs: {
+                                  selected: true,
+                                  hidden: false
+                                }
+                              },
+                              {
+                                title: 'Люкс апартаменты 2',
+                                attrs: {
+                                  value: '',
+                                }
+                              },
+                              {
+                                title: 'Люкс апартаменты 3',
+                                attrs: {
+                                  value: '',
+                                }
+                              },
+                              {
+                                title: 'Люкс апартаменты 4',
+                                attrs: {
+                                  value: '',
+                                }
+                              },
+                              {
+                                title: 'Люкс апартаменты 5',
+                                attrs: {
+                                  value: '',
+                                }
+                              },
+                              {
+                                title: 'Люкс апартаменты 6',
+                                attrs: {
+                                  value: '',
+                                }
+                              },
+                            ]
+                          )
+                      .col-12.col-md-6
+                        .form-group
+                          +field-text({
+                            title: 'Заезд',
+                            hasJs: false,
+                            isTextarea: false,
+                            hasError: false,
+                            helpText: '',
+                            mods: 'md,has-icon',
+                            val: '',
+                            attrs: {
+                              name: 'arrival-date',
+                              placeholder: '',
+                              readonly: 'readonly',
+                              class: 'datepicker-input'
+                            }
+                          })()
+                            i.icon-calendar
+                      .col-12.col-md-6
+                        .form-group.mb25
+                          +field-text({
+                            title: 'Отъезд',
+                            hasJs: false,
+                            isTextarea: false,
+                            hasError: false,
+                            helpText: '',
+                            mods: 'md,has-icon',
+                            val: '',
+                            attrs: {
+                              name: 'leaving-date',
+                              placeholder: '',
+                              readonly: 'readonly',
+                              class: 'datepicker-input'
+                            }
+                          })()
+                            i.icon-calendar
+                      .col-12
+                        .main-row__form-row.mb15
+                          div
+                            label.d-search__input-label Взрослых
+                            p.d-search__input-p Возраст: от 18 лет
+                          div
+                            .form-count.j-people-count
+                              button(type="button").btn-minus
+                              button(type="button").btn-plus
+                              input(type='text' value='2 чел')
+                        .main-row__form-row.mb25
+                          div
+                            label.d-search__input-label Детей
+                            p.d-search__input-p Возраст: от 6  до 18 лет
+                          div
+                            .form-count.j-people-count
+                              button(type="button").btn-minus
+                              button(type="button").btn-plus
+                              input(type='text' value='2 чел')
+                    .main-row__form-btns
+                      div
+                        button(type="button").btn.btn--block Проверить цены
+                      div
+                        a(href="#mapModal").btn.btn--on-map.js-popup-yamaps
+                          i.icon-map
+                          span Посмотреть на карте
+
+            .main-row__center
+              .main-row__gallery
+                .main-row__gallery-wrapper
+                  .swiper-container.main-gallery-top
+                    .swiper-wrapper
+                      .swiper-slide
+                        a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                          img(src="./tmp/main-gallery-1.png", alt="")
+                      .swiper-slide
+                        a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                          img(src="./tmp/main-gallery-1.png", alt="")
+                      .swiper-slide
+                        a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                          img(src="./tmp/main-gallery-1.png", alt="")
+                      .swiper-slide
+                        a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                          img(src="./tmp/main-gallery-1.png", alt="")
+                      .swiper-slide
+                        a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox)
+                          img(src="./tmp/main-gallery-1.png", alt="")
+                  .swiper-container.main-gallery-thumbs
+                    .swiper-wrapper
+                      .swiper-slide
+                        img(src="./tmp/main-gallery-1.png", alt="")
+                        .main-gallery__title Апартаменты
+                          strong Стандарт
+                      .swiper-slide
+                        img(src="./tmp/main-gallery-1.png", alt="")
+                        .main-gallery__title Апартаменты
+                          strong Делюкс
+                      .swiper-slide
+                        img(src="./tmp/main-gallery-1.png", alt="")
+                        .main-gallery__title Апартаменты
+                          strong Стандарт
+                      .swiper-slide
+                        img(src="./tmp/main-gallery-1.png", alt="")
+                        .main-gallery__title Апартаменты
+                          strong Делюкс
+                      .swiper-slide
+                        img(src="./tmp/main-gallery-1.png", alt="")
+                        .main-gallery__title Апартаменты
+                          strong Стандарт
+
+                .main-row__form-btns
+                  div
+                    a(href="#!").btn.btn--block проверить цены
+                  div
+                    a(href="#mapModal").btn.btn--on-map.js-popup-yamaps
+                      i.icon-map
+                      span Посмотреть на карте
 
       // Content
       .content-main

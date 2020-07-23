@@ -100,7 +100,119 @@
             <!-- Main row-->
             <div class="main-row" style="background-image: url('./tmp/main-row.png');">
                 <div class="container main-row__container">
-                    <p>1</p>
+                    <div class="main-row__wrapper">
+                        <div class="main-row__form">
+                            <div class="main-row__form-wrapper">
+                                <form action="#!">
+                                    <legend>Бронируйте современные <span class="color--pink">роскошные апартаменты </span>и будущие <span class="color--pink">Ваши яркие впечатления</span></legend>
+                                    <fieldset class="fieldset">
+                                        <div class="row --thin">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                        <label class="field-select  field-select--md"><span class="field-select__name">Класс номера</span><span class="field-select__select-wrap">
+                                                                <select class="field-select__select" name="select" id="select">
+                                                                    <option selected>Люкс апартаменты</option>
+                                                                    <option value="">Люкс апартаменты 2</option>
+                                                                    <option value="">Люкс апартаменты 3</option>
+                                                                    <option value="">Люкс апартаменты 4</option>
+                                                                    <option value="">Люкс апартаменты 5</option>
+                                                                    <option value="">Люкс апартаменты 6</option>
+                                                                </select></span>
+                                                        </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group">
+                                                        <label class="field-text  field-text--md field-text--has-icon"><span class="field-text__name">Заезд</span><span class="field-text__input-wrap">
+                                                                <input class="field-text__input datepicker-input" type="text" value="" name="arrival-date" placeholder="" readonly="readonly"><i class="icon-calendar"></i></span>
+                                                        </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="form-group mb25">
+                                                        <label class="field-text  field-text--md field-text--has-icon"><span class="field-text__name">Отъезд</span><span class="field-text__input-wrap">
+                                                                <input class="field-text__input datepicker-input" type="text" value="" name="leaving-date" placeholder="" readonly="readonly"><i class="icon-calendar"></i></span>
+                                                        </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="main-row__form-row mb15">
+                                                    <div>
+                                                        <label class="d-search__input-label">Взрослых</label>
+                                                        <p class="d-search__input-p">Возраст: от 18 лет</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="form-count j-people-count">
+                                                            <button class="btn-minus" type="button"></button>
+                                                            <button class="btn-plus" type="button"></button>
+                                                            <input type="text" value="2 чел">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="main-row__form-row mb25">
+                                                    <div>
+                                                        <label class="d-search__input-label">Детей</label>
+                                                        <p class="d-search__input-p">Возраст: от 6  до 18 лет</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="form-count j-people-count">
+                                                            <button class="btn-minus" type="button"></button>
+                                                            <button class="btn-plus" type="button"></button>
+                                                            <input type="text" value="2 чел">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main-row__form-btns">
+                                            <div>
+                                                <button class="btn btn--block" type="button">Проверить цены</button>
+                                            </div>
+                                            <div><a class="btn btn--on-map js-popup-yamaps" href="#mapModal"><i class="icon-map"></i><span>Посмотреть на карте</span></a></div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="main-row__center">
+                            <div class="main-row__gallery">
+                                <div class="main-row__gallery-wrapper">
+                                    <div class="swiper-container main-gallery-top">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><a href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox><img src="./tmp/main-gallery-1.png" alt=""></a></div>
+                                            <div class="swiper-slide"><a href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox><img src="./tmp/main-gallery-1.png" alt=""></a></div>
+                                            <div class="swiper-slide"><a href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox><img src="./tmp/main-gallery-1.png" alt=""></a></div>
+                                            <div class="swiper-slide"><a href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox><img src="./tmp/main-gallery-1.png" alt=""></a></div>
+                                            <div class="swiper-slide"><a href="https://www.youtube.com/watch?v=0-7IHOXkiV8" data-fancybox><img src="./tmp/main-gallery-1.png" alt=""></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-container main-gallery-thumbs">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><img src="./tmp/main-gallery-1.png" alt="">
+                                                <div class="main-gallery__title">Апартаменты<strong>Стандарт</strong></div>
+                                            </div>
+                                            <div class="swiper-slide"><img src="./tmp/main-gallery-1.png" alt="">
+                                                <div class="main-gallery__title">Апартаменты<strong>Делюкс</strong></div>
+                                            </div>
+                                            <div class="swiper-slide"><img src="./tmp/main-gallery-1.png" alt="">
+                                                <div class="main-gallery__title">Апартаменты<strong>Стандарт</strong></div>
+                                            </div>
+                                            <div class="swiper-slide"><img src="./tmp/main-gallery-1.png" alt="">
+                                                <div class="main-gallery__title">Апартаменты<strong>Делюкс</strong></div>
+                                            </div>
+                                            <div class="swiper-slide"><img src="./tmp/main-gallery-1.png" alt="">
+                                                <div class="main-gallery__title">Апартаменты<strong>Стандарт</strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-row__form-btns">
+                                    <div><a class="btn btn--block" href="#!">проверить цены</a></div>
+                                    <div><a class="btn btn--on-map js-popup-yamaps" href="#mapModal"><i class="icon-map"></i><span>Посмотреть на карте</span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Content-->

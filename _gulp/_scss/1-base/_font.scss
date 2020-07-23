@@ -4,6 +4,7 @@
 /* source-sans-pro-regular - latin_cyrillic */
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: 'fallback';
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/source_sans_pro/source-sans-pro-v13-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
@@ -17,6 +18,7 @@
 /* source-sans-pro-600 - latin_cyrillic */
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: 'fallback';
   font-style: normal;
   font-weight: 600;
   src: url('../fonts/source_sans_pro/source-sans-pro-v13-latin_cyrillic-600.eot'); /* IE9 Compat Modes */
@@ -30,6 +32,7 @@
 /* source-sans-pro-700 - latin_cyrillic */
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: 'fallback';
   font-style: normal;
   font-weight: 700;
   src: url('../fonts/source_sans_pro/source-sans-pro-v13-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
@@ -43,6 +46,7 @@
 /* source-sans-pro-900 - latin_cyrillic */
 @font-face {
   font-family: 'Source Sans Pro';
+  font-display: 'fallback';
   font-style: normal;
   font-weight: 900;
   src: url('../fonts/source_sans_pro/source-sans-pro-v13-latin_cyrillic-900.eot'); /* IE9 Compat Modes */
@@ -53,3 +57,5 @@
        url('../fonts/source_sans_pro/source-sans-pro-v13-latin_cyrillic-900.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/source_sans_pro/source-sans-pro-v13-latin_cyrillic-900.svg#SourceSansPro') format('svg'); /* Legacy iOS */
 }
+
+@import "../../dist/fonts/icomoon/style.scss";

@@ -329,20 +329,25 @@
                                 <div class="content__head --outside">
                                     <div class="h2">Большенство отметило</div>
                                 </div>
-                                <p><strong>Отличное расположение</strong><br>95% недавних гостей оценили расположение жилья на пять звезд.</p>
-                                <p> <strong>Прибытие организовано отлично</strong><br>100% недавних гостей оценили прибытие на пять звезд.</p>
-                                <p><strong>Жилье целиком</strong><br>Кондоминиум полностью в вашем распоряжении.</p>
-                                <p> <strong>Самостоятельное прибытие</strong><br>Легкое самостоятельное прибытие с помощью мини-сейфа.</p>
+                                <div class="column-xl-2 column-xxl-2">
+                                    <p><strong>Отличное расположение</strong><br>95% недавних гостей оценили расположение жилья на пять звезд.</p>
+                                    <p> <strong>Прибытие организовано отлично</strong><br>100% недавних гостей оценили прибытие на пять звезд.</p>
+                                    <p><strong>Жилье целиком</strong><br>Кондоминиум полностью в вашем распоряжении.</p>
+                                    <p> <strong>Самостоятельное прибытие</strong><br>Легкое самостоятельное прибытие с помощью мини-сейфа.</p>
+                                </div>
                                 <div class="content__head --outside">
                                     <div class="h2">Все удобства и услуги</div>
                                 </div>
                                 <div class="content-more">
                                     <div class="content-more__top">
-                                        <p> <strong>Домашние животные</strong><br>Размещение домашних животных не допускается.</p>
-                                        <p> <strong>Интернет</strong><br>Бесплатно! Wi-Fi предоставляется на территории всего отеля бесплатно.</p>
-                                        <p><strong>Стойка регистрации</strong><br>Хранение багажа<br>Ускоренная регистрация заезда/отъезда</p>
+                                        <div class="column-xl-2 column-xxl-2">
+                                            <p> <strong>Домашние животные</strong><br>Размещение домашних животных не допускается.</p>
+                                            <p> <strong>Интернет</strong><br>Бесплатно! Wi-Fi предоставляется на территории всего отеля бесплатно.</p>
+                                            <p><strong>Стойка регистрации</strong><br>Хранение багажа<br>Ускоренная регистрация заезда/отъезда</p>
+                                        </div>
                                     </div>
                                     <div class="content-more__bottom">
+                                        <div class="clear15"></div>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
                                         <p>Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!</p>
                                         <p>Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!</p>
@@ -350,6 +355,17 @@
                                     </div>
                                     <button class="content-more__btn" type="button"><span>Показать еще</span></button>
                                 </div>
+                                <div class="content__head --outside">
+                                    <div class="h2">Что нужно помнить</div>
+                                </div>
+                                <p><strong>Прибытие: После 15:00</strong><br><strong>Выезд: 10:00</strong></p>
+                                <ul>
+                                    <li>Курение запрещено</li>
+                                    <li>Нельзя с питомцами</li>
+                                    <li>Без вечеринок и мероприятий</li>
+                                    <li>Залог за сохранность имущества: если вы нанесете ущерб жилью, с вас могут списать деньги (максимальная сумма — 14505₽)</li>
+                                </ul>
+                                <p><strong>Бесплатная отмена в течение 48 ч.</strong><br><strong>При отмене до 3:00 PM 17 апр. вы получите возврат в размере 50% за вычетом сбора за услуги.</strong></p>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-5 col-xl-4">
@@ -466,19 +482,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="content__inside">
-                        <div class="content__head --outside">
-                            <div class="h2">Что нужно помнить</div>
-                        </div>
-                        <p><strong>Прибытие: После 15:00</strong><br><strong>Выезд: 10:00</strong></p>
-                        <ul>
-                            <li>Курение запрещено</li>
-                            <li>Нельзя с питомцами</li>
-                            <li>Без вечеринок и мероприятий</li>
-                            <li>Залог за сохранность имущества: если вы нанесете ущерб жилью, с вас могут списать деньги (максимальная сумма — 14505₽)</li>
-                        </ul>
-                        <p><strong>Бесплатная отмена в течение 48 ч.</strong><br><strong>При отмене до 3:00 PM 17 апр. вы получите возврат в размере 50% за вычетом сбора за услуги.</strong></p>
-                    </div>
                 </div>
             </div>
             <!-- Footer-->
@@ -551,36 +554,46 @@
         <script src="./js/libs/fancybox/jquery.fancybox.min.js"></script>
         <script src="./js/libs/swiper/swiper-bundle.min.js"></script>
         <script src="./js/common.js"></script>
-        <script src="https://api-maps.yandex.ru/2.1/?apikey=&lt;ваш API-ключ&gt;&amp;lang=ru_RU" type="text/javascript"></script>
+        <!--  Google Map -->
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script>
-            var myMap;
-            ymaps.ready(init);
+            function initialize() {
+                var myLatlng = new google.maps.LatLng(51.518641, -0.168163);
+                var map_options = {
+                  zoom: 16,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP,
+                  center: myLatlng,
+                  scrollwheel: false,
+                  disableDefaultUI: true
+                }
             
-            function init () {
-                myMap = new ymaps.Map('yamaps', {
-                  center: [55.76, 37.64],
-                  zoom: 7,
-                }),
+                var map = new google.maps.Map(document.getElementById('yamaps'), map_options)
+                var myIcon = new google.maps.MarkerImage('./tmp/map-marker.png', null, null, null, new google.maps.Size(225,225));
             
-                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                  hintContent: 'Sofia Luxury residence'
-                }, {
-                  iconLayout: 'default#image',
-                  iconImageHref: './tmp/map-marker.png',
-                  iconImageSize: [225, 225],
-                  iconImageOffset: [-112, -225]
+                var marker = new google.maps.Marker({
+                  position: myLatlng,
+                  map: map,
+                  icon: myIcon
                 });
             
-              myMap.geoObjects
-                .add(myPlacemark);
-              
-              myMap.behaviors.disable('drag');
-              myMap.behaviors.disable('scrollZoom');
-            }
+                /* Remove if you dont want B/W Google Map */
+                
+                var styles = [
+                  {
+                    featureType: "all",
+                    stylers: [
+                      { saturation: -100 }
+                    ]
+                  }
+                ];
             
-            $(window).load(function(){
-              /**/
-            })
+                map.setOptions({styles: styles});
+                
+              }
+            
+              google.maps.event.addDomListener(window, 'load', initialize);
+            
         </script>
+        <!--  Google Map Ends! -->
     </body>
 </html>

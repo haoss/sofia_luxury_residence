@@ -11,7 +11,7 @@ $(document).on('ready', function(){
 
   $('.js-popup-yamaps').magnificPopup({
 		type: 'inline',
-		preloader: false,
+		preloader: true,
 		focus: '#yamaps'
 	});
 
@@ -120,11 +120,11 @@ $(document).on('ready', function(){
   });
 
   // Datepicker fix
-  $('.datepicker-div').datepicker().on('changeDate', function(ev) {
-    // YOUR CODE
-  }).on('hide', function(event) {
-    event.preventDefault();
-    event.stopPropagation();
+  $('.datepicker-div').datepicker().on('changeDate', function(e) {
+    autoClose: false
+  }).on('hide', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
   });
   $('.datepicker-input').datepicker({
     autoClose: true
@@ -216,6 +216,9 @@ $(document).on('ready', function(){
   var mainGalleryThumbs = new Swiper('.main-gallery-thumbs', {
     spaceBetween: 8,
     slidesPerView: 2,
+    freeMode: false,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
     breakpoints: {
       480: {
         slidesPerView: 3
@@ -235,10 +238,15 @@ $(document).on('ready', function(){
     }
   });
   var mainGalleryTop = new Swiper('.main-gallery-top', {
-    spaceBetween: 0,
+    spaceBetween: 10,
     thumbs: {
       swiper: mainGalleryThumbs
     }
+  });
+
+  $(".j-anchor").on('click', function(e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 800);
   });
 
   // Chrome Smooth Scroll
@@ -397,7 +405,7 @@ function modal() {
   });
 
   // Blocks click stoped fix
-  $(document).on('click', '.lang, .m-search, .nav, .d-search', function(e){
+  $(document).on('click', '.lang, .m-search, .nav, .d-search, .datepicker--cell', function(e){
     e.stopPropagation();
   });
 }

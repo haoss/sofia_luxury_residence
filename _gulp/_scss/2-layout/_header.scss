@@ -92,10 +92,16 @@
     flex-grow: 1;
     flex-shrink: 0;
     img {
-      width: 56px;
-      height: 56px;
+      width: 59px;
+      height: 64px;
       background-size: cover;
+      .--main & {
+        width: 56px;
+        height: 56px;
+        background-size: auto;
+      }
     }
+    
   }
   &__lang {
     margin-left: 22px;
@@ -105,9 +111,6 @@
   }
   &.--main {
     background-color: transparent;
-    #{$this} {
-      
-    }
     &+.header-holder {
       display: none;
     }
@@ -184,7 +187,7 @@
       }
       img {
         .--main & {
-          width: 236px;
+          width: 238px;
         }
       }
     }

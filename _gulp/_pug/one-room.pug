@@ -104,48 +104,68 @@ html(lang="ru")
 
                 .content__head.--outside
                   .h2 Большенство отметило
-                p
-                  strong Отличное расположение
-                  br
-                  | 95% недавних гостей оценили расположение жилья на пять звезд.
-                p 
-                  strong Прибытие организовано отлично
-                  br
-                  | 100% недавних гостей оценили прибытие на пять звезд.
-                p
-                  strong Жилье целиком
-                  br
-                  | Кондоминиум полностью в вашем распоряжении.
-                p 
-                  strong Самостоятельное прибытие
-                  br
-                  | Легкое самостоятельное прибытие с помощью мини-сейфа.
+                .column-xl-2.column-xxl-2
+                  p
+                    strong Отличное расположение
+                    br
+                    | 95% недавних гостей оценили расположение жилья на пять звезд.
+                  p 
+                    strong Прибытие организовано отлично
+                    br
+                    | 100% недавних гостей оценили прибытие на пять звезд.
+                  p
+                    strong Жилье целиком
+                    br
+                    | Кондоминиум полностью в вашем распоряжении.
+                  p 
+                    strong Самостоятельное прибытие
+                    br
+                    | Легкое самостоятельное прибытие с помощью мини-сейфа.
 
                 .content__head.--outside
                   .h2 Все удобства и услуги
                 .content-more
                   .content-more__top
-                    p 
-                      strong Домашние животные
-                      br
-                      | Размещение домашних животных не допускается.
-                    p 
-                      strong Интернет
-                      br
-                      | Бесплатно! Wi-Fi предоставляется на территории всего отеля бесплатно.
-                    p
-                      strong Стойка регистрации
-                      br
-                      | Хранение багажа
-                      br
-                      | Ускоренная регистрация заезда/отъезда
+                    .column-xl-2.column-xxl-2
+                      p 
+                        strong Домашние животные
+                        br
+                        | Размещение домашних животных не допускается.
+                      p 
+                        strong Интернет
+                        br
+                        | Бесплатно! Wi-Fi предоставляется на территории всего отеля бесплатно.
+                      p
+                        strong Стойка регистрации
+                        br
+                        | Хранение багажа
+                        br
+                        | Ускоренная регистрация заезда/отъезда
+                        
                   .content-more__bottom
+                    .clear15
                     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
                     p Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!
                     p Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!
                     p Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel odio?
                   button(type="button").content-more__btn
                     span Показать еще
+
+                .content__head.--outside
+                  .h2 Что нужно помнить
+                p
+                  strong Прибытие: После 15:00
+                  br
+                  strong Выезд: 10:00
+                ul
+                  li Курение запрещено
+                  li Нельзя с питомцами
+                  li Без вечеринок и мероприятий
+                  li Залог за сохранность имущества: если вы нанесете ущерб жилью, с вас могут списать деньги (максимальная сумма — 14505₽)
+                p
+                  strong Бесплатная отмена в течение 48 ч.
+                  br
+                  strong При отмене до 3:00 PM 17 апр. вы получите возврат в размере 50% за вычетом сбора за услуги.
 
             .col-12.col-md-6.col-lg-5.col-xl-4
 
@@ -291,23 +311,7 @@ html(lang="ru")
                           b 5.0
                       p Далеко-далеко за словесными горами в стране гласных и согласных живут Далеко-далеко за словесными горами в стране гласных и согласных живут
                   a(href="#!").btn.btn--border.btn--md.btn--block все отзывы
-
-          .content__inside
-            .content__head.--outside
-              .h2 Что нужно помнить
-            p
-              strong Прибытие: После 15:00
-              br
-              strong Выезд: 10:00
-            ul
-              li Курение запрещено
-              li Нельзя с питомцами
-              li Без вечеринок и мероприятий
-              li Залог за сохранность имущества: если вы нанесете ущерб жилью, с вас могут списать деньги (максимальная сумма — 14505₽)
-            p
-              strong Бесплатная отмена в течение 48 ч.
-              br
-              strong При отмене до 3:00 PM 17 апр. вы получите возврат в размере 50% за вычетом сбора за услуги.
+            
 
       include ./_include/_footer
       //- div(style="height: 1000px; background-color: #000")
@@ -316,34 +320,44 @@ html(lang="ru")
     include ./_include/_footer-js
     script(src="./js/common.js")
 
-    script(src='https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU' type='text/javascript')
+    //  Google Map 
+    script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
     script.
-  
-      var myMap;
-      ymaps.ready(init);
       
-      function init () {
-          myMap = new ymaps.Map('yamaps', {
-            center: [55.76, 37.64],
-            zoom: 7,
-          }),
-
-          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Sofia Luxury residence'
-          }, {
-            iconLayout: 'default#image',
-            iconImageHref: './tmp/map-marker.png',
-            iconImageSize: [225, 225],
-            iconImageOffset: [-112, -225]
+      function initialize() {
+          var myLatlng = new google.maps.LatLng(51.518641, -0.168163);
+          var map_options = {
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: myLatlng,
+            scrollwheel: false,
+            disableDefaultUI: true
+          }
+      
+          var map = new google.maps.Map(document.getElementById('yamaps'), map_options)
+          var myIcon = new google.maps.MarkerImage('./tmp/map-marker.png', null, null, null, new google.maps.Size(225,225));
+      
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            icon: myIcon
           });
-
-        myMap.geoObjects
-          .add(myPlacemark);
-        
-        myMap.behaviors.disable('drag');
-        myMap.behaviors.disable('scrollZoom');
-      }
-  
-      $(window).load(function(){
-        /**/
-      })
+      
+          /* Remove if you dont want B/W Google Map */
+          
+          var styles = [
+            {
+              featureType: "all",
+              stylers: [
+                { saturation: -100 }
+              ]
+            }
+          ];
+      
+          map.setOptions({styles: styles});
+          
+        }
+      
+        google.maps.event.addDomListener(window, 'load', initialize);
+      
+    //  Google Map Ends! 

@@ -171,24 +171,29 @@ html(lang="ru")
                     .swiper-wrapper
                       .swiper-slide
                         img(src="./tmp/main-gallery-1.png", alt="")
-                        .main-gallery__title Апартаменты
-                          strong Стандарт
+                        .main-gallery__title
+                          a(href="#!") Апартаменты
+                            strong Стандарт
                       .swiper-slide
                         img(src="./tmp/main-gallery-1.png", alt="")
-                        .main-gallery__title Апартаменты
-                          strong Делюкс
+                        .main-gallery__title
+                          a(href="#!") Апартаменты
+                            strong Делюкс
                       .swiper-slide
                         img(src="./tmp/main-gallery-1.png", alt="")
-                        .main-gallery__title Апартаменты
-                          strong Стандарт
+                        .main-gallery__title
+                          a(href="#!") Апартаменты
+                            strong Стандарт
                       .swiper-slide
                         img(src="./tmp/main-gallery-1.png", alt="")
-                        .main-gallery__title Апартаменты
-                          strong Делюкс
+                        .main-gallery__title
+                          a(href="#!") Апартаменты
+                            strong Делюкс
                       .swiper-slide
                         img(src="./tmp/main-gallery-1.png", alt="")
-                        .main-gallery__title Апартаменты
-                          strong Стандарт
+                        .main-gallery__title
+                          a(href="#!") Апартаменты
+                            strong Стандарт
 
                 .main-row__form-btns
                   div
@@ -199,8 +204,8 @@ html(lang="ru")
                       span Посмотреть на карте
 
       // Content
-      .content-main
-        .content-main__head
+      #content-main.content-main
+        a(href="#content-main").content-main__head.j-anchor
 
         .container
           // Section
@@ -387,8 +392,9 @@ html(lang="ru")
                           | Хранение багажа
                           br
                           | Ускоренная регистрация заезда/отъезда
-                        p &nbsp;
+                          
                     .content-more__bottom
+                      .clear15
                       p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
                       p Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!
                       p Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!
@@ -403,60 +409,70 @@ html(lang="ru")
                     h2 Отзывы
                     .comments__block
                       .comments__block-thumb
-                        img(src="./tmp/user-img-1.png", alt="")
+                        a(href="#!")
+                          img(src="./tmp/user-img-1.png", alt="")
                       .comments__block-wrapper
                         .comments__block-head
                           .comments__block-title 
-                            b Петручио
-                            small.small Гваделупа
+                            a(href="#!")
+                              b Петручио
+                              small.small Гваделупа
                           .comments__block-star
                             i.icon-star
                             b 5.0
                         p Далеко-далеко за словесными горами в стране гласных и согласных живут Далеко-далеко за словесными горами в стране гласных и согласных живут
                     .comments__block
                       .comments__block-thumb
-                        img(src="./tmp/user-img-2.png", alt="")
+                        a(href="#!")
+                          img(src="./tmp/user-img-2.png", alt="")
                       .comments__block-wrapper
                         .comments__block-head
                           .comments__block-title 
-                            b Петручио
-                            small.small Гваделупа
+                            a(href="#!")
+                              b Петручио
+                              small.small Гваделупа
                           .comments__block-star
                             i.icon-star
                             b 5.0
                         p Далеко-далеко за словесными горами в стране гласных и согласных живут Далеко-далеко за словесными горами в стране гласных и согласных живут
                     .comments__block
                       .comments__block-thumb
-                        img(src="./tmp/user-img-3.png", alt="")
+                        a(href="#!")
+                          img(src="./tmp/user-img-3.png", alt="")
                       .comments__block-wrapper
                         .comments__block-head
                           .comments__block-title 
-                            b Петручио
-                            small.small Гваделупа
+                            a(href="#!")
+                              b Петручио
+                              small.small Гваделупа
                           .comments__block-star
                             i.icon-star
                             b 5.0
                         p Далеко-далеко за словесными горами в стране гласных и согласных живут Далеко-далеко за словесными горами в стране гласных и согласных живут
                     .comments__block
                       .comments__block-thumb
-                        img(src="./tmp/user-img-4.png", alt="")
+                        a(href="#!")
+                          img(src="./tmp/user-img-4.png", alt="")
                       .comments__block-wrapper
                         .comments__block-head
                           .comments__block-title 
-                            b Петручио
-                            small.small Гваделупа
+                            a(href="#!")
+                              b Петручио
+                              small.small Гваделупа
                           .comments__block-star
                             i.icon-star
                             b 5.0
                         p Далеко-далеко за словесными горами в стране гласных и согласных живут Далеко-далеко за словесными горами в стране гласных и согласных живут
                     .comments__block
                       .comments__block-thumb
-                        img(src="./tmp/user-img-5.png", alt="")
+                        a(href="#!")
+                          img(src="./tmp/user-img-5.png", alt="")
                       .comments__block-wrapper
                         .comments__block-head
                           .comments__block-title 
-                            b Петручио
-                            small.small Гваделупа
+                            a(href="#!")
+                              b Петручио
+                              small.small Гваделупа
                           .comments__block-star
                             i.icon-star
                             b 5.0
@@ -796,51 +812,80 @@ html(lang="ru")
     include ./_include/_footer-js
     script(src="./js/common.js")
 
-    script(src='https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU' type='text/javascript')
-    script(type='text/javascript').
-      ymaps.ready(init);
-      function init(){ 
-        var myMap = new ymaps.Map("map", {
-            center: [55.76, 37.64],
-            zoom: 7
-          }),
-
-          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Sofia Luxury residence'
-          }, {
-            iconLayout: 'default#image',
-            iconImageHref: './tmp/map-marker.png',
-            iconImageSize: [225, 225],
-            iconImageOffset: [-112, -225]
-          });
-
-        myMap.geoObjects
-          .add(myPlacemark);
-        
-        myMap.behaviors.disable('drag');
-        myMap.behaviors.disable('scrollZoom');
-      }
-      var myMap2;
-      ymaps.ready(init2);
+    //  Google Map 
+    script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
+    script.
       
-      function init2 () {
-          myMap2 = new ymaps.Map('yamaps', {
-            center: [55.76, 37.64],
-            zoom: 7
-          }),
-
-          myPlacemark = new ymaps.Placemark(myMap2.getCenter(), {
-            hintContent: 'Sofia Luxury residence'
-          }, {
-            iconLayout: 'default#image',
-            iconImageHref: './tmp/map-marker.png',
-            iconImageSize: [225, 225],
-            iconImageOffset: [-112, -225]
+      function initialize() {
+          var myLatlng = new google.maps.LatLng(51.518641, -0.168163);
+          var map_options = {
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: myLatlng,
+            scrollwheel: false,
+            disableDefaultUI: true
+          }
+      
+          var map = new google.maps.Map(document.getElementById('yamaps'), map_options)
+          var myIcon = new google.maps.MarkerImage('./tmp/map-marker.png', null, null, null, new google.maps.Size(225,225));
+      
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            icon: myIcon
           });
+      
+          /* Remove if you dont want B/W Google Map */
+          
+          var styles = [
+            {
+              featureType: "all",
+              stylers: [
+                { saturation: -100 }
+              ]
+            }
+          ];
+      
+          map.setOptions({styles: styles});
+          
+        }
+      
+        google.maps.event.addDomListener(window, 'load', initialize);
 
-        myMap2.geoObjects
-          .add(myPlacemark);
-        
-        myMap2.behaviors.disable('drag');
-        myMap2.behaviors.disable('scrollZoom');
-      }
+      function initialize2() {
+          var myLatlng = new google.maps.LatLng(51.518641, -0.168163);
+          var map_options = {
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: myLatlng,
+            scrollwheel: false,
+            disableDefaultUI: true
+          }
+      
+          var map = new google.maps.Map(document.getElementById('map'), map_options)
+          var myIcon = new google.maps.MarkerImage('./tmp/map-marker.png', null, null, null, new google.maps.Size(225,225));
+      
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            icon: myIcon
+          });
+      
+          /* Remove if you dont want B/W Google Map */
+          
+          var styles = [
+            {
+              featureType: "all",
+              stylers: [
+                { saturation: -100 }
+              ]
+            }
+          ];
+      
+          map.setOptions({styles: styles});
+          
+        }
+      
+        google.maps.event.addDomListener(window, 'load', initialize2);
+
+    //  Google Map Ends! 

@@ -405,7 +405,7 @@ function modal() {
   });
 
   // Blocks click stoped fix
-  $(document).on('click', '.lang, .m-search, .nav, .d-search, .datepicker--cell', function(e){
+  $(document).on('click', '.lang, .m-search, .nav, .d-search, .datepicker--cell, .datepicker--nav-title, .datepicker--nav-action', function(e){
     e.stopPropagation();
   });
 }
